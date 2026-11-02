@@ -1,0 +1,329 @@
+"use client";
+
+import { useState, type ReactNode } from "react";
+import { GradientText } from "../Shared";
+
+export const themeItems = [
+  {
+    index: "01",
+    label: "Ambient Intelligence, Clinical Documentation & Workforce Relief",
+    heading: "Ambient Intelligence, Clinical Documentation & Workforce Relief",
+    shortDesc:
+      "Ambient clinical voice listening, automated medical coding and billing triage, physician burnout reduction, clinical decision support (CDS) copilots.",
+    expandedScope:
+      "Ambient clinical voice listening, automated medical coding and billing triage, physician burnout reduction, clinical decision support (CDS) copilots, nursing documentation workflows, and automated discharge summaries.",
+    clinicalFormat: "Interactive 75-minute Workshop Clinic A (Hosted by Engagement Partner) & Buyer Evidence Plenary",
+    image: "/dubai/healthcare/images/agenda/keynotes.webp",
+  },
+  {
+    index: "02",
+    label: "Diagnostic Imaging Triage, Pathology & Time-Critical Care",
+    heading: "Diagnostic Imaging Triage, Pathology & Time-Critical Care",
+    shortDesc:
+      "Computer vision for radiology triage (stroke, trauma, oncology), automated pathology screening, early cancer detection pipelines.",
+    expandedScope:
+      "Computer vision for radiology triage (stroke, trauma, oncology), automated pathology screening, early cancer detection pipelines, time-critical clinical coordination, multi-modal diagnostic data fusion, and clinical regulatory validation.",
+    clinicalFormat: "Interactive 75-minute Workshop Clinic B (Hosted by Engagement Partner) & Applied Case Studies",
+    image: "/dubai/healthcare/images/agenda/panel-discussion.webp",
+  },
+  {
+    index: "03",
+    label: "Health System Operations, Capacity & Supply Chain Resilience",
+    heading: "Health System Operations, Capacity & Supply Chain Resilience",
+    shortDesc:
+      "Predictive bed management and patient length-of-stay forecasting, emergency department triage optimisation, surgical scheduling.",
+    expandedScope:
+      "Predictive bed management and patient length-of-stay forecasting, emergency department triage optimisation, surgical scheduling and operating theatre utilisation, clinical staffing allocation, and hospital cold-chain tracking.",
+    clinicalFormat: "Applied Case Studies Plenary & Outcome Roundtables",
+    image: "/dubai/healthcare/images/agenda/driving-malaysia-stage.webp",
+  },
+  {
+    index: "04",
+    label: "Health Data Interoperability, Sovereign Governance & Life Sciences",
+    heading: "Health Data Interoperability, Sovereign Governance & Life Sciences",
+    shortDesc:
+      "Compliance with UAE health data residency laws (Nabidh, Malaffi, Riayati), FHIR standards and multi-EMR integration, federated learning.",
+    expandedScope:
+      "Compliance with UAE health data residency laws (Nabidh, Malaffi, Riayati), FHIR standards and multi-EMR integration, patient privacy and de-identification, federated learning, synthetic clinical trials, and AI-accelerated drug discovery.",
+    clinicalFormat: "Risk and Trust Plenary Panel & Sovereign Health Data Governance Sessions",
+    image: "/dubai/healthcare/images/agenda/Fireside.webp",
+  },
+];
+
+export const sixPartBlocks = [
+  {
+    num: "Block 1",
+    title: "Sector Priority Brief",
+    desc: "Opening framing by health authorities and hospital group CEOs establishing ranked clinical priorities, clinician shortage pressures, and immediate ROI benchmarks.",
+    accent: "cyan",
+  },
+  {
+    num: "Block 2",
+    title: "Buyer Evidence",
+    desc: "Frank, unvarnished clinical case studies examining real-world deployment hurdles, EMR integration friction, physician adoption challenges, and pilot post-mortems.",
+    accent: "green",
+  },
+  {
+    num: "Block 3",
+    title: "Risk and Trust Plenary",
+    desc: "Specialised regulatory panels detailing patient privacy assurance, clinical safety validation, bias mitigation across diverse demographic datasets, and regulatory compliance.",
+    accent: "cyan",
+  },
+  {
+    num: "Block 4",
+    title: "Parallel Breakout Clinics",
+    desc: "Two interactive 75-minute parallel workshop clinics: Clinic A: Ambient Clinical Voice, Copilots & Documentation (Hosted by Engagement Partner) | Clinic B: Diagnostic AI, Radiology Triage & Clinical Decision Support (Hosted by Engagement Partner).",
+    accent: "green",
+  },
+  {
+    num: "Block 5",
+    title: "Applied Case Studies",
+    desc: "Applied demonstrations detailing hospital capacity optimisation, operating theatre scheduling, and precision medicine breakthroughs across live hospital workflows.",
+    accent: "cyan",
+  },
+  {
+    num: "Block 6",
+    title: "Outcome Roundtables",
+    desc: "Curated peer discussions recording next actions, hospital procurement specifications, and verified vendor evaluation criteria for 2027 deployments.",
+    accent: "green",
+  },
+];
+
+function ThemeIcon({ index }: { index: number }) {
+  const normalized = ((index % 4) + 4) % 4;
+  if (normalized === 0) {
+    return (
+      <svg className="w-[23px] h-[23px] fill-none stroke-current stroke-[1.8] stroke-linecap-round stroke-linejoin-round" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3 4 7v6c0 5 3.4 8.8 8 10 4.6-1.2 8-5 8-10V7l-8-4Z" />
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+    );
+  }
+  if (normalized === 1) {
+    return (
+      <svg className="w-[23px] h-[23px] fill-none stroke-current stroke-[1.8] stroke-linecap-round stroke-linejoin-round" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 4 4 8l8 4 8-4-8-4Z" />
+        <path d="m4 12 8 4 8-4" />
+        <path d="m4 16 8 4 8-4" />
+      </svg>
+    );
+  }
+  if (normalized === 2) {
+    return (
+      <svg className="w-[23px] h-[23px] fill-none stroke-current stroke-[1.8] stroke-linecap-round stroke-linejoin-round" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 20h16" />
+        <path d="M6 20V9h5v11" />
+        <path d="M13 20V4h5v16" />
+        <path d="M8 12h1M8 15h1M15 8h1M15 11h1M15 14h1" />
+      </svg>
+    );
+  }
+  return (
+    <svg className="w-[23px] h-[23px] fill-none stroke-current stroke-[1.8] stroke-linecap-round stroke-linejoin-round" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 4v5" />
+      <path d="M6 14h12" />
+      <path d="M8 20h8" />
+      <path d="M12 9 6 14l6 5 6-5-6-5Z" />
+    </svg>
+  );
+}
+
+export function AgendaSection({
+  title = (
+    <>
+      Four operational mandates. <GradientText>One day.</GradientText>
+    </>
+  ),
+  subtitle = "Specialised Curriculum",
+  description = null,
+  showSixBlocks = true,
+}: {
+  title?: ReactNode;
+  subtitle?: ReactNode | null;
+  description?: ReactNode | null;
+  showSixBlocks?: boolean;
+}) {
+  const [expandedPillar, setExpandedPillar] = useState<number | null>(null);
+
+  return (
+    <section
+      className="relative py-[104px] bg-gradient-to-b from-[#020a18]/96 to-[#051224]/70 max-sm:py-[72px]"
+      id="agenda"
+    >
+      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+        {/* Headings */}
+        {subtitle && (
+          <div className="text-center mb-3">
+            <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold">
+              {subtitle}
+            </span>
+          </div>
+        )}
+        <h2
+          data-aos="fade-up"
+          className="text-center font-[850] text-white leading-[1.04] tracking-[-2px] text-[clamp(36px,4.8vw,56px)] mb-[44px]"
+        >
+          {title}
+        </h2>
+        {description && (
+          <p
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="max-w-[920px] mx-auto -mt-6 text-center text-muted text-[18px] leading-[1.55] mb-[44px]"
+          >
+            {description}
+          </p>
+        )}
+
+        {/* Component C3 — Expandable Pillar Cards (4 Cards in 2x2 Grid — expands on hover/click) */}
+        <div className="grid grid-cols-2 gap-6 items-start max-md:grid-cols-1">
+          {themeItems.map((theme, idx) => {
+            const isExpanded = expandedPillar === idx;
+            return (
+              <article
+                key={theme.index}
+                data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-delay={String((idx % 2) * 150)}
+                onMouseEnter={() => setExpandedPillar(idx)}
+                onMouseLeave={() => setExpandedPillar(null)}
+                onClick={() => setExpandedPillar(isExpanded ? null : idx)}
+                className={`group relative flex flex-col justify-between p-7 rounded-[20px] border transition-all duration-300 cursor-pointer text-left ${
+                  isExpanded
+                    ? "border-[#C0F43C]/65 bg-gradient-to-br from-[#071a33]/95 via-[#040e22]/98 to-[#030916]/98 shadow-[0_20px_50px_rgba(0,0,0,0.45),0_0_32px_rgba(192,244,60,0.14)] -translate-y-1"
+                    : "border-white/15 bg-gradient-to-br from-[#00ceff]/10 via-[#040c1e]/95 to-[#996cff]/10 shadow-[inset_0_0_28px_rgba(65,220,255,0.05),0_20px_50px_rgba(0,0,0,0.3)]"
+                }`}
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-3 mb-5">
+                    <span
+                      className={`grid place-items-center w-[48px] h-[48px] border rounded-[14px] transition-all duration-300 ${
+                        isExpanded
+                          ? "border-[#C0F43C]/60 bg-[#C0F43C]/18 text-[#C0F43C]"
+                          : "border-cyan/30 bg-cyan/10 text-cyan"
+                      }`}
+                    >
+                      <ThemeIcon index={idx} />
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`px-3 py-1 rounded-full border font-mono text-[11px] font-bold uppercase tracking-[1.8px] transition-colors duration-300 ${
+                          isExpanded
+                            ? "border-[#C0F43C]/50 bg-[#C0F43C]/15 text-[#C0F43C]"
+                            : "border-white/10 bg-white/5 text-cyan"
+                        }`}
+                      >
+                        Pillar / {theme.index}
+                      </span>
+                      <span className="text-white/60 font-mono text-xs px-2 py-0.5 rounded border border-white/10">
+                        {isExpanded ? "− Collapse" : "+ Expand Scope"}
+                      </span>
+                    </div>
+                  </div>
+
+                  <h3
+                    className={`m-0 mb-3 font-extrabold text-[21px] leading-[1.26] transition-colors duration-200 ${
+                      isExpanded ? "text-[#C0F43C]" : "text-white"
+                    }`}
+                  >
+                    {theme.label}
+                  </h3>
+
+                  <p className="m-0 text-white/80 text-[15.5px] leading-[1.6]">
+                    {theme.shortDesc}
+                  </p>
+
+                  <div
+                    className={`grid transition-all duration-300 ease-out overflow-hidden ${
+                      isExpanded
+                        ? "grid-rows-[1fr] opacity-100 mt-5 pt-4 border-t border-white/12"
+                        : "grid-rows-[0fr] opacity-0 mt-0 pt-0 border-t border-transparent"
+                    }`}
+                  >
+                    <div className="min-h-0 space-y-3 overflow-hidden">
+                      <div>
+                        <span className="block font-mono text-[11px] uppercase tracking-[1.6px] text-[#18d4ff] mb-1">
+                          Operational Scope &amp; Technical Focus
+                        </span>
+                        <p className="m-0 text-white/75 text-[14.5px] leading-[1.6]">
+                          {theme.expandedScope}
+                        </p>
+                      </div>
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/10 text-white/80 font-mono text-[11.5px]">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#C0F43C]" />
+                        Format: {theme.clinicalFormat}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        {/* Universal Themes Footer */}
+        <div className="mt-8 p-5 rounded-[16px] border border-[#18d4ff]/25 bg-[#040D1F]/80 text-center">
+          <p className="m-0 text-white/85 font-mono text-[13px] leading-relaxed">
+            <strong className="text-[#C0F43C] uppercase tracking-[1.4px] mr-2">Universal Themes:</strong>
+            Physician change management and trust, clinical negligence and liability frameworks, return on health investment (ROHI), and ethical AI in patient care.
+          </p>
+        </div>
+
+        {/* S6 · Programme Architecture (Six-Part Block Methodology) */}
+        {showSixBlocks && (
+          <div className="mt-24 pt-16 border-t border-white/10">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 rounded-full border border-[#18D4FF]/35 bg-[#18D4FF]/10 text-[#18D4FF] font-mono text-[11.5px] uppercase tracking-[2px] font-bold mb-4">
+                Trescon Six-Part Block Methodology
+              </span>
+              <h3 className="text-center font-[850] text-white leading-[1.08] tracking-[-1.6px] text-[clamp(30px,4vw,46px)] max-w-[920px] mx-auto">
+                Engineered to drive healthcare buyers from boardroom priorities down to{" "}
+                <GradientText>concrete procurement.</GradientText>
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
+              {sixPartBlocks.map((block) => {
+                const isGreen = block.accent === "green";
+                return (
+                  <div
+                    key={block.num}
+                    className={`p-6 rounded-[18px] border transition-all duration-300 hover:-translate-y-1 ${
+                      isGreen
+                        ? "border-[#C0F43C]/35 bg-gradient-to-br from-[#C0F43C]/[0.07] via-[#041022] to-[#030917]"
+                        : "border-[#18d4ff]/35 bg-gradient-to-br from-[#18d4ff]/[0.07] via-[#041022] to-[#030917]"
+                    }`}
+                  >
+                    <span
+                      className={`inline-block px-3 py-1 rounded-full font-mono text-[11px] font-bold uppercase tracking-[1.6px] mb-3 border ${
+                        isGreen
+                          ? "border-[#C0F43C]/40 bg-[#C0F43C]/12 text-[#C0F43C]"
+                          : "border-[#18d4ff]/40 bg-[#18d4ff]/12 text-[#18d4ff]"
+                      }`}
+                    >
+                      {block.num}
+                    </span>
+                    <h4 className="m-0 mb-2.5 text-white font-extrabold text-[19px] leading-snug">
+                      {block.title}
+                    </h4>
+                    <p className="m-0 text-white/75 text-[14.5px] leading-[1.6]">
+                      {block.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-10 flex justify-center">
+              <a
+                href="/dubai/healthcare/agenda/agenda/"
+                className="inline-flex items-center justify-center gap-2 h-[50px] px-8 rounded-full font-extrabold text-[14.5px] text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] transition-all duration-200"
+              >
+                Explore Full 1-Day Master Schedule →
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
