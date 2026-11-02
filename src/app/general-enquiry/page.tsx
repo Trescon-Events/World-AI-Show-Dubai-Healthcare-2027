@@ -52,7 +52,7 @@ export default function GeneralEnquiryPage() {
               </p>
 
               {/* Hubspot Form Embedded Container */}
-              <HubspotForm portalId="2953901" formId="8ccdb18c-889f-43da-a90a-b6b496715a65" region="na1" />
+              <HubspotForm portalId="2953901" formId="06b75046-fe04-489d-a1f1-7d30348e6f87" region="na1" />
             </div>
           </div>
         </div>

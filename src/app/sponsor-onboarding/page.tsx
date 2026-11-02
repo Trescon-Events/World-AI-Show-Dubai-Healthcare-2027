@@ -41,7 +41,7 @@ export default function SponsorOnboardingPage() {
               </p>
 
               {/* Hubspot Form Embedded Container */}
-              <HubspotForm portalId="2953901" formId="9c677228-2c4d-40f6-8cb7-98dbfa058bcd" region="na1" />
+              <HubspotForm portalId="2953901" formId="41869806-869f-4b03-9299-2bd9a26b188a" region="na1" />
             </div>
           </div>
         </div>
