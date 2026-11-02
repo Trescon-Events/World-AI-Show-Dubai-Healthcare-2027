@@ -32,7 +32,7 @@ export function WhatsAppNetworkingContent() {
         <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] rounded-full bg-[#25D366]/6 blur-[110px] pointer-events-none z-0"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0"></div>
 
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10 text-left flex flex-col items-start">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10 text-left flex flex-col items-start">
           
           <div className="max-w-[620px] w-full">
             <span className="block text-[12px] uppercase tracking-[2px] font-bold text-[#25D366] mb-3.5 font-mono">
@@ -69,7 +69,7 @@ export function WhatsAppNetworkingContent() {
 
       {/* ── Section 2: Comparison Grid Section ── */}
       <section className="relative py-24 bg-[#020814] border-t border-white/5 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_70%_20%,rgba(37,211,102,0.02),transparent_40%)]">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10">
           
           {/* Header */}
           <div className="text-center mb-16 max-w-[660px] mx-auto">
@@ -204,7 +204,7 @@ export function WhatsAppNetworkingContent() {
         {/* Soft Ambient Spotlight */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[#C0F43C]/5 blur-[100px] pointer-events-none z-0"></div>
         
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10 text-center">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10 text-center">
           <h2 className="font-[850] text-white leading-tight tracking-[-2px] text-[clamp(36px,5vw,54px)] m-0">
             Your community is waiting.
           </h2>

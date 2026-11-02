@@ -55,7 +55,7 @@ export default function ExhibitionPage() {
 
       {/* Section 11 · Standardised Booth Footprints & Interactive Concourse Map */}
       <section className="relative py-20 bg-[#020b1c] border-y border-white/10">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
           <div className="text-center mb-12">
             <span className="inline-flex items-center mb-3 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
               Exhibition &amp; Concourse Hub · Dubai, UAE
@@ -63,7 +63,7 @@ export default function ExhibitionPage() {
             <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(30px,4vw,46px)] m-0">
               Standardised Concourse <GradientText>Footprints &amp; Floorplan</GradientText>
             </h2>
-            <p className="mt-3 text-white/70 text-[16px] max-w-[780px] mx-auto">
+            <p className="mt-3 text-white/70 text-[16px] w-full mx-auto">
               Venue Showcase: Dubai Science Park / Dubai Healthcare City Campus Facility / Jumeirah Emirates Towers (Subject to final technical clearance). Standardised 6 sqm, 9 sqm, and 12 sqm concourse booths alongside 2 private CXO Closed-Door Boardroom Suites.
             </p>
           </div>

@@ -57,7 +57,7 @@ export function PhotoGalleryContent() {
         <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] rounded-full bg-[#18d4ff]/8 blur-[110px] pointer-events-none z-0"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[#C0F43C]/4 blur-[130px] pointer-events-none z-0"></div>
 
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10 grid grid-cols-[1.15fr_0.85fr] gap-[74px] items-center max-lg:grid-cols-1 max-lg:gap-14">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10 grid grid-cols-[1.15fr_0.85fr] gap-[74px] items-center max-lg:grid-cols-1 max-lg:gap-14">
           
           {/* Left Column: Heading & Vertical Steps */}
           <div>
@@ -184,10 +184,10 @@ export function PhotoGalleryContent() {
 
       {/* ── Section 2: Smart AI. Seamless Experience. (Side-by-Side Cards) ── */}
       <section className="relative py-24 bg-[#020814] border-t border-white/5 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_30%_80%,rgba(24,212,255,0.03),transparent_40%)]">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10">
           
           {/* Header */}
-          <div className="text-center mb-16 max-w-[760px] mx-auto">
+          <div className="text-center mb-16 w-full mx-auto">
             <h2 className="font-[850] text-white leading-tight tracking-[-2px] text-[clamp(42px,5.5vw,62px)] m-0">
               Smart AI.<br />
               <GradientText>Seamless Experience.</GradientText>

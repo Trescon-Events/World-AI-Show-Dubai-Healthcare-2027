@@ -45,7 +45,7 @@ const benefits: BenefitItem[] = [
 export function SponsorBenefitsList() {
   return (
     <section className="relative py-[104px] bg-gradient-to-b from-[#020b1c] to-[#041226]" id="benefits">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)] text-center mb-16">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)] text-center mb-16">
         <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#9a6cff]/30 rounded-full text-[#9a6cff] font-mono text-[12px] uppercase tracking-[2px] bg-[#9a6cff]/5">
           Sponsorship ROI Triggers
         </span>
@@ -55,7 +55,7 @@ export function SponsorBenefitsList() {
         </h2>
       </div>
 
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)] grid grid-cols-4 gap-4 max-[980px]:grid-cols-2 max-sm:grid-cols-1">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)] grid grid-cols-4 gap-4 max-[980px]:grid-cols-2 max-sm:grid-cols-1">
         {benefits.map((benefit, index) => (
           <article
             key={benefit.title}
@@ -76,7 +76,7 @@ export function SponsorBenefitsList() {
       {/* Direct Enquiry Call to Action */}
       <div className="w-[min(820px,calc(100%-48px))] mx-auto mt-16 p-8 border border-[#c0f43c]/30 rounded-[20px] bg-[#050c1c]/80 shadow-[0_0_40px_rgba(192,244,60,0.06)] text-center max-sm:p-6">
         <h3 className="m-0 text-white font-[850] text-[22px] mb-3">Interested in Sponsor Packages?</h3>
-        <p className="m-0 text-white/68 text-[15px] leading-relaxed mb-6 max-w-[620px] mx-auto">
+        <p className="m-0 text-white/68 text-[15px] leading-relaxed mb-6 w-full mx-auto">
           Contact our summit partnership desks directly to receive the standard brochure, customisable booth floorplans, and speaking slot availability.
         </p>
         <div className="flex justify-center gap-4 max-sm:flex-col">

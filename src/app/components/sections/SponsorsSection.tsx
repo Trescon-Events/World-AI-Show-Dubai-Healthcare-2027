@@ -59,19 +59,19 @@ const governmentLogos = [
 export function SponsorsSection() {
   return (
     <section className="relative py-[100px] pb-0 bg-[#030b19] overflow-hidden max-sm:py-[72px] max-sm:pb-0" id="partners">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
         {/* S9 · Sponsor value & commercial architecture */}
         <div className="text-center mb-3">
           <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold">
             Commercial Partnerships
           </span>
         </div>
-        <h2 className="text-center font-[850] text-white leading-[1.06] tracking-[-2px] text-[clamp(34px,4.4vw,54px)] max-w-[960px] mx-auto">
+        <h2 className="text-center font-[850] text-white leading-[1.06] tracking-[-2px] text-[clamp(34px,4.4vw,54px)] w-full mx-auto">
           Where Middle East hospital leaders specify, validate, and{" "}
           <GradientText>procure production AI</GradientText>
         </h2>
 
-        <p className="mt-6 max-w-[880px] mx-auto text-center text-muted text-[18px] leading-[1.6] max-sm:text-[16px]">
+        <p className="mt-6 w-full mx-auto text-center text-muted text-[18px] leading-[1.6] max-sm:text-[16px]">
           Middle East healthcare networks are finalising their 2027 technology procurement decisions now. Partnerships are structured around 20-minute plenary keynotes, exclusive 75-minute workshop clinics, standardised 6 sqm, 9 sqm, and 12 sqm concourse booths, and private 15-buyer CXO closed-door boardrooms.
         </p>
 
@@ -136,8 +136,8 @@ export function SponsorsSection() {
 
       {/* Governments and Associations Who Have Worked With Us In The Past (4x4 Grid from worldaishow.com) */}
       <div className="mt-20 py-16 bg-white text-center">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
-          <h3 className="m-0 mb-10 text-[#151923] font-[850] text-[clamp(22px,2.8vw,32px)] leading-[1.2] tracking-[-0.5px] uppercase max-w-[820px] mx-auto">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
+          <h3 className="m-0 mb-10 text-[#151923] font-[850] text-[clamp(22px,2.8vw,32px)] leading-[1.2] tracking-[-0.5px] uppercase w-full mx-auto">
             Governments and Associations Who Have Worked With Us In The Past
           </h3>
 

@@ -51,7 +51,7 @@ const channels: ChannelItem[] = [
 export function NetworkingChannels() {
   return (
     <section className="relative py-[92px] bg-[#020b1c]" id="channels">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         
         {/* Title */}
         <div className="text-center mb-16">

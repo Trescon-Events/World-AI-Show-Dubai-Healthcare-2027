@@ -46,11 +46,11 @@ const partnerLogos = [
 export function PartnerMarquee() {
   return (
     <section className="relative py-[92px] pb-0 bg-[#030b19] overflow-hidden max-sm:py-[62px]" id="exhibitors">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)] text-center mb-14">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)] text-center mb-14">
         <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(36px,4.5vw,52px)]">
           The ecosystem, <GradientText>in motion.</GradientText>
         </h2>
-        <p className="max-w-[620px] mx-auto mt-4 text-white/58 text-[16px] leading-relaxed">
+        <p className="w-full mx-auto mt-4 text-white/58 text-[16px] leading-relaxed">
           Hover over any row to pause the scrolling and inspect our confirmed summit sponsors and associate organizations.
         </p>
       </div>

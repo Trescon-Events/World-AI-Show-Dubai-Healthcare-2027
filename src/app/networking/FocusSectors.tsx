@@ -39,7 +39,7 @@ export function FocusSectors() {
 
   return (
     <section className="relative py-[104px] bg-[#020C21] overflow-hidden max-sm:py-[72px]" id="focus-sectors">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         
         {/* Industry Focus and Meet grid */}
         <div className="grid grid-cols-[0.72fr_1fr] gap-9 items-center max-[980px]:grid-cols-1 max-[980px]:gap-12">

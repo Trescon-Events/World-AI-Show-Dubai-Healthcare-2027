@@ -401,7 +401,7 @@ function TelemetryCard({ card, cardIndex }: { card: TelemetryCardData; cardIndex
 export function EcosystemSectionDemo() {
   return (
     <section
-      className="relative w-full px-20 pt-10 pb-20 bg-[#020b1c] overflow-hidden flex flex-col items-center max-lg:px-6 max-sm:px-4 max-sm:py-12"
+      className="relative w-full pt-10 pb-20 bg-[#020b1c] overflow-hidden flex flex-col items-center max-sm:py-12"
       id="ecosystem"
     >
       <style>{`
@@ -461,7 +461,7 @@ export function EcosystemSectionDemo() {
       />
 
       {/* ───── S3 · The argument — page centre of gravity ───── */}
-      <div className="relative z-10 w-full max-w-[1140px] mx-auto flex flex-col items-center text-center">
+      <div className="relative z-10 w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-24px,1172px)] mx-auto flex flex-col items-center text-center">
         <span
           data-aos="fade-up"
           className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold mb-3"
@@ -471,7 +471,7 @@ export function EcosystemSectionDemo() {
 
         <h2
           data-aos="fade-up"
-          className="max-w-[980px] text-center font-[850] text-white leading-[1.06] tracking-[-1.8px] text-[clamp(32px,4.4vw,52px)] mb-5"
+          className="w-full text-center font-[850] text-white leading-[1.06] tracking-[-1.8px] text-[clamp(32px,4.4vw,52px)] mb-5"
         >
           Moving clinical AI from isolated experimental trials into{" "}
           <GradientText>governed, reimbursable clinical practice.</GradientText>
@@ -480,7 +480,7 @@ export function EcosystemSectionDemo() {
         <p
           data-aos="fade-up"
           data-aos-delay="80"
-          className="max-w-[920px] text-white font-semibold text-[19px] leading-[1.6] mb-4 max-sm:text-[16.5px]"
+          className="w-full text-white font-semibold text-[19px] leading-[1.6] mb-4 max-sm:text-[16.5px]"
         >
           Healthcare providers cannot afford unvalidated AI experiments where patient safety, clinical liability, and sensitive data sovereignty are on the line. World AI Show convenes hospital operators, health authorities, and life-sciences leaders around clinical evidence and live workflow integration.
         </p>
@@ -488,7 +488,7 @@ export function EcosystemSectionDemo() {
         <p
           data-aos="fade-up"
           data-aos-delay="120"
-          className="max-w-[920px] text-white/75 text-[17px] leading-[1.65] mb-14 max-sm:text-[15.5px]"
+          className="w-full text-white/75 text-[17px] leading-[1.65] mb-14 max-sm:text-[15.5px]"
         >
           Middle East healthcare systems across MOHAP, DHA, and DoH jurisdictions are executing ambitious digital modernisation mandates. However, clinical leaders and hospital operators face a profound implementation divide: while algorithms demonstrate high diagnostic accuracy in academic trials, embedding them safely into live Electronic Medical Record (EMR) systems, diagnostic workflows, and sovereign patient data environments requires unprecedented clinical governance and software interoperability.
         </p>
@@ -536,7 +536,7 @@ export function EcosystemSectionDemo() {
           </span>
           <h3
             data-aos="fade-up"
-            className="text-center font-[850] text-white leading-[1.08] tracking-[-1.6px] text-[clamp(28px,3.8vw,44px)] max-w-[880px] mx-auto mb-10"
+            className="text-center font-[850] text-white leading-[1.08] tracking-[-1.6px] text-[clamp(28px,3.8vw,44px)] w-full mx-auto mb-10"
           >
             Clinical execution over{" "}
             <GradientText>medical equipment exhibitions</GradientText>

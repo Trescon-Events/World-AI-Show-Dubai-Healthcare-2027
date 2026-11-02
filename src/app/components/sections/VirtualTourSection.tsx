@@ -11,16 +11,16 @@ export function VirtualTourSection() {
 
   return (
     <section className="relative py-20 pb-28 bg-[#020b1c] min-h-screen">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)] flex flex-col items-center">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)] flex flex-col items-center">
         
         <div className="text-center mb-10">
           <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
             Interactive Experience
           </span>
-          <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(36px,4.5vw,54px)] max-w-[800px] mx-auto mb-4">
+          <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(36px,4.5vw,54px)] w-full mx-auto mb-4">
             Virtual <GradientText>Tour</GradientText>
           </h2>
-          <p className="max-w-[620px] mx-auto text-white/60 text-[16px] leading-relaxed">
+          <p className="w-full mx-auto text-white/60 text-[16px] leading-relaxed">
             Immerse yourself in the world-class venue of World AI Show | Healthcare and Life Sciences | Dubai 2027. Explore our healthcare technology demonstration concourse and main plenary halls in fully interactive 360 degrees.
           </p>
         </div>

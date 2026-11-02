@@ -9,7 +9,7 @@ export function NetworkingHero() {
         backgroundImage: 'linear-gradient(90deg, rgba(1,7,18,0.98) 0%, rgba(2,9,25,0.8) 47%, rgba(2,9,25,0.4) 100%), url("/dubai/healthcare/images/networking/networking-hero-bg.webp")'
       }}
     >
-      <div className="relative z-10 w-[min(1114px,calc(100%-48px))] mx-auto">
+      <div className="relative z-10 w-[min(1172px,calc(100%-48px))] mx-auto">
         <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
           High-Value Networking
         </span>
@@ -17,7 +17,7 @@ export function NetworkingHero() {
           Where Middle East <br />
           <GradientText>healthcare AI leaders connect.</GradientText>
         </h1>
-        <p className="max-w-[700px] mt-6 mb-0 text-white/74 text-[20px] leading-relaxed max-sm:text-base">
+        <p className="w-full mt-6 mb-0 text-white/74 text-[20px] leading-relaxed max-sm:text-base">
           A dedicated networking environment in Dubai designed to foster institutional partnerships. Connect with health authorities, hospital CXOs, CMOs, CIOs, clinical informatics leads, and HealthTech architects without spectators.
         </p>
       </div>

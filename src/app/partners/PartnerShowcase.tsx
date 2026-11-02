@@ -47,7 +47,7 @@ export function PartnerShowcase() {
       <div className="absolute top-1/4 left-0 w-[400px] h-[400px] rounded-full bg-cyan/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] rounded-full bg-purple-500/5 blur-[120px] pointer-events-none" />
 
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         {/* ── PART 2: TIER-GROUPED ARCHITECTURE (Section 10) ─────────── */}
         <div className="mb-20">
           <div className="text-center mb-10">
@@ -95,7 +95,7 @@ export function PartnerShowcase() {
               <GradientText>qualified hospital procurement committees.</GradientText>
             </h3>
 
-            <p className="m-0 text-white/70 text-[16px] leading-relaxed max-w-[680px] font-sans">
+            <p className="m-0 text-white/70 text-[16px] leading-relaxed w-full font-sans">
               Secure your commercial partnership today.
             </p>
 

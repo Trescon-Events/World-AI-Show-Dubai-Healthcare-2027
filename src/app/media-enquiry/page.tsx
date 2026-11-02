@@ -16,7 +16,7 @@ export default function MediaEnquiryPage() {
 
       {/* Main Content Area */}
       <section className="relative z-10 py-[140px] pt-[200px] max-sm:py-[100px] max-sm:pt-[130px]">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
           
           {/* Back button */}
           <div className="mb-8">
@@ -30,7 +30,7 @@ export default function MediaEnquiryPage() {
 
           {/* Premium Glass Form Card */}
           <div
-            className="relative w-full max-w-[900px] mx-auto p-12 max-sm:p-6 rounded-[32px] backdrop-blur-[24px] overflow-hidden"
+            className="relative w-full w-full mx-auto p-12 max-sm:p-6 rounded-[32px] backdrop-blur-[24px] overflow-hidden"
             style={{
               background: "linear-gradient(125.2deg, rgba(0, 206, 255, 0.064) 0%, rgba(192, 244, 60, 0.012) 100%), rgba(4, 14, 33, 0.85)",
               boxShadow: "0 0 40px 0 rgba(192, 244, 60, 0.18), 0 0 0 1px rgba(192, 244, 60, 0.40), 0 24px 64px 0 rgba(0, 0, 0, 0.5)"

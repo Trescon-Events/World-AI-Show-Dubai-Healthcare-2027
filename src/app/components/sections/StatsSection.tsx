@@ -240,7 +240,7 @@ function StatCard({ stat, index }: { stat: (typeof statsData)[0]; index: number 
 export function StatsSection() {
   return (
     <section className="relative pt-[68px] pb-[32px] -mt-[30px] z-10 bg-[#020b1c] overflow-hidden max-sm:py-[48px] max-sm:mt-0" id="attend">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
         {/* Title Heading */}
         <h2
           data-aos="fade-up"

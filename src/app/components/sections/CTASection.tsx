@@ -7,7 +7,7 @@ export function CTASection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[radial-gradient(circle,rgba(192,244,60,0.06),transparent_70%)] pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[450px] bg-[radial-gradient(circle,rgba(24,212,255,0.03),transparent_70%)] pointer-events-none" />
 
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)] space-y-8">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)] space-y-8">
         {/* S11 · Twin closing CTA bands */}
         <div className="grid grid-cols-2 gap-6 max-[980px]:grid-cols-1">
           {/* Band 1: Delegate Pass */}
@@ -83,7 +83,7 @@ export function CTASection() {
               Faculty
             </div>
 
-            <h2 className="m-0 font-[850] text-white leading-[1.08] tracking-[-1.5px] text-[clamp(28px,3.8vw,44px)] max-w-[780px]">
+            <h2 className="m-0 font-[850] text-white leading-[1.08] tracking-[-1.5px] text-[clamp(28px,3.8vw,44px)] w-full">
               If you have deployed AI into hospital or clinical production, <span className="text-[#18d4ff]">we want you</span>{" "}
               <span className="text-[#C0F43C]">on stage</span>
             </h2>

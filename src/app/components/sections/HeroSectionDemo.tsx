@@ -213,7 +213,7 @@ export function HeroSectionDemo() {
           Where Malaysia&apos;s <GradientText>AI Decisions</GradientText> Get Made.
         </h1>
 
-        <div className="w-full max-w-[900px] border-t border-white/20 opacity-60"></div>
+        <div className="w-full w-full border-t border-white/20 opacity-60"></div>
 
         {/* Event Meta Footer */}
         <div className="grid grid-cols-[max-content_max-content] justify-center items-center gap-6 w-full max-w-[650px] mx-auto mt-8 text-center max-[980px]:grid-cols-1 max-sm:gap-3 max-sm:mt-6">

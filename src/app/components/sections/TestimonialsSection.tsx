@@ -89,7 +89,7 @@ export function TestimonialsSection() {
         className="pointer-events-none absolute bottom-10 right-10 w-[420px] h-[300px] rounded-full bg-[#C0F43C]/[0.04] blur-[120px]"
       />
 
-      <div className="relative z-10 w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="relative z-10 w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
         {/* Heading + Carousel Controls */}
         <div className="flex items-end justify-between gap-6 mb-10 max-[980px]:flex-col max-[980px]:items-center max-[980px]:text-center">
           <div>

@@ -6,7 +6,7 @@ export function AttendFaq({ faqs }: { faqs: string[] }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="max-w-[976px] mx-auto mt-12 p-6 border border-white/8 rounded-[24px] bg-[#040a19]/50">
+    <div className="w-full mx-auto mt-12 p-6 border border-white/8 rounded-[24px] bg-[#040a19]/50">
       {faqs.map((faq, index) => {
         const isOpen = openIndex === index;
         return (
@@ -40,7 +40,7 @@ export function AttendFaq({ faqs }: { faqs: string[] }) {
               id={`attend-faq-${index}`}
             >
               <div className="overflow-hidden">
-                <p className="max-w-[740px] ml-[68px] mr-6 pb-4 text-[#aeb5c5] text-[15px] leading-relaxed max-sm:ml-[44px]">
+                <p className="w-full ml-[68px] mr-6 pb-4 text-[#aeb5c5] text-[15px] leading-relaxed max-sm:ml-[44px]">
                   World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE) is built for senior hospital, clinical informatics, genomics, payer, and regulatory decision-makers. Registration, sponsorship, and master schedule details are managed by the official Trescon team.
                 </p>
               </div>

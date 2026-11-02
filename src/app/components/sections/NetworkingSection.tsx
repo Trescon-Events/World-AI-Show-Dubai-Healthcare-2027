@@ -90,10 +90,10 @@ function ThrivingEnvironmentShowcase() {
 
   return (
     <div className="mt-24 pt-16 border-t border-white/10">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto text-center mb-12 max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto text-center mb-12 max-sm:w-[min(100%-24px,1172px)]">
         <h3
           data-aos="fade-up"
-          className="m-0 text-white font-[850] text-[clamp(30px,4.4vw,54px)] leading-[1.04] tracking-[-1.8px] max-w-[820px] mx-auto"
+          className="m-0 text-white font-[850] text-[clamp(30px,4.4vw,54px)] leading-[1.04] tracking-[-1.8px] w-full mx-auto"
         >
           Designed for <GradientText>Maximum Clinical &amp; Executive Engagement</GradientText>
         </h3>
@@ -180,10 +180,10 @@ export function NetworkingSection() {
 
   return (
     <section className="relative py-[104px] bg-[#020C21] overflow-x-clip max-sm:py-[72px]" id="networking">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
         {/* S7 · Who is in the room */}
         <div className="flex flex-col items-center text-center">
-          <div className="max-w-[920px] mb-12">
+          <div className="w-full mb-12">
             <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold mb-3">
               Who Is in the Room
             </span>
@@ -227,7 +227,7 @@ export function NetworkingSection() {
       {/* Dedicated Full-Bleed Sticky Scroll Section */}
       <ThrivingEnvironmentShowcase />
 
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
         {/* S8 · How to attend — two-door model */}
         <div className="mt-24 pt-16 border-t border-white/10">
           <div className="text-center mb-10">

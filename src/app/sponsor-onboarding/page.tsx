@@ -15,10 +15,10 @@ export default function SponsorOnboardingPage() {
 
       {/* Main Content Area */}
       <section className="relative z-10 py-[140px] pt-[150px] max-sm:py-[100px] max-sm:pt-[110px]">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
           {/* Premium Glass Form Card */}
           <div
-            className="relative w-full max-w-[900px] mx-auto p-12 max-sm:p-6 rounded-[32px] backdrop-blur-[24px] overflow-hidden"
+            className="relative w-full w-full mx-auto p-12 max-sm:p-6 rounded-[32px] backdrop-blur-[24px] overflow-hidden"
             style={{
               background:
                 "linear-gradient(125.2deg, rgba(0, 206, 255, 0.064) 0%, rgba(192, 244, 60, 0.012) 100%), rgba(4, 14, 33, 0.85)",

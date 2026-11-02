@@ -150,7 +150,7 @@ export function AgendaSection({
       className="relative py-[104px] bg-gradient-to-b from-[#020a18]/96 to-[#051224]/70 max-sm:py-[72px]"
       id="agenda"
     >
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
         {/* Headings */}
         {subtitle && (
           <div className="text-center mb-3">
@@ -169,7 +169,7 @@ export function AgendaSection({
           <p
             data-aos="fade-up"
             data-aos-delay="100"
-            className="max-w-[920px] mx-auto -mt-6 text-center text-muted text-[18px] leading-[1.55] mb-[44px]"
+            className="w-full mx-auto -mt-6 text-center text-muted text-[18px] leading-[1.55] mb-[44px]"
           >
             {description}
           </p>
@@ -275,7 +275,7 @@ export function AgendaSection({
               <span className="inline-block px-4 py-1.5 rounded-full border border-[#18D4FF]/35 bg-[#18D4FF]/10 text-[#18D4FF] font-mono text-[11.5px] uppercase tracking-[2px] font-bold mb-4">
                 Trescon Six-Part Block Methodology
               </span>
-              <h3 className="text-center font-[850] text-white leading-[1.08] tracking-[-1.6px] text-[clamp(30px,4vw,46px)] max-w-[920px] mx-auto">
+              <h3 className="text-center font-[850] text-white leading-[1.08] tracking-[-1.6px] text-[clamp(30px,4vw,46px)] w-full mx-auto">
                 Engineered to drive healthcare buyers from boardroom priorities down to{" "}
                 <GradientText>concrete procurement.</GradientText>
               </h3>

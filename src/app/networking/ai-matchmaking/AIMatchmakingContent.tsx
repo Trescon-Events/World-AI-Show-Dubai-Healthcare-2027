@@ -34,7 +34,7 @@ export function AIMatchmakingContent() {
         <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] rounded-full bg-[#00ceff]/8 blur-[110px] pointer-events-none z-0"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[#C0F43C]/4 blur-[130px] pointer-events-none z-0"></div>
 
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10 text-left flex flex-col items-start">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10 text-left flex flex-col items-start">
           <div className="max-w-[620px] w-full">
             <span className="text-[#18d4ff] font-mono text-[12px] uppercase tracking-[3px] font-bold block mb-3">
               AI-Powered Matchmaking
@@ -75,10 +75,10 @@ export function AIMatchmakingContent() {
 
       {/* Right People. Real Connections. Section */}
       <section className="relative py-24 bg-[#020814]">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
           
           {/* Section Header */}
-          <div className="text-center mb-16 max-w-[760px] mx-auto">
+          <div className="text-center mb-16 w-full mx-auto">
             <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#18d4ff]/10 text-[#18d4ff] border border-[#18d4ff]/20 mb-5 inline-block">
               AI Powered Platform · KonfHub
             </span>

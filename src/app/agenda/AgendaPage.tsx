@@ -778,7 +778,7 @@ export function AgendaCallForSpeakers() {
           <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold mb-3">
             Call for Clinical &amp; Operational Healthcare Faculty
           </span>
-          <h1 className="text-white font-[850] tracking-[-2px] leading-[1.06] text-[clamp(40px,5.6vw,68px)] max-w-[900px]">
+          <h1 className="text-white font-[850] tracking-[-2px] leading-[1.06] text-[clamp(40px,5.6vw,68px)] w-full">
             If you have deployed AI into live hospital workflows,{" "}
             <GradientText>we want you on stage</GradientText>
           </h1>

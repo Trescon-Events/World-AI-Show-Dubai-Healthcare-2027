@@ -6,7 +6,7 @@ export function FooterSection() {
       {/* Visual top glow accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[1px] bg-[radial-gradient(circle,rgba(18,205,255,0.24),transparent_70%)] pointer-events-none" />
 
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
         
         {/* Footer Top Column Grid */}
         <div className="grid grid-cols-[1.65fr_0.7fr_0.78fr_0.7fr] gap-[72px] pb-[48px] border-b border-white/20 max-[980px]:grid-cols-1 max-[980px]:gap-[42px]">

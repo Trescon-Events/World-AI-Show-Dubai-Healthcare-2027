@@ -26,7 +26,7 @@ export function SpeakersCTASection() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="relative z-10 w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-7 items-stretch">
           {/* ── Card 1: Delegate Pass (Lime Accent Glass Card) ── */}
           <article className="group relative p-10 max-sm:p-7 rounded-[28px] border border-[#C0F43C]/35 bg-gradient-to-br from-[#0a1e2e]/90 via-[#051122]/95 to-[#030915]/98 backdrop-blur-xl shadow-[0_24px_64px_rgba(0,0,0,0.5),0_0_32px_rgba(192,244,60,0.08),inset_0_1px_0_rgba(255,255,255,0.12)] hover:border-[#C0F43C]/65 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">

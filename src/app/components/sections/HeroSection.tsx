@@ -32,7 +32,7 @@ export function HeroSection() {
       />
 
       {/* Hero Content */}
-      <div className="container relative z-10 mx-auto px-6 pt-[220px] lg:pt-[240px] pb-16 max-sm:pt-[175px] max-sm:pb-12 max-sm:px-4 flex flex-col items-center">
+      <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-24px,1172px)] relative z-10 mx-auto pt-[220px] lg:pt-[240px] pb-16 max-sm:pt-[175px] max-sm:pb-12 flex flex-col items-center">
         {/* Kicker */}
         <span
           data-aos="fade-down"
@@ -55,7 +55,7 @@ export function HeroSection() {
         <h1
           data-aos="fade-up"
           data-aos-delay="100"
-          className="max-w-[1060px] mx-auto text-white font-[850] leading-[1.08] xl:leading-[70px] tracking-[-1.8px] text-[clamp(32px,4.6vw,64px)] xl:text-[64px] text-center mb-3"
+          className="w-full mx-auto text-white font-[850] leading-[1.08] xl:leading-[70px] tracking-[-1.8px] text-[clamp(32px,4.6vw,64px)] xl:text-[64px] text-center mb-3"
         >
           <span className="block">Deployable, governed, and evidence-backed AI for</span>
           <span className="block"><GradientText>clinical care and health operations.</GradientText></span>
@@ -74,18 +74,18 @@ export function HeroSection() {
         <p
           data-aos="fade-up"
           data-aos-delay="200"
-          className="max-w-[900px] mx-auto text-[#CBD5E1] text-[clamp(15px,1.55vw,18.5px)] xl:text-[18.5px] font-normal leading-relaxed xl:leading-[30px] tracking-normal text-center mb-8"
+          className="w-full mx-auto text-[#CBD5E1] text-[clamp(15px,1.55vw,18.5px)] xl:text-[18.5px] font-normal leading-relaxed xl:leading-[30px] tracking-normal text-center mb-8"
         >
           The premier buyer-led executive decision forum connecting clinical leadership, hospital operations, and life-sciences innovation through deployable, governed, and evidence-backed artificial intelligence. Convenes 300+ hospital group CXOs, Chief Medical Officers, healthcare CIOs, and regulators actively locking down clinical copilots, diagnostic triage, EMR integration, and 2027 healthtech procurement.
         </p>
 
-        <div data-aos="fade-in" data-aos-delay="250" className="w-full max-w-[780px] border-t border-white/20 opacity-60 mt-1" />
+        <div data-aos="fade-in" data-aos-delay="250" className="w-full border-t border-white/20 opacity-60 mt-1" />
 
         {/* Event Meta Footer */}
         <div
           data-aos="fade-up"
           data-aos-delay="300"
-          className="grid grid-cols-[max-content_max-content_max-content] justify-center items-center gap-6 w-full max-w-[860px] mx-auto mt-7 text-center max-[980px]:grid-cols-1 max-sm:gap-3 max-sm:mt-5"
+          className="grid grid-cols-[max-content_max-content_max-content] justify-center items-center gap-6 w-full mx-auto mt-7 text-center max-[980px]:grid-cols-1 max-sm:gap-3 max-sm:mt-5"
         >
           {/* Column 1: Dates */}
           <div className="pr-6 border-r border-white/27 text-center max-[980px]:border-r-0 max-[980px]:pr-0 max-sm:w-full max-sm:pb-3 max-sm:border-b max-sm:border-white/20">

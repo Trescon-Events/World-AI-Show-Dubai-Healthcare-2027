@@ -10,7 +10,7 @@ const heritageStats = [
 export function OrganizerSection() {
   return (
     <section className="relative py-[104px] pt-[80px] bg-[#020713] overflow-hidden" id="organizer">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)] space-y-12">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)] space-y-12">
         {/* S10 · Credibility & series heritage */}
         <div
           data-aos="zoom-in-up"

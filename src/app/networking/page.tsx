@@ -99,8 +99,8 @@ export default function NetworkingPage() {
           backgroundImage: `linear-gradient(90deg, rgba(2, 7, 19, 0.96) 0%, rgba(2, 7, 19, 0.8) 45%, rgba(2, 7, 19, 0.25) 100%), url('/dubai/healthcare/images/networking/networking-hero-bg.webp')`
         }}
       >
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto relative z-10">
-          <div className="max-w-[640px] w-full">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10">
+          <div className="w-full w-full">
             <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
               Networking Suite &amp; Concierge · Dubai 2027
             </span>
@@ -134,7 +134,7 @@ export default function NetworkingPage() {
 
       {/* Stats Row */}
       <section className="relative py-12 border-y border-white/5 bg-[#020814]">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
           <div className="grid grid-cols-3 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1 text-center divide-x divide-white/10">
             <div className="flex flex-col">
               <span className="text-[40px] font-[900] text-[#C0F43C] tracking-tight">
@@ -158,10 +158,10 @@ export default function NetworkingPage() {
 
       {/* ── Section 2: Ways to Connect ── */}
       <section className="relative py-24 bg-[#030b19]">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
 
           {/* Header */}
-          <div className="text-center mb-16 max-w-[760px] mx-auto">
+          <div className="text-center mb-16 w-full mx-auto">
             <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#18d4ff]/10 text-[#18d4ff] border border-[#18d4ff]/20 mb-5 inline-block">
               Section 12 · Networking Suite &amp; Attendee App
             </span>
@@ -214,7 +214,7 @@ export default function NetworkingPage() {
 
       {/* ── Section 3: 300 Qualified CXOs. One Room. ── */}
       <section className="relative py-24 bg-[#020814]">
-        <div className="w-[min(1114px,calc(100%-48px))] mx-auto">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
 
           <div className="grid grid-cols-[1.1fr_0.9fr] gap-12 max-[980px]:grid-cols-1 max-[980px]:gap-12">
 
@@ -295,7 +295,7 @@ export default function NetworkingPage() {
           <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(28px,3.5vw,38px)] m-0">
             Be in the room where <GradientText>regulated clinical AI gets decided.</GradientText>
           </h2>
-          <p className="m-0 mt-4 text-white/58 text-[15px] leading-relaxed max-w-[580px] mx-auto">
+          <p className="m-0 mt-4 text-white/58 text-[15px] leading-relaxed w-full mx-auto">
             Apply for a complimentary Delegate Pass (by invitation and qualification) or enquire about commercial sponsorship for World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE · 1-Day Executive Decision Forum).
           </p>
 

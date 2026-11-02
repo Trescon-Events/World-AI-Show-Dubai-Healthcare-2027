@@ -67,7 +67,7 @@ export function SpeakersList() {
 
   return (
     <section className="relative py-[92px] bg-[#020b1c] max-sm:py-[62px]" id="lineup">
-      <div className="w-[min(1114px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1114px)]">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
 
         {/* Clinical & Technical Faculty Pre-Announcement Banner (Section 09) */}
         <div className="mb-12 p-7 rounded-2xl border border-[#C0F43C]/35 bg-gradient-to-r from-[#C0F43C]/10 via-[#061428] to-[#18d4ff]/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">

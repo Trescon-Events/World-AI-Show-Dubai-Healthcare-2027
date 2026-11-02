@@ -357,7 +357,7 @@ export function AttendCTASection() {
           <span className="inline-flex items-center mb-[27px] px-[15px] py-2 border border-white/10 rounded-full text-white/72 text-[12px] tracking-[2px] uppercase select-none before:content-[''] before:w-[7px] before:h-[7px] before:mr-2.5 before:rounded-full before:bg-cyan font-mono">
             Dubai · 25 March 2027 · 1-Day Forum · 300+ Senior Healthcare Leaders
           </span>
-          <h2 className="max-w-[780px] mx-auto mb-8 text-[#f7f9ff] font-[850] leading-[1.08] tracking-[-1.8px] text-[clamp(36px,5vw,56px)] max-sm:text-[32px] max-sm:tracking-[-1px]">
+          <h2 className="w-full mx-auto mb-8 text-[#f7f9ff] font-[850] leading-[1.08] tracking-[-1.8px] text-[clamp(36px,5vw,56px)] max-sm:text-[32px] max-sm:tracking-[-1px]">
             Be in the room where <span className="bg-gradient-to-r from-[#C0F43C] to-[#18d4ff] bg-clip-text text-transparent">2027&apos;s clinical AI architecture</span> gets finalised.
           </h2>
 
@@ -426,7 +426,7 @@ export function AttendOverviewSection() {
         id="overview"
       >
         <div className="heroBackdrop absolute bottom-0 right-[-3%] w-[58%] h-[84%] opacity-0 pointer-events-none" />
-        <div className="relative z-10 max-w-[860px]">
+        <div className="relative z-10 w-full">
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.06] tracking-[-1.8px] text-[clamp(42px,5.4vw,68px)] max-sm:text-[36px]">
             Focusing on controlled AI deployment for <GradientText>regulated clinical &amp; life sciences operations.</GradientText>
           </h1>
@@ -469,7 +469,7 @@ export function AttendOverviewSection() {
       {/* Stats Section */}
       <section className="py-[86px] pt-[74px] bg-gradient-to-b from-[#020c21] to-[#031127] text-center max-sm:py-[62px]">
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
-          <h2 className="max-w-[820px] mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
+          <h2 className="w-full mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
             The <GradientText>Room Composition</GradientText>
           </h2>
           <AttendStats />
@@ -480,7 +480,7 @@ export function AttendOverviewSection() {
       <section className="py-[86px] bg-[#020c21] max-sm:py-[62px]" id="pass-matrix">
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="max-w-[820px] mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(36px,4.6vw,54px)]">
+            <h2 className="w-full mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(36px,4.6vw,54px)]">
               How You Can be <GradientText>Part of This Event</GradientText>
             </h2>
           </div>
@@ -539,7 +539,7 @@ export function AttendOverviewSection() {
       {/* Value Section */}
       <section className="py-[86px] bg-gradient-to-b from-[#031127] to-[#020b1c] text-center max-sm:py-[62px]">
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
-          <h3 className="max-w-[820px] mx-auto mt-0 mb-10 text-white font-[850] leading-[1.08] tracking-[-1.5px] text-[clamp(32px,4vw,46px)] max-sm:text-[30px]">
+          <h3 className="w-full mx-auto mt-0 mb-10 text-white font-[850] leading-[1.08] tracking-[-1.5px] text-[clamp(32px,4vw,46px)] max-sm:text-[30px]">
             Why Healthcare Leaders Convene in <GradientText>Dubai, UAE</GradientText>
           </h3>
           <div className="grid grid-cols-3 gap-4 mb-9 max-[980px]:grid-cols-[repeat(3,310px)] max-sm:grid-cols-1">
@@ -565,11 +565,11 @@ export function AttendDelegateSection() {
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
 
-        <div className="relative z-10 max-w-[840px]">
+        <div className="relative z-10 w-full">
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(42px,5.4vw,66px)] max-sm:text-[36px]">
             Built for Pre-Qualified <GradientText>Healthcare &amp; Life Sciences CXOs.</GradientText>
           </h1>
-          <p className="max-w-[740px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
+          <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
             Complimentary Delegate Passes are reserved for senior hospital, clinical, and life sciences leaders, including Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, and Health Authorities attending by invitation and subject to qualification against an active clinical or IT deployment mandate.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
@@ -623,11 +623,11 @@ export function AttendSponsorSection() {
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
 
-        <div className="relative z-10 max-w-[840px]">
+        <div className="relative z-10 w-full">
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(42px,5.4vw,66px)] max-sm:text-[36px]">
             Where Middle East healthcare leaders specify, procure, and <GradientText>deploy clinical AI.</GradientText>
           </h1>
-          <p className="max-w-[760px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
+          <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
             Explore commercial partnerships structured around 20-minute plenary keynotes, 75-minute workshop clinics, standardised 6 sqm, 9 sqm, and 12 sqm concourse booths, and private buyer CXO closed-door boardrooms.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
@@ -690,11 +690,11 @@ export function AttendMediaSection() {
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
 
-        <div className="relative z-10 max-w-[820px]">
+        <div className="relative z-10 w-full">
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
             Cover the Premier <GradientText>Middle East Healthcare AI Forum</GradientText>
           </h1>
-          <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
+          <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
             Secure accredited press credentials, dedicated broadcast suite access, and 1-on-1 briefings with hospital group CXOs, Chief Medical Officers, and regulators setting the Middle East&apos;s 2027 clinical AI agenda.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
@@ -741,11 +741,11 @@ export function AttendAssociationSection() {
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
 
-        <div className="relative z-10 max-w-[820px]">
+        <div className="relative z-10 w-full">
           <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
             Institutional <GradientText>Partnership Application</GradientText>
           </h1>
-          <p className="max-w-[710px] mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
+          <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
             Collaborate with regional medical associations, hospital federations, clinical informatics societies, and life sciences councils to steer national clinical AI adoption, foster bilateral delegations, and champion audited patient-safe innovation across the Middle East.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
