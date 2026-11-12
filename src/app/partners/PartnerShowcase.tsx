@@ -85,11 +85,6 @@ export function PartnerShowcase() {
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#c0f43c]/20 to-transparent pointer-events-none" />
 
           <div className="relative z-10 flex flex-col items-center gap-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-white/10 rounded-full text-[11px] font-mono font-extrabold uppercase tracking-widest text-[#00ceff] bg-white/5">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#00ceff] animate-pulse" />
-              4 Sector Content Pillars · 20-Min Keynotes · 75-Min Clinics · 6, 9 &amp; 12 sqm Booths
-            </div>
-
             <h3 className="m-0 font-space-grotesk text-white font-[850] text-[clamp(28px,3.5vw,42px)] leading-tight tracking-tight">
               Put your clinical solution directly before <br />
               <GradientText>qualified hospital procurement committees.</GradientText>
@@ -105,12 +100,6 @@ export function PartnerShowcase() {
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[14px] font-extrabold text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
                 Enquire About Sponsorship <span className="font-mono">→</span>
-              </a>
-              <a
-                href="/dubai/healthcare/attend/sponsor/"
-                className="inline-flex items-center justify-center px-7 py-3.5 border border-white/20 rounded-full text-[14px] font-extrabold text-white bg-white/5 hover:bg-white/10 hover:border-white/35 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
-              >
-                View Commercial Standards
               </a>
             </div>
           </div>

@@ -90,16 +90,13 @@ export function OrganizerSection() {
 
         {/* S11 · Twin Closing CTA Bands */}
         <div className="grid grid-cols-2 gap-6 max-[980px]:grid-cols-1">
-          {/* Band 1: Delegate Pass */}
+          {/* Band 1: Business Pass */}
           <div
             data-aos="fade-right"
             data-aos-delay="100"
             className="flex flex-col justify-between p-8 rounded-[24px] border border-white/15 bg-gradient-to-br from-[#06182e] via-[#041022] to-[#030917] shadow-[0_20px_50px_rgba(0,0,0,0.45)]"
           >
             <div>
-              <span className="inline-block font-mono text-[11px] uppercase tracking-[1.6px] text-[#C0F43C] mb-3">
-                Dubai · 25 March 2027 · 300+ Senior Healthcare Leaders · Minimum 70% Buy-Side Ratio
-              </span>
               <h3 className="m-0 mb-6 text-white font-[850] text-[clamp(24px,2.8vw,32px)] leading-[1.15] tracking-[-0.8px]">
                 Be in the room where 2027 healthcare AI architecture and clinical adoption get finalised
               </h3>
@@ -109,7 +106,7 @@ export function OrganizerSection() {
                 href="/dubai/healthcare/attend/delegate/"
                 className="inline-flex items-center justify-center gap-2 h-[50px] px-7 rounded-full font-extrabold text-[15px] text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.4)] transition-all duration-200"
               >
-                Apply for a Delegate Pass →
+                Apply for a Business Pass →
               </a>
             </div>
           </div>
@@ -121,9 +118,6 @@ export function OrganizerSection() {
             className="flex flex-col justify-between p-8 rounded-[24px] border border-white/15 bg-gradient-to-br from-[#06182e] via-[#041022] to-[#030917] shadow-[0_20px_50px_rgba(0,0,0,0.45)]"
           >
             <div>
-              <span className="inline-block font-mono text-[11px] uppercase tracking-[1.6px] text-[#18D4FF] mb-3">
-                4 Sector Content Pillars · Curated Tech Showcase · Closed-Door CXO Boardrooms
-              </span>
               <h3 className="m-0 mb-6 text-white font-[850] text-[clamp(24px,2.8vw,32px)] leading-[1.15] tracking-[-0.8px]">
                 Put your enterprise solution directly before qualified hospital procurement committees
               </h3>

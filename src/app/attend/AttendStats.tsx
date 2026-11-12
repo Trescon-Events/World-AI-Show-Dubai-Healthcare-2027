@@ -52,7 +52,7 @@ function Counter({ end, prefix = "", suffix = "", duration = 1500 }: { end: numb
 
 const statsData = [
   { number: 300, prefix: "", suffix: "+", label: "Pre-Qualified Healthcare CXOs" },
-  { number: 70, prefix: "", suffix: "%+", label: "Buy-Side Institutional Ratio" },
+  { number: 80, prefix: "", suffix: "%+", label: "Buy-Side Institutional Ratio" },
   { number: 45, prefix: "35–", suffix: "", label: "Expert Clinical & Technical Speakers" },
   { number: 4, prefix: "", suffix: "", label: "Core Sector Content Pillars" },
   { number: 48, prefix: "", suffix: "", label: "Global Series Editions" },

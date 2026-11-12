@@ -8,7 +8,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Attend | World AI Show | Healthcare and Life Sciences | Dubai 2027",
   description:
-    "How to attend World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE). Explore the Delegate Pass (complimentary, strictly by invitation and qualification), Business Pass, and Commercial Sponsorship packages.",
+    "How to attend World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE). Explore Business Passes and Commercial Sponsorship packages.",
 };
 
 const subNav = ["Overview", "Delegate", "Sponsor", "Media Partner", "Association Partner"];
@@ -21,18 +21,18 @@ type CardItem = {
 
 const valueCards: CardItem[] = [
   {
-    title: "Controlled AI Deployment for Clinical Operations",
-    text: "A 1-Day Executive Decision Forum for 300+ pre-qualified Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, and Health Authorities moving AI into bedside and operational production.",
+    title: "Governed Clinical AI Execution",
+    text: "Engineered for hospital operators and health authorities resolving EHR interoperability, patient safety, and clinical liability to deploy production-ready healthcare software safely across live patient environments.",
     icon: "/dubai/healthcare/images/Attend/enterprise-ai-in-action.svg",
   },
   {
-    title: "Five Governed Institutional Constituencies",
-    text: "Maintaining a minimum 70% buy-side institutional ratio across hospital systems, clinical informatics leadership, precision medicine & genomics institutes, health authorities & payers, and global HealthTech providers.",
+    title: "300+ Senior Healthcare Decision-Makers",
+    text: "Maintaining an audited 80%+ buy-side provider ratio across hospital networks, clinical leadership, health authorities, and research institutes with active capital procurement budgets for 2027.",
     icon: "/dubai/healthcare/images/Attend/region-ai-decision-makers.svg",
   },
   {
-    title: "Hands-On Use-Case Clinics & Clinical Evidence",
-    text: "Drive decision-makers through practical hospital post-mortems, closed-door breakout clinics, and roundtables to resolve EHR/HIS interoperability, establish clinical safety governance, and define actionable 2027 procurement roadmaps.",
+    title: "Practical Implementation Clinics",
+    text: "Interactive use-case breakout clinics and closed-door peer roundtables detailing real-world clinical integration architectures, pilot failure post-mortems, and actionable 2027 hospital procurement shortlists.",
     icon: "/dubai/healthcare/images/Attend/insights-drive-transformation.svg",
   },
 ];
@@ -49,7 +49,7 @@ const gatewayCards: CardItem[] = [
     icon: "/dubai/healthcare/images/Attend/gateway/high-value-networking.svg",
   },
   {
-    title: "Block 6 Outcome Roundtables",
+    title: "Outcome Roundtables",
     text: "Participate in structured peer-to-peer outcome roundtables capturing recorded hospital procurement criteria and 2027 clinical implementation roadmaps.",
     icon: "/dubai/healthcare/images/Attend/gateway/curated-roundtable-discussions.svg",
   },
@@ -112,8 +112,8 @@ const sponsorBenefits: CardItem[] = [
     icon: "/dubai/healthcare/images/Attend/partner/networking-access.webp",
   },
   {
-    title: "Minimum 70% Buy-Side Guarantee",
-    text: "Strict room governance ensuring at least 70% of the 300+ attendees represent buy-side hospital systems, genomics institutes, and regulators.",
+    title: "Minimum 80%+ Buy-Side Guarantee",
+    text: "Strict room governance ensuring 80%+ of the 300+ attendees represent buy-side hospital systems, genomics institutes, and regulators.",
     icon: "/dubai/healthcare/images/Attend/sponsor/exclusive-sponsorship-branding.webp",
   },
   {
@@ -173,8 +173,8 @@ const associationBenefits: CardItem[] = [
     icon: "/dubai/healthcare/images/Attend/partner/co-branding-opportunities.webp",
   },
   {
-    title: "Member Delegate Pass Pathway",
-    text: "Priority nomination pathway for senior member Hospital CEOs, CMOs, CIOs, Chief Digital Officers, and Heads of Clinical Informatics to apply for complimentary Delegate Passes.",
+    title: "Member Business Pass Pathway",
+    text: "Priority nomination pathway for senior member Hospital CEOs, CMOs, CIOs, Chief Digital Officers, and Heads of Clinical Informatics to register for a Business Pass.",
     icon: "/dubai/healthcare/images/Attend/partner/complimentary-delegate-passes.webp",
   },
   {
@@ -189,7 +189,7 @@ const associationBenefits: CardItem[] = [
   },
   {
     title: "Faculty & Roundtable Nominations",
-    text: "Nominate qualified clinical and health-tech practitioners with live hospital production evidence for plenary panels and Block 6 Outcome Roundtables.",
+    text: "Nominate qualified clinical and health-tech practitioners with live hospital production evidence for plenary panels and Outcome Roundtables.",
     icon: "/dubai/healthcare/images/Attend/partner/speaking-opportunities.webp",
   },
   {
@@ -324,9 +324,9 @@ export function SplitSection({
 
         <div className="grid grid-cols-[1fr_minmax(360px,47%)] items-center gap-[64px] max-[980px]:grid-cols-1 max-sm:gap-[34px]">
           <div className={`flex flex-col ${reverse ? "max-[980px]:order-none order-2" : "order-none"}`}>
-            <p className="m-0 mb-9 text-white/75 text-[18px] leading-[1.7] max-sm:text-base">
+            <div className="m-0 mb-9 text-white/75 text-[18px] leading-[1.7] max-sm:text-base">
               {text}
-            </p>
+            </div>
             <div className="flex">
               <ArrowButton href={buttonHref || `#${id}`}>{button}</ArrowButton>
             </div>
@@ -366,7 +366,7 @@ export function AttendCTASection() {
               href="/dubai/healthcare/attend/delegate/"
               className="inline-flex items-center justify-center gap-2 min-w-[178px] h-[49px] px-[32px] py-[15px] rounded-full text-[15px] font-extrabold text-[#06111f] [color:#06111f!important] bg-[#C0F43C] shadow-[0_8px_24px_rgba(192,244,60,0.25)] hover:shadow-[0_12px_32px_rgba(192,244,60,0.4)] hover:scale-[1.03] transition-all duration-200 cursor-pointer max-sm:w-full"
             >
-              Apply for a Delegate Pass
+              Apply for a Business Pass
               <span className="font-mono text-[16px] font-bold">→</span>
             </a>
             <a
@@ -432,7 +432,7 @@ export function AttendOverviewSection() {
           </h1>
           <div className="flex flex-wrap gap-3.5 mt-10 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="/dubai/healthcare/attend/delegate/" variant="solid">
-              Apply for a Delegate Pass
+              Apply for a Business Pass
             </ArrowButton>
             <ArrowButton href="/dubai/healthcare/sponsorship-enquiry/" variant="outline">
               Enquire about sponsorship
@@ -449,10 +449,10 @@ export function AttendOverviewSection() {
               Controlled execution over <GradientText>clinical hype.</GradientText>
             </h2>
             <p className="mt-6 mb-4 text-white/75 text-[17px] leading-[1.65]">
-              World AI Show | Healthcare and Life Sciences is an executive decision forum convening Hospital Group CEOs, Chief Medical Officers (CMOs), Chief Information Officers (CIOs), Heads of Clinical Informatics, and health regulators moving AI from experimental pilots into safe bedside and operational workflows. As part of the World AI Show Industry Series, the forum addresses EHR/HIS interoperability, SaMD clinical governance, and sovereign health data residency required under UAE Federal Law No. 2 of 2019 and Nabidh / Malaffi / Riayati frameworks.
+              World AI Show | Healthcare and Life Sciences convenes hospital group CXOs, clinical leaders, and regulators to deploy safe, governed AI across clinical and operational workflows.
             </p>
             <p className="m-0 text-white/75 text-[17px] leading-[1.65]">
-              It is structured around four critical operational mandates every healthcare buying committee must resolve: clinical workflows &amp; ambient AI, diagnostic imaging &amp; precision genomics, hospital operations &amp; revenue cycle management (RCM), and health data sovereignty &amp; SaMD regulation.
+              Part of the World AI Show Industry Series, the forum addresses EHR interoperability and UAE health data residency (Nabidh, Malaffi, Riayati) across four core mandates: ambient clinical documentation, diagnostic imaging triage, hospital capacity optimisation, and sovereign data governance.
             </p>
           </div>
           <div className="relative overflow-hidden border border-[#55cfff]/25 rounded-[24px] bg-[#071426]/72 shadow-[0_0_44px_rgba(0,206,255,0.14)]">
@@ -490,10 +490,10 @@ export function AttendOverviewSection() {
             <div className="flex flex-col justify-between p-9 rounded-[24px] border border-[#C0F43C]/45 bg-gradient-to-br from-[#C0F43C]/10 via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
               <div>
                 <h3 className="text-white font-extrabold text-[25px] leading-[1.2] mb-3">
-                  Delegate Pass — complimentary, strictly by invitation and qualification
+                  Business Pass — Healthcare &amp; Life Sciences Buyers
                 </h3>
                 <p className="text-white/80 text-[16px] leading-[1.6] mb-5">
-                  Senior hospital, health authority, and life sciences executives attend by invitation on a complimentary Delegate Pass, subject to qualification against an active clinical or IT deployment mandate.
+                  Senior hospital, health authority, and life sciences executives attend on a Business Pass, with role verification ensuring alignment with an active clinical or IT deployment mandate.
                 </p>
                 <ul className="space-y-2.5 mb-8 text-white/75 text-[15px] list-none p-0">
                   <li className="flex items-start gap-2.5"><span className="text-[#C0F43C] font-bold">✓</span> Target Audience: Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, Health Authorities</li>
@@ -503,7 +503,7 @@ export function AttendOverviewSection() {
               </div>
               <div>
                 <ArrowButton href="/dubai/healthcare/attend/delegate/" variant="solid">
-                  Apply for a Delegate Pass
+                  Apply for a Business Pass
                 </ArrowButton>
               </div>
             </div>
@@ -512,14 +512,14 @@ export function AttendOverviewSection() {
             <div className="flex flex-col justify-between p-9 rounded-[24px] border border-cyan/40 bg-gradient-to-br from-cyan/10 via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
               <div>
                 <h3 className="text-white font-extrabold text-[25px] leading-[1.2] mb-3">
-                  Business Pass — paid commercial access with strictly capped quota
+                  Business Pass — Solution Providers (Strictly Capped Quota)
                 </h3>
                 <p className="text-white/80 text-[16px] leading-[1.6] mb-5">
-                  Business Passes provide commercial access for healthcare technology vendors, medical device manufacturers, and consultancies outside the invitation criteria, with ticket numbers strictly capped to protect room composition.
+                  Business Passes provide commercial access for healthcare technology vendors, medical device manufacturers, and consultancies, with ticket numbers strictly capped to protect room composition.
                 </p>
                 <ul className="space-y-2.5 mb-8 text-white/75 text-[15px] list-none p-0">
                   <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Paid commercial access for HealthTech, EHR/HIS, diagnostic imaging, RCM, and sovereign cloud vendors</li>
-                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Strictly capped quota to protect the minimum 70% buy-side institutional ratio</li>
+                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Strictly capped quota to protect the minimum 80%+ buy-side institutional ratio</li>
                   <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Full 1-day access to plenary blocks, concourse showcase, and Closing Executive Reception</li>
                 </ul>
               </div>
@@ -540,7 +540,7 @@ export function AttendOverviewSection() {
       <section className="py-[86px] bg-gradient-to-b from-[#031127] to-[#020b1c] text-center max-sm:py-[62px]">
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
           <h3 className="w-full mx-auto mt-0 mb-10 text-white font-[850] leading-[1.08] tracking-[-1.5px] text-[clamp(32px,4vw,46px)] max-sm:text-[30px]">
-            Why Healthcare Leaders Convene in <GradientText>Dubai, UAE</GradientText>
+            Why Healthcare Leaders are Convening at <GradientText>World AI Show</GradientText>
           </h3>
           <div className="grid grid-cols-3 gap-4 mb-9 max-[980px]:grid-cols-[repeat(3,310px)] max-sm:grid-cols-1">
             {valueCards.map((card, index) => (
@@ -570,16 +570,16 @@ export function AttendDelegateSection() {
             Built for Pre-Qualified <GradientText>Healthcare &amp; Life Sciences CXOs.</GradientText>
           </h1>
           <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Complimentary Delegate Passes are reserved for senior hospital, clinical, and life sciences leaders, including Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, and Health Authorities attending by invitation and subject to qualification against an active clinical or IT deployment mandate.
+            Business Passes grant executive access for senior hospital, clinical, and life sciences leaders—including Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, and Health Authorities—alongside capped commercial attendees holding an active clinical or IT deployment mandate.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
-            <ArrowButton href="#delegate-qualification">Apply for a Delegate Pass</ArrowButton>
+            <ArrowButton href="#delegate-qualification">Apply for a Business Pass</ArrowButton>
           </div>
         </div>
       </section>
 
       <SplitSection
-        button="Submit Delegate Qualification Application"
+        button="Submit Business Pass Application"
         buttonHref="/dubai/healthcare/general-enquiry/"
         id="delegate-qualification"
         eyebrow="Qualification & UAE PDPL Consent Governance"
@@ -602,7 +602,7 @@ export function AttendDelegateSection() {
       <section className="py-[86px] bg-gradient-to-b from-[#020b1c] to-[#031127] max-sm:py-[62px]">
         <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
           <h2 className="m-0 mb-[42px] text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-center text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
-            Delegate Pass <GradientText>Inclusions &amp; Standards</GradientText>
+            Business Pass <GradientText>Inclusions &amp; Standards</GradientText>
           </h2>
           <BenefitGrid items={gatewayCards} />
         </div>
@@ -628,7 +628,7 @@ export function AttendSponsorSection() {
             Where Middle East healthcare leaders specify, procure, and <GradientText>deploy clinical AI.</GradientText>
           </h1>
           <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
-            Explore commercial partnerships structured around 20-minute plenary keynotes, 75-minute workshop clinics, standardised 6 sqm, 9 sqm, and 12 sqm concourse booths, and private buyer CXO closed-door boardrooms.
+            Explore commercial partnerships structured around plenary keynotes, workshop clinics, concourse booths, and private buyer-led CXO closed-door boardrooms.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <ArrowButton href="/dubai/healthcare/sponsorship-enquiry/">Enquire About Sponsorship</ArrowButton>
@@ -652,17 +652,23 @@ export function AttendSponsorSection() {
           </>
         }
         text={
-          <>
-            • <strong>Speaking Sponsor:</strong> 20-Min Plenary Keynote/Fireside + 12 sqm Concourse Booth + 12 Passes
-            <br />
-            • <strong>Engagement Partner:</strong> Exclusive Leadership of 75-Min Workshop Clinic + 9 sqm Booth + 8 Passes
-            <br />
-            • <strong>CXO Closed-Door Boardroom:</strong> 60-Min Curated Session with 15 Wishlist CXOs + 5-Min Opening Address
-            <br />
-            • <strong>Industry Partner:</strong> Plenary Panel Speaking Seat + 9 sqm Booth + 6 Passes
-            <br />
-            • <strong>Exhibitor:</strong> 6 sqm Standard Turnkey Concourse Booth + 4 Passes
-          </>
+          <div className="flex flex-col gap-3">
+            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+              <strong className="text-white">Speaking Sponsor:</strong> 20-Min Plenary Keynote/Fireside + 12 sqm Concourse Booth + 12 Passes
+            </div>
+            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+              <strong className="text-white">Engagement Partner:</strong> Exclusive Leadership of 75-Min Workshop Clinic + 9 sqm Booth + 8 Passes
+            </div>
+            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+              <strong className="text-white">CXO Closed-Door Boardroom:</strong> 60-Min Curated Session with 15 Wishlist CXOs + 5-Min Opening Address
+            </div>
+            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+              <strong className="text-white">Industry Partner:</strong> Plenary Panel Speaking Seat + 9 sqm Booth + 6 Passes
+            </div>
+            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+              <strong className="text-white">Exhibitor:</strong> 6 sqm Standard Turnkey Concourse Booth + 4 Passes
+            </div>
+          </div>
         }
       />
 

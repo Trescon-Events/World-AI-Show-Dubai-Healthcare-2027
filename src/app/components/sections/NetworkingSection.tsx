@@ -5,7 +5,7 @@ import { GradientText } from "../Shared";
 
 const buyingUnitConstituencies = [
   {
-    title: "Hospital Groups & Clinical Providers (Buy-Side 70%+)",
+    title: "Hospital Groups & Clinical Providers (Buy-Side 80%+)",
     desc: "Hospital CEOs, Chief Medical Officers (CMOs), CIOs, Chief Digital Officers, Heads of Clinical Informatics, Nursing Directors, Operations Heads.",
     badge: "01 · HOSPITAL GROUPS & CLINICAL PROVIDERS",
   },
@@ -184,12 +184,8 @@ export function NetworkingSection() {
         {/* S7 · Who is in the room */}
         <div className="flex flex-col items-center text-center">
           <div className="w-full mb-12">
-            <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold mb-3">
-              Who Is in the Room
-            </span>
             <h2 className="font-[850] text-white leading-[1.06] tracking-[-1.8px] text-[clamp(32px,4.2vw,50px)] m-0">
-              Five governed institutional constituencies{" "}
-              <GradientText>(Minimum 70% Buy-Side Provider Ratio)</GradientText>
+              Governed by <GradientText>Five Institutional Constituencies</GradientText>
             </h2>
             <p className="mt-5 mb-0 text-muted text-[18px] leading-[1.55] max-sm:text-[16px]">
               Meet with over 300 pre-qualified hospital group CXOs, Chief Medical Officers, healthcare CIOs, clinical informatics leaders, and health regulators convening around validated clinical deployments.
@@ -228,19 +224,16 @@ export function NetworkingSection() {
       <ThrivingEnvironmentShowcase />
 
       <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
-        {/* S8 · How to attend — two-door model */}
+        {/* S8 · How to attend — Business Pass access */}
         <div className="mt-24 pt-16 border-t border-white/10">
           <div className="text-center mb-10">
-            <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#18D4FF] font-bold mb-3">
-              How to Attend · Two-Door Model
-            </span>
             <h3 className="text-white font-[850] text-[clamp(30px,3.8vw,44px)] leading-[1.08] tracking-[-1.2px]">
               A Forum Composed for <GradientText>Healthcare Buyers &amp; Solution Providers</GradientText>
             </h3>
           </div>
 
           <div className="grid grid-cols-2 gap-6 max-[980px]:grid-cols-1">
-            {/* Door 1: Delegate Pass */}
+            {/* Door 1: Business Pass (Buy-Side Healthcare & Clinical Leaders) */}
             <div
               data-aos="fade-right"
               data-aos-delay="100"
@@ -254,10 +247,10 @@ export function NetworkingSection() {
 
               <div className="relative z-10">
                 <h4 className="text-white font-extrabold text-[24px] leading-[1.2] mb-3 transition-colors duration-300 group-hover:text-[#f5ffe0]">
-                  Delegate Pass — complimentary, strictly by invitation and qualification
+                  Business Pass — Healthcare Buyers &amp; Clinical Leaders
                 </h4>
                 <p className="text-muted text-[16px] leading-[1.6] mb-6 transition-colors duration-300 group-hover:text-white/85">
-                  Senior healthcare executives, hospital operators, clinical leaders, and health authority officials attend by invitation on a complimentary Delegate Pass, subject to qualification against an active operational mandate.
+                  Senior healthcare executives, hospital operators, clinical leaders, and health authority officials attend on a Business Pass, with role verification ensuring alignment with an active operational mandate.
                 </p>
               </div>
               <div className="relative z-10">
@@ -265,13 +258,13 @@ export function NetworkingSection() {
                   href="/dubai/healthcare/attend/delegate/"
                   className="inline-flex items-center justify-center gap-2.5 h-[50px] px-7 rounded-full font-extrabold text-[15px] text-[#06111F] [color:#06111F!important] bg-[#C0F43C] transition-all duration-300 group-hover:bg-[#cdfb50] group-hover:shadow-[0_0_28px_rgba(192,244,60,0.45)] hover:scale-[1.02]"
                 >
-                  Apply for a Delegate Pass
+                  Apply for a Business Pass
                   <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </a>
               </div>
             </div>
 
-            {/* Door 2: Business Pass */}
+            {/* Door 2: Business Pass (Commercial & Solution Providers) */}
             <div
               data-aos="fade-left"
               data-aos-delay="200"
@@ -285,10 +278,10 @@ export function NetworkingSection() {
 
               <div className="relative z-10">
                 <h4 className="text-white font-extrabold text-[24px] leading-[1.2] mb-3 transition-colors duration-300 group-hover:text-[#e6fbff]">
-                  Business Pass — paid commercial access with strictly capped quota
+                  Business Pass — Solution Providers (Strictly Capped Quota)
                 </h4>
                 <p className="text-muted text-[16px] leading-[1.6] mb-6 transition-colors duration-300 group-hover:text-white/85">
-                  Business Passes provide paid commercial access for healthtech providers, software vendors, and consultancies outside the invitation criteria, with registration numbers strictly capped to protect room composition.
+                  Business Passes provide commercial access for healthtech providers, software vendors, and consultancies, with registration numbers strictly capped to protect the 80%+ buy-side room composition.
                 </p>
               </div>
               <div className="relative z-10">

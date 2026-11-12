@@ -67,7 +67,7 @@ const statsData = [
   },
   {
     icon: "/dubai/healthcare/icons/stats/3.svg",
-    number: 70,
+    number: 80,
     prefix: "",
     suffix: "%+",
     label: "Buy-Side Institutional Ratio",

@@ -83,7 +83,7 @@ export function SpeakersList() {
             href="/dubai/healthcare/agenda/call-for-speakers/"
             className="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#C0F43C] text-[#06111F] [color:#06111F!important] font-extrabold text-[14px] whitespace-nowrap hover:brightness-110 transition-all shrink-0"
           >
-            Have a live hospital or life sciences deployment case study? Apply for the 2027 Faculty →
+            Have a deployment case study? Apply to speak →
           </a>
         </div>
 

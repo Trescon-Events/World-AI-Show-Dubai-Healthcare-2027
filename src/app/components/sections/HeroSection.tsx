@@ -57,8 +57,8 @@ export function HeroSection() {
           data-aos-delay="100"
           className="w-full mx-auto text-white font-[850] leading-[1.08] xl:leading-[70px] tracking-[-1.8px] text-[clamp(32px,4.6vw,64px)] xl:text-[64px] text-center mb-3"
         >
-          <span className="block">Deployable, governed, and evidence-backed AI for</span>
-          <span className="block"><GradientText>clinical care and health operations.</GradientText></span>
+          <span className="block">Deployable, governed AI for</span>
+          <span className="block"><GradientText>clinical care &amp; hospital operations.</GradientText></span>
         </h1>
 
         {/* Thesis */}
@@ -76,7 +76,7 @@ export function HeroSection() {
           data-aos-delay="200"
           className="w-full mx-auto text-[#CBD5E1] text-[clamp(15px,1.55vw,18.5px)] xl:text-[18.5px] font-normal leading-relaxed xl:leading-[30px] tracking-normal text-center mb-8"
         >
-          The premier buyer-led executive decision forum connecting clinical leadership, hospital operations, and life-sciences innovation through deployable, governed, and evidence-backed artificial intelligence. Convenes 300+ hospital group CXOs, Chief Medical Officers, healthcare CIOs, and regulators actively locking down clinical copilots, diagnostic triage, EMR integration, and 2027 healthtech procurement.
+          Dubai&rsquo;s buyer-led forum connecting 300+ hospital group CXOs, Chief Medical Officers, and health regulators to validate clinical evidence, EMR integration, and 2027 health tech procurement.
         </p>
 
         <div data-aos="fade-in" data-aos-delay="250" className="w-full border-t border-white/20 opacity-60 mt-1" />
@@ -125,7 +125,7 @@ export function HeroSection() {
           className="flex justify-center flex-wrap gap-3.5 mt-9 max-sm:flex-col max-sm:items-center max-sm:gap-3.5 max-sm:w-full max-sm:max-w-[340px]"
         >
           <Button href="/dubai/healthcare/attend/delegate/" showArrow={true}>
-            Apply for Delegate Pass (Complimentary)
+            Apply for a Business Pass
           </Button>
           <Button href="/dubai/healthcare/attend/sponsor/" variant="outline" showArrow={true}>
             Explore Commercial Sponsorship

@@ -19,13 +19,13 @@ export function SpeakerCallToStage() {
         <div className="grid grid-cols-[1.12fr_0.88fr] gap-[66px] items-center max-[980px]:grid-cols-1 max-[980px]:gap-[48px] mb-12">
           <div>
             <h3 className="m-0 text-white font-[850] text-[28px] leading-tight mb-4 max-sm:text-[23px]">
-              Call for Clinical &amp; Technical Faculty: Unvarnished Production Evidence
+              Share Your Clinical AI Implementation Evidence in Dubai
             </h3>
             <p className="m-0 text-white/68 text-[16px] leading-[1.65] mb-5">
-              We are seeking hospital group, clinical informatics, and life sciences leaders — Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, Directors of Radiology/Pathology, and Health Authorities — with unvarnished case studies: real-world EHR/HIS integration hurdles, pilot post-mortems, clinical safety governance, and verified patient outcomes.
+              World AI Show is looking for healthcare leaders ready to move beyond theoretical models and share the practical realities of embedding algorithms into clinical practice.
             </p>
             <p className="m-0 text-white/68 text-[16px] leading-[1.65] mb-8">
-              Taking place on 25 March 2027 in Dubai, UAE (Day 2 of the March Dubai Cluster), the forum prioritises clinical execution under UAE Federal Law No. 2 of 2019 and MOHAP, DHA, and DoH standards over vendor hype across four core content pillars.
+              Whether solving time-critical diagnostic triage, ambient documentation, or hospital capacity, we welcome case studies that help peer operators deploy governed, reimbursable AI under UAE health frameworks.
             </p>
 
             {/* Value Highlights */}
@@ -53,7 +53,7 @@ export function SpeakerCallToStage() {
                     className="w-5 h-5 object-contain mt-[3px] select-none flex-shrink-0"
                   />
                   <span>
-                    <strong className="text-white">300+ Pre-Qualified Healthcare CXOs (70%+ Buy-Side):</strong> Address senior GCC hospital, clinical informatics, genomics, and regulatory decision-makers actively locking down 2027 architectures.
+                    <strong className="text-white">300+ Pre-Qualified Healthcare CXOs (80%+ Buy-Side):</strong> Address senior GCC hospital, clinical informatics, genomics, and regulatory decision-makers actively locking down 2027 architectures.
                   </span>
                 </li>
                 <li className="flex items-start gap-3.5 text-white/80 text-[15px]">

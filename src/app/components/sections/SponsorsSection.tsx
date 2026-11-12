@@ -61,11 +61,6 @@ export function SponsorsSection() {
     <section className="relative py-[100px] pb-0 bg-[#030b19] overflow-hidden max-sm:py-[72px] max-sm:pb-0" id="partners">
       <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
         {/* S9 · Sponsor value & commercial architecture */}
-        <div className="text-center mb-3">
-          <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold">
-            Commercial Partnerships
-          </span>
-        </div>
         <h2 className="text-center font-[850] text-white leading-[1.06] tracking-[-2px] text-[clamp(34px,4.4vw,54px)] w-full mx-auto">
           Where Middle East hospital leaders specify, validate, and{" "}
           <GradientText>procure production AI</GradientText>

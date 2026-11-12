@@ -53,7 +53,7 @@ export function FooterSection() {
               Sponsorships
             </a>
             <a href="/dubai/healthcare/attend/delegate" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
-              Delegate Pass
+              Business Pass
             </a>
             <a href="/dubai/healthcare/media-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
               Media Partner

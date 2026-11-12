@@ -110,7 +110,7 @@ export default function NetworkingPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">By Design.</span>
             </h1>
             <p className="m-0 mt-6 text-white/75 text-[18px] leading-relaxed max-sm:text-[15px]">
-              Curated specifically for senior hospital, clinical informatics, and life sciences leadership, the forum moves beyond casual hallway encounters to deliver intentional, high-impact peer exchange. Connect directly with institutional decision-makers through pre-scheduled bilateral meetings, private boardroom discussions, and collaborative working groups built to address live procurement and clinical architecture priorities.
+              Designed for senior healthcare and life sciences leaders, the forum enables high-impact peer exchange through pre-scheduled meetings, private boardroom discussions, and collaborative sessions focused on procurement and clinical priorities.
             </p>
 
             {/* Quick links buttons */}
@@ -119,7 +119,7 @@ export default function NetworkingPage() {
                 href="/dubai/healthcare/attend/delegate"
                 className="px-8 py-[15px] rounded-full !text-black [color:#06111f!important] bg-[#C0F43C] shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] font-extrabold text-[14.5px] text-center transition-all duration-200 hover:-translate-y-0.5"
               >
-                Apply for a Delegate Pass ➔
+                Apply for a Business Pass ➔
               </a>
               <a
                 href="/dubai/healthcare/sponsorship-enquiry"
@@ -144,7 +144,7 @@ export default function NetworkingPage() {
             </div>
             <div className="flex flex-col">
               <span className="text-[40px] font-[900] text-[#C0F43C] tracking-tight">
-                70%+
+                80%+
               </span>
               <span className="text-[12.5px] text-white/50 uppercase tracking-widest font-mono font-bold mt-1.5">Buy-Side Institutional Ratio</span>
             </div>
@@ -220,9 +220,6 @@ export default function NetworkingPage() {
 
             {/* Left Column: Heading and Roles List */}
             <div className="flex flex-col">
-              <span className="text-white/40 text-[13px] font-bold font-mono tracking-[2px] uppercase mb-3 block">
-                Who Is In The Room
-              </span>
               <h2 className="font-[850] text-white leading-[1.1] tracking-[-2px] text-[clamp(36px,4.5vw,52px)] m-0 mb-8">
                 300+ Pre-Qualified Leaders.<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">The Healthcare Buying Unit.</span>
@@ -296,7 +293,7 @@ export default function NetworkingPage() {
             Be in the room where <GradientText>regulated clinical AI gets decided.</GradientText>
           </h2>
           <p className="m-0 mt-4 text-white/58 text-[15px] leading-relaxed w-full mx-auto">
-            Apply for a complimentary Delegate Pass (by invitation and qualification) or enquire about commercial sponsorship for World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE · 1-Day Executive Decision Forum).
+            Apply for a Business Pass or enquire about commercial sponsorship for World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE · 1-Day Executive Decision Forum).
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
@@ -304,7 +301,7 @@ export default function NetworkingPage() {
               href="/dubai/healthcare/attend/delegate"
               className="px-8 py-3.5 rounded-full text-black [color:#06111f!important] bg-[#C0F43C] font-extrabold text-sm shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] transition-all duration-200 hover:-translate-y-0.5"
             >
-              Apply for a Delegate Pass ➔
+              Apply for a Business Pass ➔
             </a>
             <a
               href="/dubai/healthcare/sponsorship-enquiry"

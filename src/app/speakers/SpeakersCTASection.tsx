@@ -28,7 +28,7 @@ export function SpeakersCTASection() {
 
       <div className="relative z-10 w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-7 items-stretch">
-          {/* ── Card 1: Delegate Pass (Lime Accent Glass Card) ── */}
+          {/* ── Card 1: Business Pass (Lime Accent Glass Card) ── */}
           <article className="group relative p-10 max-sm:p-7 rounded-[28px] border border-[#C0F43C]/35 bg-gradient-to-br from-[#0a1e2e]/90 via-[#051122]/95 to-[#030915]/98 backdrop-blur-xl shadow-[0_24px_64px_rgba(0,0,0,0.5),0_0_32px_rgba(192,244,60,0.08),inset_0_1px_0_rgba(255,255,255,0.12)] hover:border-[#C0F43C]/65 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden">
             <div className="absolute -top-20 -right-20 w-52 h-52 rounded-full bg-[#C0F43C]/10 blur-3xl pointer-events-none" />
 
@@ -68,7 +68,7 @@ export function SpeakersCTASection() {
               </h2>
 
               <p className="m-0 mt-4 text-white/75 text-[15.5px] leading-[1.65]">
-                Delegate Pass — complimentary, strictly by invitation and qualification for senior hospital, clinical informatics, health authority, and life sciences executives.
+                Business Pass — executive forum access for senior hospital, clinical informatics, health authority, and life sciences leaders (subject to room composition governance).
               </p>
             </div>
 
@@ -77,7 +77,7 @@ export function SpeakersCTASection() {
                 href="/dubai/healthcare/attend/delegate/"
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-[15px] font-extrabold text-[#06111F] [color:#06111F!important] bg-[#C0F43C] shadow-[0_8px_24px_rgba(192,244,60,0.25)] hover:shadow-[0_12px_32px_rgba(192,244,60,0.45)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer max-sm:w-full"
               >
-                Apply for a Delegate Pass
+                Apply for a Business Pass
                 <svg
                   className="w-4 h-4 flex-shrink-0 text-[#06111F]"
                   fill="none"

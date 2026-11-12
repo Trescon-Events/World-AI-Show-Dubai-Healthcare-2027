@@ -48,7 +48,7 @@ export default function GeneralEnquiryPage() {
                 General <span className="text-[#18d4ff]">Enquiry</span>
               </h1>
               <p className="m-0 text-white/70 text-[16px] leading-relaxed mb-9">
-                Have questions about Delegate Passes (complimentary, strictly by invitation and qualification), Business Passes (paid commercial access with strictly capped quota), or attending World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE)? Complete the form below and our team will respond promptly.
+                Have questions about Business Passes (executive access and commercial passes with strictly capped vendor quota) or attending World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE)? Complete the form below and our team will respond promptly.
               </p>
 
               {/* Hubspot Form Embedded Container */}

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "../Shared";
 
-const navItems = ["Home", "Agenda", "Speakers", "Attend", "Partner", "Exhibition", "Networking"];
+const navItems = ["Home", "Agenda", "Speakers", "Attend", "Partner", "Networking"];
 
 // Dropdown submenus — Speakers excluded
 const subMenus: Record<string, string[]> = {
@@ -19,7 +19,6 @@ function getNavHref(item: string) {
   if (item === "Agenda") return "/dubai/healthcare/agenda";
   if (item === "Speakers") return "/dubai/healthcare/speakers";
   if (item === "Partner") return "/dubai/healthcare/partners";
-  if (item === "Exhibition") return "/dubai/healthcare/exhibition";
   if (item === "Networking") return "/dubai/healthcare/networking";
   return `/dubai/healthcare/#${item.toLowerCase()}`;
 }
@@ -48,7 +47,6 @@ function getActiveFromPath(pathname: string): string {
     cleanPath.startsWith("/sponsorship-enquiry") ||
     cleanPath.startsWith("/association-enquiry")
   ) return "Partner";
-  if (cleanPath.startsWith("/exhibition")) return "Exhibition";
   if (cleanPath.startsWith("/networking")) return "Networking";
   return "Home";
 }

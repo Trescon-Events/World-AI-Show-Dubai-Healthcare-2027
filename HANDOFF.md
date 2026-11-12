@@ -1,6 +1,6 @@
 # HANDOFF — World AI Show | Healthcare and Life Sciences | Dubai 2027
 
-Last updated: 2026-11-01 (by Antigravity).
+Last updated: 2026-11-11 (by Antigravity).
 
 ## Current state
 
@@ -11,7 +11,8 @@ Last updated: 2026-11-01 (by Antigravity).
 - **Authoritative Specification:** `brand/WAIS_Dubai_Healthcare_Specification.html` (16 sections, 18 active routes, 13 homepage sections S1–S13, 4 reusable components C1–C4).
 - **Key Metrics & Governance Enforced Across All 18 Routes:**
   - `300+` Pre-Qualified Healthcare CXOs
-  - `70%+` Buy-Side Institutional Ratio
+  - `80%+` Buy-Side Institutional Ratio
+  - `Business Pass` registration model across all attendance pathways (no complimentary passes)
   - `35–45` Expert Clinical & Technical Speakers
   - `4` Core Sector Content Pillars
   - `48` Global Editions (`42,000+` C-level executives, `2,600+` speakers, `4` continents)

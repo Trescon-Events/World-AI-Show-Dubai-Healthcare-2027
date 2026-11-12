@@ -366,7 +366,7 @@ export function GlobalPopup() {
                 <div className="wais-accent-bar" />
                 <div className="wais-popup-title">
                   <span className="wais-word-white">Limited</span>
-                  <span className="wais-word-lime">Free Delegate</span>
+                  <span className="wais-word-lime">Executive Business</span>
                   <span className="wais-word-white">Passes</span>
                   <span className="wais-word-lime">Remaining</span>
                 </div>
@@ -379,7 +379,7 @@ export function GlobalPopup() {
                       <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
                   </div>
-                  <span className="wais-info-text">Register now before<br/>all free passes are claimed.</span>
+                  <span className="wais-info-text">Register now before<br/>allocated passes are claimed.</span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <a className="wais-cta-button" href="/dubai/healthcare/sponsorship-enquiry">
@@ -394,7 +394,7 @@ export function GlobalPopup() {
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         <polygon points="12 8 13.5 11 16.5 11 14 13 15 16 12 14.5 9 16 10 13 7.5 11 10.5 11"/>
                       </svg>
-                      <span>100% Complimentary</span>
+                      <span>Business Pass</span>
                     </div>
                     <div className="wais-trust-divider" />
                     <div className="wais-trust-item">
@@ -432,8 +432,8 @@ export function GlobalPopup() {
                         </svg>
                         <div className="wais-ticket-content" style={{opacity:0.5}}>
                           <div className="wais-ticket-top">
-                            <span className="wais-ticket-tag">FREE</span>
-                            <span className="wais-ticket-main">DELEGATE</span>
+                            <span className="wais-ticket-tag">2027</span>
+                            <span className="wais-ticket-main">BUSINESS</span>
                             <span className="wais-ticket-main">PASS</span>
                           </div>
                           <div className="wais-ticket-divider"><div className="wais-divider-line"/></div>
@@ -460,8 +460,8 @@ export function GlobalPopup() {
                         <div className="wais-scanner-beam" />
                         <div className="wais-ticket-content">
                           <div className="wais-ticket-top">
-                            <div className="wais-ticket-badge">FREE</div>
-                            <div className="wais-ticket-main">DELEGATE</div>
+                            <div className="wais-ticket-badge">DUBAI</div>
+                            <div className="wais-ticket-main">BUSINESS</div>
                             <div className="wais-ticket-sub">PASS</div>
                           </div>
                           <div className="wais-ticket-divider"><div className="wais-divider-line"/></div>

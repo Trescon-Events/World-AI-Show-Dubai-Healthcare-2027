@@ -16,8 +16,8 @@ const subNav = ["Overview", "The Vision", "Agenda", "Themes", "Call for Speakers
 
 const formats: { title: string; text: string; icon: ReactNode }[] = [
   {
-    title: "20-Minute Plenary Keynotes & Live Buyer Evidence",
-    text: "Frontline case studies and fireside briefings led by hospital group CXOs, Chief Medical Officers, and healthcare CIOs. Moving past theoretical hype to examine real-world EMR integration hurdles, pilot failure post-mortems, and verified clinical outcomes.",
+    title: "Plenary Keynotes & Live Buyer Evidence",
+    text: "Frontline case studies and fireside briefings led by hospital CXOs and Chief Medical Officers, moving past theoretical hype to examine real-world EMR integration, pilot post-mortems, and verified clinical outcomes.",
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
@@ -28,8 +28,8 @@ const formats: { title: string; text: string; icon: ReactNode }[] = [
     ),
   },
   {
-    title: "75-Minute Parallel Breakout Clinics",
-    text: "Collaborative, hands-on workshop clinics designed to tackle acute clinical and operational bottlenecks: Clinic A on Ambient Clinical Voice, Copilots & Documentation, and Clinic B on Diagnostic AI, Radiology Triage & Clinical Decision Support.",
+    title: "Interactive Breakout Clinics & Deep Dives",
+    text: "Collaborative working sessions addressing acute clinical bottlenecks, focusing on ambient clinical documentation, diagnostic imaging triage, and bedside clinical decision support.",
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="3" y="3" width="7" height="7" rx="1.5" />
@@ -41,8 +41,8 @@ const formats: { title: string; text: string; icon: ReactNode }[] = [
     ),
   },
   {
-    title: "CXO Closed-Door Boardrooms & Outcome Roundtables",
-    text: "Private 60-minute closed-door boardrooms for 15 wishlist hospital leaders alongside curated peer outcome roundtables. Engineered for senior clinical and IT decision-makers to benchmark vendors, navigate UAE health data residency, and finalise 2027 procurement specifications.",
+    title: "Closed-Door Boardrooms & Peer Roundtables",
+    text: "Private, Chatham House sessions connecting health system leaders and regulators to benchmark deployable technology, ensure sovereign compliance, and align procurement priorities.",
     icon: (
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -299,11 +299,7 @@ function IconCard({ title, text, icon, index }: { title: string; text: string; i
 }
 
 function AgendaTabs() {
-  const dayTabs = [
-    { key: "2027-03-25", label: "Thursday 25 March 2027: Governed Clinical Practice" },
-  ];
-
-  const [activeDay, setActiveDay] = useState("2027-03-25");
+  const activeDay = "2027-03-25";
   const [activeTrack, setActiveTrack] = useState("all");
   const [activeSessionType, setActiveSessionType] = useState("");
   const [query, setQuery] = useState("");
@@ -344,25 +340,7 @@ function AgendaTabs() {
     <section className={styles.timelineSection} id="agenda">
       <div className={styles.container}>
         <div className={styles.timelineIntro}>
-          <h2>Full 1-Day Master Schedule: <GradientText>Governed Clinical Practice.</GradientText></h2>
-        </div>
-        <div className={styles.dayTabs} role="tablist" aria-label="Agenda days">
-          {dayTabs.map((day) => (
-            <button
-              className={activeDay === day.key ? styles.activeDay : ""}
-              key={day.key}
-              onClick={() => {
-                setActiveDay(day.key);
-                setActiveTrack("all");
-              }}
-              onPointerMove={setPointerGlow}
-              type="button"
-            >
-              <span>{day.label}</span>
-              <strong>25 March 2027 · Dubai, United Arab Emirates</strong>
-              <small>Day 2 of the March Dubai Cluster · 08:00 – 18:30 GST</small>
-            </button>
-          ))}
+          <h2>Event Schedule: <GradientText>Governed Clinical Practice.</GradientText></h2>
         </div>
 
         {trackTabs.length > 1 ? (
@@ -459,12 +437,9 @@ export function AgendaOverview() {
         }}
       >
         <div className={styles.container}>
-          <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold mb-3">
-            Curriculum Overview
-          </span>
           <h1>From use case to <br /><GradientText>operating outcome.</GradientText></h1>
           <p className={styles.heroPara}>
-            Departing entirely from conference speechifying, the forum is built on Trescon&apos;s six-part block methodology, systematically driving 300+ healthcare delegates from boardroom clinical priorities down to concrete vendor shortlists and procurement specifications.
+            The show is built to systematically drive 300+ healthcare delegates from boardroom clinical priorities down to concrete vendor shortlists and procurement specifications.
           </p>
         </div>
       </section>
@@ -474,10 +449,10 @@ export function AgendaOverview() {
           <div>
             <h2 className="!mb-6">Deployable, governed, and evidence-backed AI for <GradientText>clinical care and health operations.</GradientText></h2>
             <p className="mt-6 mb-4">
-              World AI Show | Healthcare and Life Sciences | Dubai 2027 convenes 300+ pre-qualified hospital group CXOs, Chief Medical Officers, healthcare CIOs, clinical informatics directors, and health regulators (maintaining a minimum 70% buy-side institutional ratio).
+              World AI Show | Healthcare and Life Sciences convenes 300+ pre-qualified hospital group CXOs, Chief Medical Officers, healthcare CIOs, clinical informatics directors, and health regulators (maintaining a minimum 80%+ buy-side institutional ratio).
             </p>
             <p className="m-0">
-              Every block in the programme is engineered to move senior healthcare buyers from clinical governance and interoperability mandates across MOHAP, DHA, and DoH jurisdictions down to live EMR workflow validation and 2027 procurement decisions.
+              The programme is engineered to focus on aspects from clinical governance and interoperability mandates across MOHAP, DHA, and DoH jurisdictions down to live EMR workflow validation and 2027 procurement decisions.
             </p>
           </div>
           <img src="/dubai/healthcare/images/agenda/About.webp" alt="Healthcare executives networking at World AI Show Dubai" loading="lazy" />
@@ -502,7 +477,7 @@ export function AgendaOverview() {
 
       <section className={styles.formatsSection}>
         <div className={styles.container}>
-          <h2>Trescon <GradientText>Six-Part Block Methodology.</GradientText></h2>
+          <h2>A <GradientText>Six-Part Block Methodology</GradientText></h2>
           <p>Engineered to drive healthcare buyers from boardroom priorities down to concrete procurement across one intensive day.</p>
 
           <div className="grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1 text-left">
@@ -529,9 +504,9 @@ export function AgendaOverview() {
       <section className={styles.finalCta} id="cta">
         <div className={styles.ctaBox}>
           <h2>Be in the room where <GradientText>2027 healthcare AI architecture and clinical adoption get finalised.</GradientText></h2>
-          <p>Apply for a complimentary Delegate Pass (strictly by invitation and qualification), enquire about commercial sponsorship, or apply to join the Dubai healthcare faculty.</p>
+          <p>Apply for a Business Pass, enquire about commercial sponsorship, or apply to join the Dubai healthcare speaking faculty.</p>
           <div className={styles.actions}>
-            <a className={`${styles.button} ${styles.solid} group`} href="/dubai/healthcare/attend/delegate/">Apply for a Delegate Pass <ArrowSVG /></a>
+            <a className={`${styles.button} ${styles.solid} group`} href="/dubai/healthcare/attend/delegate/">Apply for a Business Pass <ArrowSVG /></a>
             <a className={`${styles.button} ${styles.outline} group`} href="/dubai/healthcare/sponsorship-enquiry/">Enquire about sponsorship <ArrowSVG /></a>
           </div>
           <dl>
@@ -577,9 +552,6 @@ export function AgendaVision() {
         }}
       >
         <div className={styles.container}>
-          <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold mb-3">
-            Regulatory Alignment &amp; Regional Catalysts
-          </span>
           <h1>Governed Clinical Practice: <br /><GradientText>UAE Health Data Sovereignty &amp; 2027 Catalysts.</GradientText></h1>
         </div>
       </section>
@@ -654,7 +626,7 @@ export function AgendaVision() {
 
       <AgendaSection
         title={<>Four operational mandates. <GradientText>One day.</GradientText></>}
-        subtitle="Specialised Curriculum"
+        subtitle={null}
         description=""
         showSixBlocks={false}
       />
@@ -674,14 +646,14 @@ export function AgendaLiveTimeline() {
         }}
       >
         <div className={styles.container}>
-          <h1><GradientText>Full 1-Day Master Schedule</GradientText></h1>
+          <h1><GradientText>Event Schedule</GradientText></h1>
         </div>
       </section>
       <AgendaTabs />
       <section className={styles.finalCta} id="cta">
         <div className={styles.ctaBox}>
           <h2>Be in the room where <GradientText>2027 healthcare AI architecture and clinical adoption get finalised.</GradientText></h2>
-          <p>Apply for a complimentary Delegate Pass (strictly by invitation and qualification), enquire about commercial sponsorship, or apply to join the Dubai healthcare faculty.</p>
+          <p>Apply for a Business Pass, enquire about commercial sponsorship, or apply to join the Dubai healthcare speaking faculty.</p>
           <div className={styles.actions}>
             <a className={`${styles.button} ${styles.solid} group`} href="/dubai/healthcare/sponsorship-enquiry/">Enquire about sponsorship <ArrowSVG /></a>
             <a className={`${styles.button} ${styles.outline} group`} href="/dubai/healthcare/speaker-enquiry/">Apply to speak <ArrowSVG /></a>
@@ -716,35 +688,14 @@ export function AgendaThemes() {
       </section>
       <AgendaSection
         title={<>The Four Sector <GradientText>Content Pillars</GradientText></>}
-        subtitle="Specialised Curriculum"
-        description="Click any content pillar below to inspect its full operational scope, clinical format, and technical integration points."
+        subtitle={null}
+        description={null}
         showSixBlocks={true}
       />
-      <section className="relative pb-[104px] bg-[#051224]/70 max-sm:pb-[72px]">
-        <div className={styles.container}>
-          <div className={styles.brochureCta}>
-            <div>
-              <h3>Request the Dubai 2027 Commercial Partnership Prospectus.</h3>
-              <p>Explore 20-minute plenary keynotes, exclusive leadership of 75-minute workshop clinics, standardised 6 sqm, 9 sqm, and 12 sqm concourse booths, and private 15-buyer CXO closed-door boardrooms.</p>
-            </div>
-            <a
-              className={`${styles.button} ${styles.solid} group`}
-              href="/dubai/healthcare/sponsorship-enquiry/"
-              style={{ minWidth: "220px" }}
-            >
-              Enquire about sponsorship
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 object-contain transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" style={{ marginLeft: "8px" }}>
-                <path d="M3.33334 8H12.6667" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M8.66666 4L12.6667 8L8.66666 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
       <section className={styles.finalCta} id="cta">
         <div className={styles.ctaBox}>
           <h2>Be in the room where <GradientText>2027 healthcare AI architecture and clinical adoption get finalised.</GradientText></h2>
-          <p>Apply for a complimentary Delegate Pass (strictly by invitation and qualification), enquire about commercial sponsorship, or apply to join the Dubai healthcare faculty.</p>
+          <p>Apply for a Business Pass, enquire about commercial sponsorship, or apply to join the Dubai healthcare speaking faculty.</p>
           <div className={styles.actions}>
             <a className={`${styles.button} ${styles.solid} group`} href="/dubai/healthcare/sponsorship-enquiry/">Enquire about sponsorship <ArrowSVG /></a>
             <a className={`${styles.button} ${styles.outline} group`} href="/dubai/healthcare/speaker-enquiry/">Apply to speak <ArrowSVG /></a>
@@ -775,9 +726,6 @@ export function AgendaCallForSpeakers() {
         }}
       >
         <div className={styles.container}>
-          <span className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold mb-3">
-            Call for Clinical &amp; Operational Healthcare Faculty
-          </span>
           <h1 className="text-white font-[850] tracking-[-2px] leading-[1.06] text-[clamp(40px,5.6vw,68px)] w-full">
             If you have deployed AI into live hospital workflows,{" "}
             <GradientText>we want you on stage</GradientText>

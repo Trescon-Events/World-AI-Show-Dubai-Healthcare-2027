@@ -10,7 +10,7 @@ export function CTASection() {
       <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)] space-y-8">
         {/* S11 · Twin closing CTA bands */}
         <div className="grid grid-cols-2 gap-6 max-[980px]:grid-cols-1">
-          {/* Band 1: Delegate Pass */}
+          {/* Band 1: Business Pass */}
           <div
             className="relative flex flex-col justify-between p-10 max-sm:p-7 rounded-[28px] backdrop-blur-[24px] overflow-hidden"
             style={{
@@ -21,9 +21,6 @@ export function CTASection() {
             }}
           >
             <div>
-              <span className="inline-block font-mono text-[11px] uppercase tracking-[1.6px] text-[#C0F43C] mb-3">
-                Dubai · 25 March 2027 · 1-Day Executive Forum · 300+ Healthcare Leaders
-              </span>
               <h2 className="m-0 font-[850] text-white leading-[1.12] tracking-[-1px] text-[clamp(26px,3vw,36px)]">
                 Be in the room where regulated clinical AI gets decided
               </h2>
@@ -33,7 +30,7 @@ export function CTASection() {
                 href="/dubai/healthcare/attend/delegate"
                 className="inline-flex items-center gap-2 px-[28px] py-[14px] rounded-full text-[15px] font-extrabold text-[#06111f] [color:#06111f!important] bg-[#C0F43C] shadow-[0_8px_24px_rgba(192,244,60,0.25)] hover:shadow-[0_12px_32px_rgba(192,244,60,0.4)] hover:scale-[1.02] transition-all duration-200 cursor-pointer"
               >
-                Apply for a Delegate Pass
+                Apply for a Business Pass
                 <span className="font-mono text-[16px] font-bold">→</span>
               </a>
             </div>
@@ -50,9 +47,6 @@ export function CTASection() {
             }}
           >
             <div>
-              <span className="inline-block font-mono text-[11px] uppercase tracking-[1.6px] text-[#18D4FF] mb-3">
-                4 Content Pillars · 20-Min Keynotes · 75-Min Clinics · 6, 9 &amp; 12 sqm Booths
-              </span>
               <h2 className="m-0 font-[850] text-white leading-[1.12] tracking-[-1px] text-[clamp(26px,3vw,36px)]">
                 Put your clinical AI architecture in front of Middle East healthcare decision-makers
               </h2>

@@ -29,7 +29,7 @@ const sourceCitedCards: TelemetryCardData[] = [
     primaryNum: 18,
     label: "Middle East healthcare AI market projection by 2027 (CAGR exceeding 35%)",
     source: "Frost & Sullivan / Healthcare Technology Insights",
-    image: "/dubai/healthcare/images/benchmarks/benchmark-01.png",
+    image: "/dubai/healthcare/images/benchmarks/benchmark-01-healthcare.jpg",
     bars: [
       {
         name: "Regional Health System AI Capital Priority",
@@ -64,7 +64,7 @@ const sourceCitedCards: TelemetryCardData[] = [
     primaryNum: 45,
     label: "Clinician time consumed by documentation and EHR data entry (68% regional providers prioritising ambient voice)",
     source: "American Medical Association / Regional Digital Health Survey",
-    image: "/dubai/healthcare/images/benchmarks/benchmark-02.png",
+    image: "/dubai/healthcare/images/benchmarks/benchmark-02-healthcare.jpg",
     bars: [
       {
         name: "Regional providers prioritising ambient voice",
@@ -99,7 +99,7 @@ const sourceCitedCards: TelemetryCardData[] = [
     primaryNum: 60,
     label: "Reduction in time-to-treatment for critical acute events (ischemic stroke, ICH) with AI triage",
     source: "The Lancet Digital Health / Clinical Trial Results",
-    image: "/dubai/healthcare/images/benchmarks/benchmark-03.png",
+    image: "/dubai/healthcare/images/benchmarks/benchmark-03-healthcare.jpg",
     bars: [
       {
         name: "Acute stroke & ICH time-to-treatment reduction",
@@ -127,29 +127,6 @@ const sourceCitedCards: TelemetryCardData[] = [
   },
 ];
 
-const forumIsNotCards = [
-  {
-    num: "01",
-    title: "Not a generic medical equipment trade show",
-    desc: "No hospital furniture, physical diagnostic hardware, surgical disposables, or general hospital supplies. Coverage focuses purely on enterprise healthcare software, clinical algorithms, and health data intelligence.",
-  },
-  {
-    num: "02",
-    title: "Not a consumer wellness or gadget expo",
-    desc: "Fitness trackers, lifestyle wellness apps, and direct-to-consumer gadgets are completely excluded. The forum serves institutional healthcare networks, hospital groups, and enterprise life-sciences systems.",
-  },
-  {
-    num: "03",
-    title: "Not an academic bioinformatics symposium",
-    desc: "Sessions do not debate speculative wet-lab hypotheses or distant academic models. Focus rests strictly on validated, clinically certified, and deployable software solutions.",
-  },
-  {
-    num: "04",
-    title: "Not an unvetted vendor pitch platform",
-    desc: "Trescon maintains strict editorial governance over the agenda. Commercial presentations are strictly capped, vetted, and structured around practical clinical formats with verified hospital buyer case studies.",
-  },
-];
-
 function BenchmarkGraphic({ card }: { card: TelemetryCardData }) {
   return (
     <div className="relative w-full h-[200px] mt-1.5 mb-3 overflow-hidden flex items-center justify-center select-none pointer-events-none">
@@ -157,91 +134,8 @@ function BenchmarkGraphic({ card }: { card: TelemetryCardData }) {
         <img
           src={card.image}
           alt={card.label}
-          className="w-full h-full object-contain object-center animate-[NeonBreath_3.2s_ease-in-out_infinite] group-hover:scale-[1.04] transition-transform duration-500"
+          className="w-full h-full object-contain object-center rounded-xl animate-[NeonBreath_3.2s_ease-in-out_infinite] group-hover:scale-[1.04] transition-transform duration-500 [mask-image:radial-gradient(ellipse_at_center,black_62%,transparent_98%)]"
         />
-
-        {card.index === "01" && (
-          <svg
-            viewBox="0 0 304 246"
-            className="absolute inset-0 w-full h-full overflow-visible"
-            fill="none"
-          >
-            <path
-              d="M100 236 L218 175 L292 134"
-              stroke="#2fd5f6"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeDasharray="16 90"
-              className="animate-[CircuitPulse_2.6s_linear_infinite]"
-            />
-            <path
-              d="M100 236 L22 190 L98 146"
-              stroke="#C0F43C"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeDasharray="14 85"
-              className="animate-[CircuitPulse_3s_linear_infinite]"
-            />
-            <line
-              x1="251"
-              y1="145"
-              x2="251"
-              y2="14"
-              stroke="#e5ff85"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeDasharray="18 70"
-              className="animate-[ArrowAscend_1.8s_linear_infinite]"
-            />
-            <circle cx="215" cy="95" r="2.8" fill="#e5ff85" className="animate-[ParticleRise_2.2s_ease-out_infinite]" />
-            <circle cx="252" cy="110" r="3" fill="#C0F43C" className="animate-[ParticleRise_1.9s_ease-out_0.5s_infinite]" />
-            <circle cx="235" cy="125" r="2.2" fill="#2fd5f6" className="animate-[ParticleRise_2.5s_ease-out_1.1s_infinite]" />
-          </svg>
-        )}
-
-        {card.index === "02" && (
-          <svg
-            viewBox="0 0 304 230"
-            className="absolute inset-0 w-full h-full overflow-visible"
-            fill="none"
-          >
-            <path
-              d="M296 36 L160 112 L52 54"
-              stroke="#e4ff82"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeDasharray="26 160"
-              className="animate-[LaserDeflect_1.9s_linear_infinite]"
-            />
-            <path
-              d="M294 64 L158 116 L76 112"
-              stroke="#2fd5f6"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeDasharray="22 150"
-              className="animate-[LaserDeflect_2.2s_linear_0.6s_infinite]"
-            />
-          </svg>
-        )}
-
-        {card.index === "03" && (
-          <svg
-            viewBox="0 0 304 206"
-            className="absolute inset-0 w-full h-full overflow-visible"
-            fill="none"
-          >
-            <path
-              d="M160 112 L14 194"
-              stroke="#e5ff85"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeDasharray="5 22"
-              className="animate-[StreamOut_1.2s_linear_infinite]"
-            />
-          </svg>
-        )}
       </div>
     </div>
   );
@@ -462,35 +356,20 @@ export function EcosystemSectionDemo() {
 
       {/* ───── S3 · The argument — page centre of gravity ───── */}
       <div className="relative z-10 w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-24px,1172px)] mx-auto flex flex-col items-center text-center">
-        <span
-          data-aos="fade-up"
-          className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#C0F43C] font-bold mb-3"
-        >
-          The Single Strategic Hook
-        </span>
-
         <h2
           data-aos="fade-up"
           className="w-full text-center font-[850] text-white leading-[1.06] tracking-[-1.8px] text-[clamp(32px,4.4vw,52px)] mb-5"
         >
-          Moving clinical AI from isolated experimental trials into{" "}
-          <GradientText>governed, reimbursable clinical practice.</GradientText>
+          Moving clinical AI{" "}
+          <GradientText>from experimental trials to reimbursable practice.</GradientText>
         </h2>
 
         <p
           data-aos="fade-up"
           data-aos-delay="80"
-          className="w-full text-white font-semibold text-[19px] leading-[1.6] mb-4 max-sm:text-[16.5px]"
+          className="w-full text-white/85 text-[18px] leading-[1.6] mb-14 max-sm:text-[16px]"
         >
-          Healthcare providers cannot afford unvalidated AI experiments where patient safety, clinical liability, and sensitive data sovereignty are on the line. World AI Show convenes hospital operators, health authorities, and life-sciences leaders around clinical evidence and live workflow integration.
-        </p>
-
-        <p
-          data-aos="fade-up"
-          data-aos-delay="120"
-          className="w-full text-white/75 text-[17px] leading-[1.65] mb-14 max-sm:text-[15.5px]"
-        >
-          Middle East healthcare systems across MOHAP, DHA, and DoH jurisdictions are executing ambitious digital modernisation mandates. However, clinical leaders and hospital operators face a profound implementation divide: while algorithms demonstrate high diagnostic accuracy in academic trials, embedding them safely into live Electronic Medical Record (EMR) systems, diagnostic workflows, and sovereign patient data environments requires unprecedented clinical governance and software interoperability.
+          Healthcare providers cannot afford unvalidated AI when patient safety, liability, and data sovereignty are at stake. World AI Show bridges the gap between algorithmic accuracy and hospital adoption, convening Middle East healthcare leaders around live EMR interoperability, clinical governance, and regulatory compliance.
         </p>
 
         {/* Component C2 — Animated Source-Cited Telemetry Cards */}
@@ -523,46 +402,6 @@ export function EcosystemSectionDemo() {
                 World AI Show | Healthcare and Life Sciences convenes hospital operators, health authorities, and life-sciences leaders at the exact moment architecture specifications, clinical governance protocols, and annual enterprise healthtech procurement shortlists are locked down.
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* ───── S4 · What the forum is not ───── */}
-        <div className="w-full mt-20 pt-16 border-t border-white/10">
-          <span
-            data-aos="fade-up"
-            className="inline-block font-mono text-[12px] uppercase tracking-[2.4px] text-[#18D4FF] font-bold mb-3"
-          >
-            Editorial &amp; Audience Governance
-          </span>
-          <h3
-            data-aos="fade-up"
-            className="text-center font-[850] text-white leading-[1.08] tracking-[-1.6px] text-[clamp(28px,3.8vw,44px)] w-full mx-auto mb-10"
-          >
-            Clinical execution over{" "}
-            <GradientText>medical equipment exhibitions</GradientText>
-          </h3>
-
-          <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1 text-left">
-            {forumIsNotCards.map((item, idx) => (
-              <div
-                key={item.num}
-                data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
-                data-aos-delay={String((idx % 2) * 100)}
-                className="p-7 rounded-[20px] border border-white/12 bg-[#040D1F]/90 shadow-[0_18px_45px_rgba(0,0,0,0.35)] hover:border-[#18D4FF]/45 transition-all duration-300"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="px-3 py-1 rounded-full border border-[#FF5C5C]/35 bg-[#FF5C5C]/10 text-[#FF5C5C] font-mono text-[11px] font-bold uppercase tracking-[1.6px]">
-                    Guardrail // {item.num}
-                  </span>
-                </div>
-                <h4 className="m-0 mb-2.5 text-white font-extrabold text-[20px] leading-snug">
-                  {item.title}
-                </h4>
-                <p className="m-0 text-white/75 text-[15px] leading-[1.6]">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

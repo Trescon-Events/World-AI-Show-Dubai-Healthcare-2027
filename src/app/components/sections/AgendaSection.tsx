@@ -134,7 +134,7 @@ export function AgendaSection({
       Four operational mandates. <GradientText>One day.</GradientText>
     </>
   ),
-  subtitle = "Specialised Curriculum",
+  subtitle = null,
   description = null,
   showSixBlocks = true,
 }: {
@@ -260,21 +260,10 @@ export function AgendaSection({
           })}
         </div>
 
-        {/* Universal Themes Footer */}
-        <div className="mt-8 p-5 rounded-[16px] border border-[#18d4ff]/25 bg-[#040D1F]/80 text-center">
-          <p className="m-0 text-white/85 font-mono text-[13px] leading-relaxed">
-            <strong className="text-[#C0F43C] uppercase tracking-[1.4px] mr-2">Universal Themes:</strong>
-            Physician change management and trust, clinical negligence and liability frameworks, return on health investment (ROHI), and ethical AI in patient care.
-          </p>
-        </div>
-
         {/* S6 · Programme Architecture (Six-Part Block Methodology) */}
         {showSixBlocks && (
           <div className="mt-24 pt-16 border-t border-white/10">
             <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1.5 rounded-full border border-[#18D4FF]/35 bg-[#18D4FF]/10 text-[#18D4FF] font-mono text-[11.5px] uppercase tracking-[2px] font-bold mb-4">
-                Trescon Six-Part Block Methodology
-              </span>
               <h3 className="text-center font-[850] text-white leading-[1.08] tracking-[-1.6px] text-[clamp(30px,4vw,46px)] w-full mx-auto">
                 Engineered to drive healthcare buyers from boardroom priorities down to{" "}
                 <GradientText>concrete procurement.</GradientText>
@@ -318,7 +307,7 @@ export function AgendaSection({
                 href="/dubai/healthcare/agenda/agenda/"
                 className="inline-flex items-center justify-center gap-2 h-[50px] px-8 rounded-full font-extrabold text-[14.5px] text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] transition-all duration-200"
               >
-                Explore Full 1-Day Master Schedule →
+                Explore the Event Schedule →
               </a>
             </div>
           </div>

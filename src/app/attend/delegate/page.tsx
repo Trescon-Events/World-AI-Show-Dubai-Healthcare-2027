@@ -4,8 +4,8 @@ import { FooterSection } from "../../components/sections/FooterSection";
 import { AttendDelegateSection } from "../page";
 
 export const metadata: Metadata = {
-  title: "Delegate Pass | Attend | World AI Show | Healthcare and Life Sciences | Dubai 2027",
-  description: "Delegate Pass — complimentary, strictly by invitation and qualification for Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, and Health Authorities at World AI Show | Healthcare and Life Sciences | Dubai 2027.",
+  title: "Business Pass | Attend | World AI Show | Healthcare and Life Sciences | Dubai 2027",
+  description: "Business Pass access for Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, Health Authorities, and vetted Solution Providers at World AI Show | Healthcare and Life Sciences | Dubai 2027.",
 };
 
 const subNav = ["Overview", "Delegate", "Sponsor", "Media Partner", "Association Partner"];

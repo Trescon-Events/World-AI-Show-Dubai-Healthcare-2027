@@ -6,15 +6,15 @@ import { GradientText } from "../Shared";
 const faqs = [
   {
     q: "What is World AI Show | Healthcare and Life Sciences | Dubai 2027?",
-    a: "World AI Show | Healthcare and Life Sciences | Dubai 2027 is a 1-Day Executive Decision Forum taking place on 25 March 2027 in Dubai, United Arab Emirates. It convenes 300+ pre-qualified hospital group CXOs, Chief Medical Officers, healthcare CIOs, clinical informatics leaders, and health regulators (maintaining a minimum 70% buy-side institutional ratio) to advance deployable, governed, and evidence-backed artificial intelligence for clinical care and health operations.",
+    a: "World AI Show | Healthcare and Life Sciences | Dubai 2027 is a 1-Day Executive Decision Forum taking place on 25 March 2027 in Dubai, United Arab Emirates. It convenes 300+ pre-qualified hospital group CXOs, Chief Medical Officers, healthcare CIOs, clinical informatics leaders, and health regulators (maintaining a minimum 80%+ buy-side institutional ratio) to advance deployable, governed, and evidence-backed artificial intelligence for clinical care and health operations.",
   },
   {
     q: "How does this forum fit into the March Dubai Cluster?",
     a: "The forum is positioned as Day 2 of the March Dubai Cluster, paired back-to-back with World AI Show | BFSI | Dubai 2027 on 24 March 2027. Both forums share venue infrastructure while maintaining distinct P&Ls, dedicated sector agendas, and pre-qualified buyer audiences.",
   },
   {
-    q: "Who qualifies for a complimentary Delegate Pass?",
-    a: "Senior healthcare executives, hospital operators, clinical leaders, health authority officials, and health payers attend by invitation on a complimentary Delegate Pass, subject to qualification against an active operational mandate. Business Passes provide paid commercial access for healthtech providers, software vendors, and consultancies outside the invitation criteria, with registration numbers strictly capped to protect room composition.",
+    q: "How do Business Passes and delegate registration work?",
+    a: "All forum attendees register via a Business Pass. Senior healthcare executives, hospital operators, clinical leaders, health authority officials, and health payers attend subject to verification against an active operational mandate, while commercial Business Passes for healthtech providers, software vendors, and consultancies are strictly capped to protect the minimum 80%+ buy-side institutional ratio.",
   },
   {
     q: "How does UAE Federal Law No. 2 of 2019 govern health data sovereignty and cloud AI hosting?",
