@@ -1,6 +1,2 @@
-/* ── Agenda Page Layout Overrides ─────────────────────────── */
-
-.page-agenda .pt-\[200px\],
-.page-agenda .pt-\[220px\] {
-  padding-top: 0px !important;
-}
+/* ── Agenda Page Layout Styles (AI 2047 Brand Book V1.0) ─────── */
+/* Hero clearance is handled directly by .page-hero-subnav-top and AgendaPage.module.css */

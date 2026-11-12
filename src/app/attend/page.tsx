@@ -218,15 +218,10 @@ export function ArrowButton({
   href?: string;
   variant?: "solid" | "outline";
 }) {
-  const baseClasses =
-    "inline-flex items-center justify-center gap-3.5 min-w-[178px] h-[49px] px-[25px] rounded-full text-[15px] font-extrabold transition-all duration-180 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(185,248,45,0.24)] cursor-pointer";
-  const styles = {
-    solid: "bg-[#C0F43C] !text-black [color:#06111f!important] shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)]",
-    outline: "text-white border border-[#4eb9ff]/80 bg-[#030a18]/30 shadow-[inset_0_0_24px_rgba(46,172,255,0.08)] hover:border-cyan/100 hover:bg-[#030a18]/50",
-  };
+  const variantClass = variant === "solid" ? "bb-btn-primary" : "bb-btn-outline-dark";
 
   return (
-    <a className={`${baseClasses} ${styles[variant]}`} href={href}>
+    <a className={variantClass} href={href}>
       {children}
       <svg
         width="16"
@@ -234,7 +229,7 @@ export function ArrowButton({
         viewBox="0 0 16 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-[15px] h-[15px] object-contain"
+        className="bb-btn-arrow w-[15px] h-[15px] object-contain"
         aria-hidden="true"
       >
         <path
@@ -256,23 +251,18 @@ export function ArrowButton({
   );
 }
 
-export function NumberedCard({ item, index }: { item: CardItem; index: number }) {
+export function NumberedCard({ item }: { item: CardItem; index?: number }) {
   return (
-    <article className="group relative min-h-[235px] p-7 border border-white/[0.17] rounded-[13px] bg-gradient-to-br from-[#00ceff]/12 to-[#996cff]/14 bg-[#050c1c]/80 shadow-[inset_0_0_28px_rgba(65,220,255,0.05),0_20px_60px_rgba(0,0,0,0.24)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#18d4ff]/50 hover:shadow-[0_12px_36px_rgba(0,206,255,0.12),inset_0_0_24px_rgba(24,212,255,0.04)]">
-      <span className="grid place-items-center w-11 h-11 mb-7 border border-white/8 rounded-[14px] text-cyan bg-[#030914]/72 text-[11px] font-extrabold select-none group-hover:text-[#06111f] group-hover:bg-[#C0F43C] group-hover:border-[#C0F43C] group-hover:shadow-[0_0_15px_rgba(192,244,60,0.35)] transition-all duration-300">
+    <article className="group relative min-h-[235px] p-7 border border-[#0069B8]/42 rounded-[14px] bg-[#0D1B2E] shadow-[0_18px_46px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#009EAD]">
+      <span className="grid place-items-center w-11 h-11 mb-7 border border-[#0069B8]/40 rounded-[12px] text-[#009EAD] bg-[#08121E] text-[11px] font-extrabold select-none group-hover:text-white group-hover:bg-[#0069B8] group-hover:border-[#0069B8] transition-all duration-300">
         {item.icon ? (
-          <img src={item.icon} alt="" className="w-5 h-5 object-contain group-hover:brightness-0 transition-all duration-300" loading="lazy" />
-        ) : index + 1 < 10 ? (
-          `0${index + 1}`
+          <img src={item.icon} alt="" className="w-5 h-5 object-contain transition-all duration-300" loading="lazy" />
         ) : (
-          index + 1
+          <span className="w-2.5 h-2.5 rounded-full bg-current" />
         )}
       </span>
-      <span className="absolute right-[25px] top-[30px] px-[9px] py-1 rounded-full text-cyan bg-[#12d7ff]/9 text-[11px] font-extrabold tracking-[1px] select-none group-hover:text-black group-hover:bg-[#C0F43C] transition-all duration-300">
-        {index + 1 < 10 ? `0${index + 1}` : index + 1}
-      </span>
-      <h3 className="m-0 mb-2.5 text-white font-[850] text-[18px] leading-tight transition-colors duration-200 group-hover:text-[#C0F43C]">{item.title}</h3>
-      <p className="m-0 text-white/62 text-[15px] leading-relaxed transition-colors duration-200 group-hover:text-white/80">{item.text}</p>
+      <h3 className="m-0 mb-2.5 text-white font-[850] text-[18px] leading-tight transition-colors duration-200 group-hover:text-[#009EAD]">{item.title}</h3>
+      <p className="m-0 text-[#F7F9FC]/88 text-[15px] leading-relaxed">{item.text}</p>
     </article>
   );
 }
@@ -309,30 +299,30 @@ export function SplitSection({
   reverse?: boolean;
 }) {
   return (
-    <section className="py-[92px] bg-[#020b1c] max-sm:py-[66px]" id={id}>
-      <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
+    <section className="py-[92px] bg-[#08121E] border-t border-[#0069B8]/25 max-sm:py-[66px]" id={id}>
+      <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
         <div className="mb-10">
           {eyebrow && (
-            <p className="m-0 mb-[16px] text-white/78 text-[13px] font-[650] tracking-[4px] uppercase select-none font-mono">
+            <p className="m-0 mb-[16px] text-[#009EAD] text-[13px] font-bold tracking-[3px] uppercase select-none font-mono">
               {eyebrow}
             </p>
           )}
-          <h2 className="m-0 text-white font-[850] leading-[1.1] tracking-[-1.6px] text-[clamp(30px,3.6vw,46px)] max-sm:text-[30px] max-sm:tracking-[-1px]">
+          <h2 className="m-0 text-white font-[850] leading-[1.1] tracking-[-0.01em] text-[clamp(30px,3.6vw,46px)] max-sm:text-[30px]">
             {title}
           </h2>
         </div>
 
         <div className="grid grid-cols-[1fr_minmax(360px,47%)] items-center gap-[64px] max-[980px]:grid-cols-1 max-sm:gap-[34px]">
           <div className={`flex flex-col ${reverse ? "max-[980px]:order-none order-2" : "order-none"}`}>
-            <div className="m-0 mb-9 text-white/75 text-[18px] leading-[1.7] max-sm:text-base">
+            <div className="m-0 mb-9 text-[#F7F9FC]/84 text-[18px] leading-[1.7] max-sm:text-base">
               {text}
             </div>
             <div className="flex">
               <ArrowButton href={buttonHref || `#${id}`}>{button}</ArrowButton>
             </div>
           </div>
-          <div className="relative overflow-hidden border border-[#55cfff]/22 rounded-[24px] bg-[#071426]/72 shadow-[0_0_44px_rgba(0,206,255,0.12)]">
-            <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-[#020b2c]/18 pointer-events-none" />
+          <div className="relative overflow-hidden border border-[#0069B8]/52 rounded-[24px] bg-[#0D1B2E] shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-[#08121E]/25 pointer-events-none" />
             <img
               src={imageSrc}
               alt={imageAlt}
@@ -348,40 +338,37 @@ export function SplitSection({
 
 export function AttendCTASection() {
   return (
-    <section className="py-[86px] pt-[86px] bg-gradient-to-b from-transparent to-[#020a2c]/18 max-sm:py-[62px]">
-      <div className="w-[min(980px,calc(100%-48px))] mx-auto p-[66px_48px] border border-[#c0f43c]/35 rounded-[36px] text-center bg-[#050c1c]/82 shadow-[0_0_60px_rgba(192,244,60,0.12),inset_0_0_34px_rgba(0,206,255,0.03)] max-sm:p-[42px_22px] max-sm:w-[min(100%-28px,1120px)] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[radial-gradient(circle,rgba(192,244,60,0.04),transparent_70%)] pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-[1px] bg-[#2E3C4D]/45" />
-
+    <section className="py-[86px] bg-[#08121E] border-t border-[#0069B8]/25 max-sm:py-[62px]">
+      <div className="w-[min(980px,calc(100%-48px))] max-sm:w-[min(100%-32px,980px)] mx-auto p-[60px_48px] border border-[#0069B8]/52 rounded-[32px] text-center bg-[#0D1B2E] shadow-[0_24px_60px_rgba(0,0,0,0.45)] max-sm:p-[42px_22px] relative overflow-hidden">
         <div className="relative z-10">
-          <span className="inline-flex items-center mb-[27px] px-[15px] py-2 border border-white/10 rounded-full text-white/72 text-[12px] tracking-[2px] uppercase select-none before:content-[''] before:w-[7px] before:h-[7px] before:mr-2.5 before:rounded-full before:bg-cyan font-mono">
+          <span className="inline-flex items-center mb-[27px] px-[15px] py-2 border border-[#009EAD]/40 bg-[#08121E] rounded-full text-[#F7F9FC]/84 text-[12px] tracking-[2px] uppercase select-none before:content-[''] before:w-[7px] before:h-[7px] before:mr-2.5 before:rounded-full before:bg-[#009EAD] font-mono">
             Dubai · 25 March 2027 · 1-Day Forum · 300+ Senior Healthcare Leaders
           </span>
-          <h2 className="w-full mx-auto mb-8 text-[#f7f9ff] font-[850] leading-[1.08] tracking-[-1.8px] text-[clamp(36px,5vw,56px)] max-sm:text-[32px] max-sm:tracking-[-1px]">
-            Be in the room where <span className="bg-gradient-to-r from-[#C0F43C] to-[#18d4ff] bg-clip-text text-transparent">2027&apos;s clinical AI architecture</span> gets finalised.
+          <h2 className="w-full mx-auto mb-8 text-white font-[850] leading-[1.08] tracking-[-0.01em] text-[clamp(36px,5vw,56px)] max-sm:text-[32px]">
+            Be in the room where <span className="text-[#009EAD]">2027&apos;s clinical AI architecture</span> gets finalised.
           </h2>
 
           <div className="flex flex-wrap justify-center items-center gap-4 mt-8 mb-12 max-sm:flex-col max-sm:w-full">
             <a
               href="/dubai/healthcare/attend/delegate/"
-              className="inline-flex items-center justify-center gap-2 min-w-[178px] h-[49px] px-[32px] py-[15px] rounded-full text-[15px] font-extrabold text-[#06111f] [color:#06111f!important] bg-[#C0F43C] shadow-[0_8px_24px_rgba(192,244,60,0.25)] hover:shadow-[0_12px_32px_rgba(192,244,60,0.4)] hover:scale-[1.03] transition-all duration-200 cursor-pointer max-sm:w-full"
+              className="bb-btn-primary max-sm:w-full"
             >
               Apply for a Business Pass
-              <span className="font-mono text-[16px] font-bold">→</span>
+              <span className="bb-btn-arrow font-mono text-[16px] font-bold">→</span>
             </a>
             <a
               href="/dubai/healthcare/sponsorship-enquiry/"
-              className="inline-flex items-center justify-center min-w-[178px] h-[49px] px-[32px] py-[15px] rounded-full text-[15px] font-extrabold text-white bg-transparent border border-white/20 hover:border-white/40 hover:bg-white/5 hover:scale-[1.03] transition-all duration-200 cursor-pointer max-sm:w-full"
+              className="bb-btn-outline-dark max-sm:w-full"
             >
               Enquire about sponsorship
             </a>
           </div>
 
-          <div className="w-full h-[1px] bg-white/10 my-8" />
+          <div className="w-full h-[1px] bg-[#0069B8]/30 my-8" />
 
           <div className="grid grid-cols-3 w-full gap-8 max-sm:grid-cols-1 max-sm:gap-4 text-center">
             <div className="flex flex-col items-center">
-              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-white/50 mb-2 font-mono">
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#009EAD] mb-2 font-mono">
                 Date
               </span>
               <strong className="text-[17px] font-extrabold text-white tracking-wide font-mono">
@@ -389,8 +376,8 @@ export function AttendCTASection() {
               </strong>
             </div>
 
-            <div className="flex flex-col items-center border-l border-white/10 max-sm:border-l-0 max-sm:border-t max-sm:pt-4 max-sm:mt-1">
-              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-white/50 mb-2 font-mono">
+            <div className="flex flex-col items-center border-l border-[#0069B8]/25 max-sm:border-l-0 max-sm:border-t max-sm:pt-4 max-sm:mt-1">
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#009EAD] mb-2 font-mono">
                 Location
               </span>
               <strong className="text-[17px] font-extrabold text-white tracking-wide text-center">
@@ -398,8 +385,8 @@ export function AttendCTASection() {
               </strong>
             </div>
 
-            <div className="flex flex-col items-center border-l border-white/10 max-sm:border-l-0 max-sm:border-t max-sm:pt-4 max-sm:mt-1">
-              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-white/50 mb-2 font-mono">
+            <div className="flex flex-col items-center border-l border-[#0069B8]/25 max-sm:border-l-0 max-sm:border-t max-sm:pt-4 max-sm:mt-1">
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#009EAD] mb-2 font-mono">
                 Organiser
               </span>
               <strong className="text-[17px] font-extrabold text-white tracking-wide">
@@ -418,16 +405,16 @@ export function AttendOverviewSection() {
     <>
       {/* Hero Section */}
       <section
-        className="relative min-h-[700px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:center_top] bg-no-repeat max-sm:min-h-[600px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
+        className="relative min-h-[560px] flex items-end px-[max(24px,calc((100vw-1172px)/2))] page-hero-subnav-top pb-[76px] overflow-hidden bg-cover bg-[position:center_top] bg-no-repeat max-sm:min-h-[460px] max-sm:px-[16px] max-sm:pb-[56px]"
         style={{
           backgroundImage:
-            'linear-gradient(90deg, rgba(2, 7, 19, 0.92) 0%, rgba(2, 7, 19, 0.56) 45%, rgba(2, 7, 19, 0.1) 100%), url("/dubai/healthcare/images/Attend/Overview-banner.webp")',
+            'linear-gradient(90deg, rgba(8, 18, 30, 0.92) 0%, rgba(8, 18, 30, 0.58) 45%, rgba(8, 18, 30, 0.14) 100%), url("/dubai/healthcare/images/Attend/Overview-banner.webp")',
         }}
         id="overview"
       >
         <div className="heroBackdrop absolute bottom-0 right-[-3%] w-[58%] h-[84%] opacity-0 pointer-events-none" />
         <div className="relative z-10 w-full">
-          <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.06] tracking-[-1.8px] text-[clamp(42px,5.4vw,68px)] max-sm:text-[36px]">
+          <h1 className="m-0 text-white font-[850] leading-[1.06] tracking-[-0.01em] text-[clamp(38px,5.2vw,64px)] max-sm:text-[34px]">
             Focusing on controlled AI deployment for <GradientText>regulated clinical &amp; life sciences operations.</GradientText>
           </h1>
           <div className="flex flex-wrap gap-3.5 mt-10 max-sm:flex-col max-sm:items-start max-sm:gap-4">
@@ -442,20 +429,20 @@ export function AttendOverviewSection() {
       </section>
 
       {/* Controlled Execution Over Clinical Hype Split Section */}
-      <section className="py-[92px] bg-[#020b1c] max-sm:py-[66px]">
-        <div className="grid grid-cols-[1.08fr_0.92fr] items-center gap-[68px] w-[min(1120px,calc(100%-48px))] mx-auto max-[980px]:grid-cols-1 max-sm:gap-[34px]">
+      <section className="py-[92px] bg-[#08121E] border-t border-[#0069B8]/25 max-sm:py-[66px]">
+        <div className="grid grid-cols-[1.08fr_0.92fr] items-center gap-[68px] w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto max-[980px]:grid-cols-1 max-sm:gap-[34px]">
           <div className="flex flex-col">
-            <h2 className="m-0 text-white font-[850] leading-[1.08] tracking-[-1.6px] text-[clamp(36px,4.4vw,52px)] max-sm:text-[32px]">
+            <h2 className="m-0 text-white font-[850] leading-[1.08] tracking-[-0.01em] text-[clamp(36px,4.4vw,52px)] max-sm:text-[32px]">
               Controlled execution over <GradientText>clinical hype.</GradientText>
             </h2>
-            <p className="mt-6 mb-4 text-white/75 text-[17px] leading-[1.65]">
+            <p className="mt-6 mb-4 text-[#F7F9FC]/84 text-[17px] leading-[1.65]">
               World AI Show | Healthcare and Life Sciences convenes hospital group CXOs, clinical leaders, and regulators to deploy safe, governed AI across clinical and operational workflows.
             </p>
-            <p className="m-0 text-white/75 text-[17px] leading-[1.65]">
+            <p className="m-0 text-[#F7F9FC]/84 text-[17px] leading-[1.65]">
               Part of the World AI Show Industry Series, the forum addresses EHR interoperability and UAE health data residency (Nabidh, Malaffi, Riayati) across four core mandates: ambient clinical documentation, diagnostic imaging triage, hospital capacity optimisation, and sovereign data governance.
             </p>
           </div>
-          <div className="relative overflow-hidden border border-[#55cfff]/25 rounded-[24px] bg-[#071426]/72 shadow-[0_0_44px_rgba(0,206,255,0.14)]">
+          <div className="relative overflow-hidden border border-[#0069B8]/52 rounded-[24px] bg-[#0D1B2E] shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
             <img
               src="/dubai/healthcare/images/agenda/About.webp"
               alt="Controlled execution over clinical hype"
@@ -467,9 +454,9 @@ export function AttendOverviewSection() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-[86px] pt-[74px] bg-gradient-to-b from-[#020c21] to-[#031127] text-center max-sm:py-[62px]">
-        <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
-          <h2 className="w-full mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
+      <section className="py-[86px] pt-[74px] bg-[#08121E] border-t border-[#0069B8]/25 text-center max-sm:py-[62px]">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
+          <h2 className="w-full mx-auto text-white font-[850] leading-[1.05] tracking-[-0.01em] text-[clamp(40px,5vw,60px)] max-sm:text-[36px]">
             The <GradientText>Room Composition</GradientText>
           </h2>
           <AttendStats />
@@ -477,28 +464,28 @@ export function AttendOverviewSection() {
       </section>
 
       {/* Two-Door Pass Matrix Section (Section 08: /dubai/healthcare/attend/) */}
-      <section className="py-[86px] bg-[#020c21] max-sm:py-[62px]" id="pass-matrix">
-        <div className="w-[min(1120px,calc(100%-48px))] mx-auto">
+      <section className="py-[86px] bg-[#08121E] border-t border-[#0069B8]/25 max-sm:py-[62px]" id="pass-matrix">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="w-full mx-auto text-white font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(36px,4.6vw,54px)]">
+            <h2 className="w-full mx-auto text-white font-[850] leading-[1.05] tracking-[-0.01em] text-[clamp(36px,4.6vw,54px)]">
               How You Can be <GradientText>Part of This Event</GradientText>
             </h2>
           </div>
 
           <div className="grid grid-cols-2 gap-6 max-[980px]:grid-cols-1">
             {/* Door 1 */}
-            <div className="flex flex-col justify-between p-9 rounded-[24px] border border-[#C0F43C]/45 bg-gradient-to-br from-[#C0F43C]/10 via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+            <div className="flex flex-col justify-between p-9 rounded-[24px] border border-[#F15928]/60 bg-[#0D1B2E] shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
               <div>
                 <h3 className="text-white font-extrabold text-[25px] leading-[1.2] mb-3">
                   Business Pass — Healthcare &amp; Life Sciences Buyers
                 </h3>
-                <p className="text-white/80 text-[16px] leading-[1.6] mb-5">
+                <p className="text-[#F7F9FC]/84 text-[16px] leading-[1.6] mb-5">
                   Senior hospital, health authority, and life sciences executives attend on a Business Pass, with role verification ensuring alignment with an active clinical or IT deployment mandate.
                 </p>
-                <ul className="space-y-2.5 mb-8 text-white/75 text-[15px] list-none p-0">
-                  <li className="flex items-start gap-2.5"><span className="text-[#C0F43C] font-bold">✓</span> Target Audience: Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, Health Authorities</li>
-                  <li className="flex items-start gap-2.5"><span className="text-[#C0F43C] font-bold">✓</span> Inclusions: Plenary access, choice of Parallel Breakout Clinic (Ambient Voice or Diagnostics), Outcome Roundtables, Hosted Reception</li>
-                  <li className="flex items-start gap-2.5"><span className="text-[#C0F43C] font-bold">✓</span> Privacy: Mandatory separate unbundled consent checkboxes under UAE Personal Data Protection Law (PDPL)</li>
+                <ul className="space-y-2.5 mb-8 text-[#F7F9FC]/80 text-[15px] list-none p-0">
+                  <li className="flex items-start gap-2.5"><span className="text-[#F15928] font-bold">✓</span> Target Audience: Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, Health Authorities</li>
+                  <li className="flex items-start gap-2.5"><span className="text-[#F15928] font-bold">✓</span> Inclusions: Plenary access, choice of Parallel Breakout Clinic (Ambient Voice or Diagnostics), Outcome Roundtables, Hosted Reception</li>
+                  <li className="flex items-start gap-2.5"><span className="text-[#F15928] font-bold">✓</span> Privacy: Mandatory separate unbundled consent checkboxes under UAE Personal Data Protection Law (PDPL)</li>
                 </ul>
               </div>
               <div>
@@ -509,18 +496,18 @@ export function AttendOverviewSection() {
             </div>
 
             {/* Door 2 */}
-            <div className="flex flex-col justify-between p-9 rounded-[24px] border border-cyan/40 bg-gradient-to-br from-cyan/10 via-[#041022] to-[#041022] shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+            <div className="flex flex-col justify-between p-9 rounded-[24px] border border-[#009EAD]/55 bg-[#0D1B2E] shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
               <div>
                 <h3 className="text-white font-extrabold text-[25px] leading-[1.2] mb-3">
                   Business Pass — Solution Providers (Strictly Capped Quota)
                 </h3>
-                <p className="text-white/80 text-[16px] leading-[1.6] mb-5">
+                <p className="text-[#F7F9FC]/84 text-[16px] leading-[1.6] mb-5">
                   Business Passes provide commercial access for healthcare technology vendors, medical device manufacturers, and consultancies, with ticket numbers strictly capped to protect room composition.
                 </p>
-                <ul className="space-y-2.5 mb-8 text-white/75 text-[15px] list-none p-0">
-                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Paid commercial access for HealthTech, EHR/HIS, diagnostic imaging, RCM, and sovereign cloud vendors</li>
-                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Strictly capped quota to protect the minimum 80%+ buy-side institutional ratio</li>
-                  <li className="flex items-start gap-2.5"><span className="text-cyan font-bold">✓</span> Full 1-day access to plenary blocks, concourse showcase, and Closing Executive Reception</li>
+                <ul className="space-y-2.5 mb-8 text-[#F7F9FC]/80 text-[15px] list-none p-0">
+                  <li className="flex items-start gap-2.5"><span className="text-[#009EAD] font-bold">✓</span> Paid commercial access for HealthTech, EHR/HIS, diagnostic imaging, RCM, and sovereign cloud vendors</li>
+                  <li className="flex items-start gap-2.5"><span className="text-[#009EAD] font-bold">✓</span> Strictly capped quota to protect the minimum 80%+ buy-side institutional ratio</li>
+                  <li className="flex items-start gap-2.5"><span className="text-[#009EAD] font-bold">✓</span> Full 1-day access to plenary blocks, concourse showcase, and Closing Executive Reception</li>
                 </ul>
               </div>
               <div className="flex flex-wrap gap-3">
@@ -537,12 +524,12 @@ export function AttendOverviewSection() {
       </section>
 
       {/* Value Section */}
-      <section className="py-[86px] bg-gradient-to-b from-[#031127] to-[#020b1c] text-center max-sm:py-[62px]">
-        <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
-          <h3 className="w-full mx-auto mt-0 mb-10 text-white font-[850] leading-[1.08] tracking-[-1.5px] text-[clamp(32px,4vw,46px)] max-sm:text-[30px]">
+      <section className="py-[86px] bg-[#08121E] border-t border-[#0069B8]/25 text-center max-sm:py-[62px]">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
+          <h3 className="w-full mx-auto mt-0 mb-10 text-white font-[850] leading-[1.08] tracking-[-0.01em] text-[clamp(32px,4vw,46px)] max-sm:text-[30px]">
             Why Healthcare Leaders are Convening at <GradientText>World AI Show</GradientText>
           </h3>
-          <div className="grid grid-cols-3 gap-4 mb-9 max-[980px]:grid-cols-[repeat(3,310px)] max-sm:grid-cols-1">
+          <div className="grid grid-cols-3 gap-4 mb-9 max-[980px]:grid-cols-2 max-sm:grid-cols-1">
             {valueCards.map((card, index) => (
               <NumberedCard item={card} index={index} key={card.title} />
             ))}
@@ -558,18 +545,16 @@ export function AttendDelegateSection() {
     <>
       {/* Hero Section */}
       <section
-        className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:center_top] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
+        className="relative min-h-[560px] flex items-end px-[max(24px,calc((100vw-1172px)/2))] page-hero-subnav-top pb-[76px] overflow-hidden bg-cover bg-[position:center_top] bg-no-repeat max-sm:min-h-[460px] max-sm:px-[16px] max-sm:pb-[56px]"
         style={{ backgroundImage: 'url("/dubai/healthcare/images/Attend/Delegates-banner.webp")' }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020713]/88 via-[#020713]/48 to-transparent z-0 pointer-events-none" />
-        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
-        <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#08121E]/92 via-[#08121E]/60 to-transparent z-0 pointer-events-none" />
 
         <div className="relative z-10 w-full">
-          <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(42px,5.4vw,66px)] max-sm:text-[36px]">
+          <h1 className="m-0 text-white font-[850] leading-[1.05] tracking-[-0.01em] text-[clamp(38px,5.2vw,64px)] max-sm:text-[34px]">
             Built for Pre-Qualified <GradientText>Healthcare &amp; Life Sciences CXOs.</GradientText>
           </h1>
-          <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
+          <p className="w-full mt-[24px] mb-0 text-[#F7F9FC]/88 text-[19px] leading-normal">
             Business Passes grant executive access for senior hospital, clinical, and life sciences leaders—including Hospital CEOs, CMOs, CIOs, Chief Digital Officers, Heads of Clinical Informatics, and Health Authorities—alongside capped commercial attendees holding an active clinical or IT deployment mandate.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
@@ -599,9 +584,9 @@ export function AttendDelegateSection() {
         }
       />
 
-      <section className="py-[86px] bg-gradient-to-b from-[#020b1c] to-[#031127] max-sm:py-[62px]">
-        <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
-          <h2 className="m-0 mb-[42px] text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-center text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
+      <section className="py-[86px] bg-[#08121E] border-t border-[#0069B8]/25 max-sm:py-[62px]">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
+          <h2 className="m-0 mb-[42px] text-white font-[850] leading-[1.05] tracking-[-0.01em] text-center text-[clamp(40px,5vw,60px)] max-sm:text-[36px]">
             Business Pass <GradientText>Inclusions &amp; Standards</GradientText>
           </h2>
           <BenefitGrid items={gatewayCards} />
@@ -616,18 +601,16 @@ export function AttendSponsorSection() {
     <>
       {/* Hero Section */}
       <section
-        className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
+        className="relative min-h-[560px] flex items-end px-[max(24px,calc((100vw-1172px)/2))] page-hero-subnav-top pb-[76px] overflow-hidden bg-cover bg-[position:center_top] bg-no-repeat max-sm:min-h-[460px] max-sm:px-[16px] max-sm:pb-[56px]"
         style={{ backgroundImage: 'url("/dubai/healthcare/images/Attend/Sponsor-banner.webp")' }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020713]/88 via-[#020713]/48 to-transparent z-0 pointer-events-none" />
-        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
-        <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#08121E]/92 via-[#08121E]/60 to-transparent z-0 pointer-events-none" />
 
         <div className="relative z-10 w-full">
-          <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(42px,5.4vw,66px)] max-sm:text-[36px]">
+          <h1 className="m-0 text-white font-[850] leading-[1.05] tracking-[-0.01em] text-[clamp(38px,5.2vw,64px)] max-sm:text-[34px]">
             Where Middle East healthcare leaders specify, procure, and <GradientText>deploy clinical AI.</GradientText>
           </h1>
-          <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
+          <p className="w-full mt-[24px] mb-0 text-[#F7F9FC]/88 text-[19px] leading-normal">
             Explore commercial partnerships structured around plenary keynotes, workshop clinics, concourse booths, and private buyer-led CXO closed-door boardrooms.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
@@ -653,28 +636,28 @@ export function AttendSponsorSection() {
         }
         text={
           <div className="flex flex-col gap-3">
-            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+            <div className="p-4 rounded-[14px] border border-[#0069B8]/45 bg-[#0D1B2E] text-[16px] leading-snug text-[#F7F9FC]/84">
               <strong className="text-white">Speaking Sponsor:</strong> 20-Min Plenary Keynote/Fireside + 12 sqm Concourse Booth + 12 Passes
             </div>
-            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+            <div className="p-4 rounded-[14px] border border-[#0069B8]/45 bg-[#0D1B2E] text-[16px] leading-snug text-[#F7F9FC]/84">
               <strong className="text-white">Engagement Partner:</strong> Exclusive Leadership of 75-Min Workshop Clinic + 9 sqm Booth + 8 Passes
             </div>
-            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+            <div className="p-4 rounded-[14px] border border-[#0069B8]/45 bg-[#0D1B2E] text-[16px] leading-snug text-[#F7F9FC]/84">
               <strong className="text-white">CXO Closed-Door Boardroom:</strong> 60-Min Curated Session with 15 Wishlist CXOs + 5-Min Opening Address
             </div>
-            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+            <div className="p-4 rounded-[14px] border border-[#0069B8]/45 bg-[#0D1B2E] text-[16px] leading-snug text-[#F7F9FC]/84">
               <strong className="text-white">Industry Partner:</strong> Plenary Panel Speaking Seat + 9 sqm Booth + 6 Passes
             </div>
-            <div className="p-4 rounded-[14px] border border-white/[0.14] bg-[#050c1c]/85 shadow-[inset_0_0_20px_rgba(65,220,255,0.04)] text-[16px] leading-snug text-white/80">
+            <div className="p-4 rounded-[14px] border border-[#0069B8]/45 bg-[#0D1B2E] text-[16px] leading-snug text-[#F7F9FC]/84">
               <strong className="text-white">Exhibitor:</strong> 6 sqm Standard Turnkey Concourse Booth + 4 Passes
             </div>
           </div>
         }
       />
 
-      <section className="py-[86px] bg-gradient-to-b from-[#020b1c] to-[#031127] max-sm:py-[62px]">
-        <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
-          <h2 className="m-0 mb-[42px] text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-center text-[clamp(40px,5vw,60px)] max-sm:text-[38px] max-sm:tracking-[-1px]">
+      <section className="py-[86px] bg-[#08121E] border-t border-[#0069B8]/25 max-sm:py-[62px]">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
+          <h2 className="m-0 mb-[42px] text-white font-[850] leading-[1.05] tracking-[-0.01em] text-center text-[clamp(40px,5vw,60px)] max-sm:text-[36px]">
             Standardised Partnership <GradientText>Tiers &amp; Deliverables</GradientText>
           </h2>
           <BenefitGrid items={sponsorBenefits} />
@@ -689,18 +672,16 @@ export function AttendMediaSection() {
     <>
       {/* Hero Section */}
       <section
-        className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
+        className="relative min-h-[560px] flex items-end px-[max(24px,calc((100vw-1172px)/2))] page-hero-subnav-top pb-[76px] overflow-hidden bg-cover bg-[position:center_top] bg-no-repeat max-sm:min-h-[460px] max-sm:px-[16px] max-sm:pb-[56px]"
         style={{ backgroundImage: 'url("/dubai/healthcare/images/Attend/Media-banner.webp")' }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020713]/88 via-[#020713]/48 to-transparent z-0 pointer-events-none" />
-        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
-        <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#08121E]/92 via-[#08121E]/60 to-transparent z-0 pointer-events-none" />
 
         <div className="relative z-10 w-full">
-          <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
+          <h1 className="m-0 text-white font-[850] leading-[1.05] tracking-[-0.01em] text-[clamp(38px,5.2vw,64px)] max-sm:text-[34px]">
             Cover the Premier <GradientText>Middle East Healthcare AI Forum</GradientText>
           </h1>
-          <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
+          <p className="w-full mt-[24px] mb-0 text-[#F7F9FC]/88 text-[19px] leading-normal">
             Secure accredited press credentials, dedicated broadcast suite access, and 1-on-1 briefings with hospital group CXOs, Chief Medical Officers, and regulators setting the Middle East&apos;s 2027 clinical AI agenda.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
@@ -726,8 +707,8 @@ export function AttendMediaSection() {
         }
       />
 
-      <section className="py-[86px] bg-gradient-to-b from-[#020b1c] to-[#031127] max-sm:py-[62px]">
-        <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
+      <section className="py-[86px] bg-[#08121E] border-t border-[#0069B8]/25 max-sm:py-[62px]">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
           <BenefitGrid items={mediaBenefits} />
         </div>
       </section>
@@ -740,18 +721,16 @@ export function AttendAssociationSection() {
     <>
       {/* Hero Section */}
       <section
-        className="relative min-h-[760px] -mt-[102px] flex items-end px-[max(24px,calc((100vw-1120px)/2))] py-[76px] pt-[280px] overflow-hidden bg-cover bg-[position:right_center] bg-no-repeat max-sm:min-h-[690px] max-sm:px-[18px] max-sm:py-[56px] max-sm:pt-[240px]"
+        className="relative min-h-[560px] flex items-end px-[max(24px,calc((100vw-1172px)/2))] page-hero-subnav-top pb-[76px] overflow-hidden bg-cover bg-[position:center_top] bg-no-repeat max-sm:min-h-[460px] max-sm:px-[16px] max-sm:pb-[56px]"
         style={{ backgroundImage: 'url("/dubai/healthcare/images/Attend/Association-banner.webp")' }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020713]/88 via-[#020713]/48 to-transparent z-0 pointer-events-none" />
-        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#18d4ff]/4 blur-[110px] pointer-events-none z-0" />
-        <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-[#C0F43C]/2 blur-[130px] pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#08121E]/92 via-[#08121E]/60 to-transparent z-0 pointer-events-none" />
 
         <div className="relative z-10 w-full">
-          <h1 className="m-0 text-[#f7f9ff] font-[850] leading-[1.05] tracking-[-1.8px] text-[clamp(44px,5.5vw,68px)] max-sm:text-[38px]">
+          <h1 className="m-0 text-white font-[850] leading-[1.05] tracking-[-0.01em] text-[clamp(38px,5.2vw,64px)] max-sm:text-[34px]">
             Institutional <GradientText>Partnership Application</GradientText>
           </h1>
-          <p className="w-full mt-[24px] mb-0 text-white/88 text-[19px] leading-normal">
+          <p className="w-full mt-[24px] mb-0 text-[#F7F9FC]/88 text-[19px] leading-normal">
             Collaborate with regional medical associations, hospital federations, clinical informatics societies, and life sciences councils to steer national clinical AI adoption, foster bilateral delegations, and champion audited patient-safe innovation across the Middle East.
           </p>
           <div className="flex gap-3.5 mt-9 max-sm:flex-col max-sm:items-start max-sm:gap-4">
@@ -778,8 +757,8 @@ export function AttendAssociationSection() {
         }
       />
 
-      <section className="py-[86px] bg-gradient-to-b from-[#020b1c] to-[#031127] max-sm:py-[62px]">
-        <div className="w-[min(1120px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-28px,1120px)]">
+      <section className="py-[86px] bg-[#08121E] border-t border-[#0069B8]/25 max-sm:py-[62px]">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
           <BenefitGrid items={associationBenefits} />
         </div>
       </section>
@@ -789,7 +768,7 @@ export function AttendAssociationSection() {
 
 export default function AttendPage() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-[#020814] via-[#031022] to-[#020a18] text-white font-space-grotesk overflow-x-hidden">
+    <main className="relative min-h-screen bg-[#08121E] text-white font-display overflow-x-clip">
       <Header activeItem="Attend" subNavItems={subNav} activeSubNavItem="Overview" />
       <AttendOverviewSection />
       <FooterSection />

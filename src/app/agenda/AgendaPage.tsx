@@ -287,11 +287,10 @@ function setPointerGlow(event: PointerEvent<HTMLElement>) {
   event.currentTarget.style.setProperty("--mouse-y", `${event.clientY - rect.top}px`);
 }
 
-function IconCard({ title, text, icon, index }: { title: string; text: string; icon: string; index: number }) {
+function IconCard({ title, text, icon }: { title: string; text: string; icon: string; index: number }) {
   return (
     <article className={styles.iconCard}>
       <span className={styles.iconBadge}><img src={icon} alt="" loading="lazy" /></span>
-      <span className={styles.cardIndex}>{String(index + 1).padStart(2, "0")}</span>
       <h3>{title}</h3>
       <p>{text}</p>
     </article>
@@ -429,11 +428,11 @@ export function AgendaOverview() {
   return (
     <>
       <section
-        className={`${styles.hero} pt-[200px]`}
+        className={`${styles.hero} page-hero-subnav-top pb-[76px]`}
         id="overview"
         style={{
           background:
-            "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/dubai/healthcare/images/agenda/Overview-hero.webp) center top / cover no-repeat",
+            "linear-gradient(90deg, rgba(8, 18, 30, 0.90) 0%, rgba(8, 18, 30, 0.56) 44%, rgba(8, 18, 30, 0.14) 100%), url(/dubai/healthcare/images/agenda/Overview-hero.webp) center top / cover no-repeat",
         }}
       >
         <div className={styles.container}>
@@ -462,7 +461,7 @@ export function AgendaOverview() {
           <div className={styles.formatGrid}>
             {formats.map((item) => (
               <article className={`${styles.formatCard} !p-7`} key={item.title}>
-                <div className="w-12 h-12 rounded-2xl border border-[#18d4ff]/35 bg-gradient-to-br from-[#18d4ff]/15 to-[#C0F43C]/10 flex items-center justify-center text-[#18d4ff] shadow-[0_0_24px_rgba(24,212,255,0.18)]">
+                <div className="w-12 h-12 rounded-2xl border border-[#009EAD]/40 bg-[#08121E] flex items-center justify-center text-[#009EAD]">
                   {item.icon}
                 </div>
                 <div>
@@ -484,15 +483,15 @@ export function AgendaOverview() {
             {sixPartBlocks.map((block) => (
               <div
                 key={block.num}
-                className="p-6 rounded-[18px] border border-[#18d4ff]/30 bg-[#050d20]/85 shadow-[0_18px_45px_rgba(0,0,0,0.35)]"
+                className="p-6 rounded-[18px] border border-[#0069B8]/45 bg-[#0D1B2E] shadow-[0_18px_45px_rgba(0,0,0,0.35)]"
               >
-                <span className="inline-block font-mono text-[11px] uppercase tracking-[1.8px] text-[#C0F43C] font-bold mb-2">
+                <span className="inline-block font-mono text-[11px] uppercase tracking-[1.8px] text-[#F15928] font-bold mb-2">
                   {block.num}
                 </span>
                 <h3 className="!m-0 !mb-2 !text-white !text-[19px] font-extrabold">
                   {block.title}
                 </h3>
-                <p className="!m-0 !text-white/75 !text-[14.5px] leading-relaxed">
+                <p className="!m-0 !text-[#F7F9FC]/80 !text-[14.5px] leading-relaxed">
                   {block.desc}
                 </p>
               </div>
@@ -506,8 +505,8 @@ export function AgendaOverview() {
           <h2>Be in the room where <GradientText>2027 healthcare AI architecture and clinical adoption get finalised.</GradientText></h2>
           <p>Apply for a Business Pass, enquire about commercial sponsorship, or apply to join the Dubai healthcare speaking faculty.</p>
           <div className={styles.actions}>
-            <a className={`${styles.button} ${styles.solid} group`} href="/dubai/healthcare/attend/delegate/">Apply for a Business Pass <ArrowSVG /></a>
-            <a className={`${styles.button} ${styles.outline} group`} href="/dubai/healthcare/sponsorship-enquiry/">Enquire about sponsorship <ArrowSVG /></a>
+            <a className="bb-btn-primary group" href="/dubai/healthcare/attend/delegate/">Apply for a Business Pass <ArrowSVG /></a>
+            <a className="bb-btn-outline-dark group" href="/dubai/healthcare/sponsorship-enquiry/">Enquire about sponsorship <ArrowSVG /></a>
           </div>
           <dl>
             <div><dt>Date</dt><dd>25 March 2027 · 1-Day Forum</dd></div>
@@ -545,10 +544,10 @@ export function AgendaVision() {
   return (
     <>
       <section
-        className={`${styles.hero} pt-[200px]`}
+        className={`${styles.hero} page-hero-subnav-top pb-[76px]`}
         id="the-2030-vision-hero"
         style={{
-          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.9) 0%, rgba(2, 7, 19, 0.56) 42%, rgba(2, 7, 19, 0.1) 100%), url(/dubai/healthcare/images/agenda/Vision-hero.webp) center top / cover no-repeat"
+          background: "linear-gradient(90deg, rgba(8, 18, 30, 0.92) 0%, rgba(8, 18, 30, 0.58) 44%, rgba(8, 18, 30, 0.14) 100%), url(/dubai/healthcare/images/agenda/Vision-hero.webp) center top / cover no-repeat"
         }}
       >
         <div className={styles.container}>
@@ -559,7 +558,7 @@ export function AgendaVision() {
       <section className={styles.visionSection} id="the-2030-vision">
         <div className={styles.container}>
           <div className="grid grid-cols-[0.95fr_1.05fr] gap-12 items-stretch max-[980px]:grid-cols-1 mb-10">
-            <div className="group relative rounded-[22px] overflow-hidden border border-[#20d5ff]/30 bg-[#040d1d] shadow-[0_0_42px_rgba(0,206,255,0.14)] min-h-[420px]">
+            <div className="group relative rounded-[22px] overflow-hidden border border-[#0069B8]/52 bg-[#0D1B2E] shadow-[0_20px_50px_rgba(0,0,0,0.4)] min-h-[420px]">
               <img
                 src="/dubai/healthcare/images/agenda/dubai/the-vision.jpg"
                 alt="UAE and GCC Healthcare AI Mandate"
@@ -572,24 +571,24 @@ export function AgendaVision() {
               {visionPoints.map((pt, idx) => (
                 <article
                   key={pt.title}
-                  className="group text-left p-6 rounded-[18px] border border-white/12 bg-[#040d1d]/75 transition-all duration-300 cursor-default hover:border-[#C0F43C]/65 hover:bg-gradient-to-br hover:from-[#C0F43C]/10 hover:via-[#06152d] hover:to-[#040d1d] hover:shadow-[0_12px_32px_rgba(192,244,60,0.12)] hover:-translate-y-0.5"
+                  className="group text-left p-6 rounded-[18px] border border-[#0069B8]/40 bg-[#0D1B2E] transition-all duration-300 cursor-default hover:border-[#F15928] hover:-translate-y-0.5"
                 >
                   <div className="flex items-center justify-between gap-3 mb-2">
-                    <h3 className="m-0 font-extrabold text-[19px] leading-snug text-white transition-colors duration-300 group-hover:text-[#C0F43C]">
+                    <h3 className="m-0 font-extrabold text-[19px] leading-snug text-white transition-colors duration-300 group-hover:text-[#009EAD]">
                       {pt.title}
                     </h3>
-                    <span className="font-mono text-xs px-2.5 py-1 rounded-full bg-white/10 text-white/60 transition-all duration-300 group-hover:bg-[#C0F43C] group-hover:text-[#06111F] group-hover:font-bold">
+                    <span className="font-mono text-xs px-2.5 py-1 rounded-full bg-[#08121E] border border-[#0069B8]/40 text-[#009EAD] transition-all duration-300 group-hover:bg-[#F15928] group-hover:border-[#F15928] group-hover:text-white group-hover:font-bold">
                       0{idx + 1}
                     </span>
                   </div>
-                  <p className="m-0 text-white/75 text-[15px] leading-relaxed">
+                  <p className="m-0 text-[#F7F9FC]/80 text-[15px] leading-relaxed">
                     {pt.text}
                   </p>
                   {pt.bullets.length > 0 && (
                     <ul className="mt-3 mb-0 pl-0 list-none space-y-1.5">
                       {pt.bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-2 text-white/85 text-[14.5px] font-medium">
-                          <span className="text-[#C0F43C] font-bold">•</span>
+                        <li key={b} className="flex items-start gap-2 text-[#F7F9FC]/85 text-[14.5px] font-medium">
+                          <span className="text-[#F15928] font-bold">•</span>
                           <span>{b}</span>
                         </li>
                       ))}
@@ -601,9 +600,9 @@ export function AgendaVision() {
           </div>
 
           {/* Data Sovereignty Rule Callout */}
-          <blockquote className="w-full m-0 p-9 md:px-12 rounded-[22px] border-[1.5px] border-[#18d4ff]/45 bg-gradient-to-br from-[#040b1b]/95 to-[#0a1834]/98 shadow-[0_0_35px_rgba(24,212,255,0.18),inset_0_0_25px_rgba(24,212,255,0.05)] text-[#f7f9ff] text-[clamp(19px,2.2vw,24px)] font-[750] leading-[1.45] text-center">
+          <blockquote className="w-full m-0 p-9 md:px-12 rounded-[22px] border-[1.5px] border-[#009EAD]/60 bg-[#0D1B2E] shadow-[0_20px_50px_rgba(0,0,0,0.4)] text-[#F7F9FC] text-[clamp(19px,2.2vw,24px)] font-[750] leading-[1.45] text-center">
             &ldquo;68% of regional healthcare providers are prioritising ambient clinical voice and documentation automation as clinician EHR burden consumes 45% of working hours.&rdquo;
-            <cite className="block mt-4 text-[11px] font-mono font-bold tracking-[2px] uppercase text-white/50 not-italic">
+            <cite className="block mt-4 text-[11px] font-mono font-bold tracking-[2px] uppercase text-[#009EAD] not-italic">
               &mdash; SOURCE: AMERICAN MEDICAL ASSOCIATION / REGIONAL DIGITAL HEALTH SURVEY
             </cite>
           </blockquote>
@@ -638,11 +637,11 @@ export function AgendaLiveTimeline() {
   return (
     <>
       <section
-        className={`${styles.hero} pt-[200px]`}
+        className={`${styles.hero} page-hero-subnav-top pb-[76px]`}
         id="agenda-timeline-hero"
         style={{
           background:
-            "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/dubai/healthcare/images/agenda/Agenda-hero.webp) center top / cover no-repeat",
+            "linear-gradient(90deg, rgba(8, 18, 30, 0.90) 0%, rgba(8, 18, 30, 0.56) 44%, rgba(8, 18, 30, 0.14) 100%), url(/dubai/healthcare/images/agenda/Agenda-hero.webp) center top / cover no-repeat",
         }}
       >
         <div className={styles.container}>
@@ -655,8 +654,8 @@ export function AgendaLiveTimeline() {
           <h2>Be in the room where <GradientText>2027 healthcare AI architecture and clinical adoption get finalised.</GradientText></h2>
           <p>Apply for a Business Pass, enquire about commercial sponsorship, or apply to join the Dubai healthcare speaking faculty.</p>
           <div className={styles.actions}>
-            <a className={`${styles.button} ${styles.solid} group`} href="/dubai/healthcare/sponsorship-enquiry/">Enquire about sponsorship <ArrowSVG /></a>
-            <a className={`${styles.button} ${styles.outline} group`} href="/dubai/healthcare/speaker-enquiry/">Apply to speak <ArrowSVG /></a>
+            <a className="bb-btn-primary group" href="/dubai/healthcare/sponsorship-enquiry/">Enquire about sponsorship <ArrowSVG /></a>
+            <a className="bb-btn-outline-dark group" href="/dubai/healthcare/speaker-enquiry/">Apply to speak <ArrowSVG /></a>
           </div>
           <dl>
             <div><dt>Date</dt><dd>25 March 2027 · 1-Day Forum</dd></div>
@@ -673,10 +672,10 @@ export function AgendaThemes() {
   return (
     <>
       <section
-        className={`${styles.hero} pt-[200px]`}
+        className={`${styles.hero} page-hero-subnav-top pb-[76px]`}
         id="agenda-themes-hero"
         style={{
-          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.48) 42%, rgba(2, 7, 19, 0.05) 100%), url(/dubai/healthcare/images/agenda/Themes-hero.webp) center top / cover no-repeat"
+          background: "linear-gradient(90deg, rgba(8, 18, 30, 0.90) 0%, rgba(8, 18, 30, 0.52) 44%, rgba(8, 18, 30, 0.10) 100%), url(/dubai/healthcare/images/agenda/Themes-hero.webp) center top / cover no-repeat"
         }}
       >
         <div className={styles.container}>
@@ -697,8 +696,8 @@ export function AgendaThemes() {
           <h2>Be in the room where <GradientText>2027 healthcare AI architecture and clinical adoption get finalised.</GradientText></h2>
           <p>Apply for a Business Pass, enquire about commercial sponsorship, or apply to join the Dubai healthcare speaking faculty.</p>
           <div className={styles.actions}>
-            <a className={`${styles.button} ${styles.solid} group`} href="/dubai/healthcare/sponsorship-enquiry/">Enquire about sponsorship <ArrowSVG /></a>
-            <a className={`${styles.button} ${styles.outline} group`} href="/dubai/healthcare/speaker-enquiry/">Apply to speak <ArrowSVG /></a>
+            <a className="bb-btn-primary group" href="/dubai/healthcare/sponsorship-enquiry/">Enquire about sponsorship <ArrowSVG /></a>
+            <a className="bb-btn-outline-dark group" href="/dubai/healthcare/speaker-enquiry/">Apply to speak <ArrowSVG /></a>
           </div>
           <dl>
             <div><dt>Date</dt><dd>25 March 2027 · 1-Day Forum</dd></div>
@@ -715,12 +714,12 @@ export function AgendaCallForSpeakers() {
   return (
     <>
       <section
-        className={`${styles.hero} pt-[200px]`}
+        className={`${styles.hero} page-hero-subnav-top pb-[76px]`}
         id="agenda-speakers-hero"
         style={{
-          background: "linear-gradient(90deg, rgba(2, 7, 19, 0.88) 0%, rgba(2, 7, 19, 0.52) 42%, rgba(2, 7, 19, 0.08) 100%), url(/dubai/healthcare/images/agenda/Call-speakers-bg.webp) center top / cover no-repeat",
+          background: "linear-gradient(90deg, rgba(8, 18, 30, 0.90) 0%, rgba(8, 18, 30, 0.56) 44%, rgba(8, 18, 30, 0.14) 100%), url(/dubai/healthcare/images/agenda/Call-speakers-bg.webp) center top / cover no-repeat",
           alignItems: "center",
-          minHeight: "750px",
+          minHeight: "560px",
           marginTop: "0",
           display: "flex"
         }}

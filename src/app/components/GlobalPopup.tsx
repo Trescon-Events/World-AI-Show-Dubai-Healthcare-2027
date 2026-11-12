@@ -182,17 +182,17 @@ export function GlobalPopup() {
             .wais-popup-overlay.active { opacity: 1; pointer-events: all; }
             .wais-popup-backdrop {
               position: absolute; inset: 0;
-              background: rgba(2,8,28,0.75);
+              background: rgba(8,18,30,0.78);
               backdrop-filter: blur(12px);
               -webkit-backdrop-filter: blur(12px);
             }
             .wais-popup-card {
               position: relative;
               width: 900px; max-width: 92vw; height: 500px;
-              background: radial-gradient(circle at 80% 20%, #06173a 0%, #02081c 100%);
+              background: radial-gradient(circle at 80% 20%, #0D1B2E 0%, #08121E 100%);
               border-radius: 24px;
-              border: 1px solid rgba(0,243,255,0.15);
-              box-shadow: 0 0 30px rgba(0,243,255,0.15), 0 0 50px rgba(181,245,35,0.1);
+              border: 1px solid rgba(0,158,173,0.35);
+              box-shadow: 0 24px 64px rgba(8,18,30,0.65), 0 0 40px rgba(0,105,184,0.22);
               overflow: hidden; z-index: 10;
               transform: scale(0.2) translateY(40px); opacity: 0;
               transition: transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.7s ease;
@@ -204,15 +204,15 @@ export function GlobalPopup() {
             .wais-close-btn {
               position: absolute; top: 24px; right: 24px;
               width: 36px; height: 36px; border-radius: 50%;
-              background: #b5f523; border: none;
+              background: #F15928; color: #FFFFFF; border: none;
               display: flex; justify-content: center; align-items: center;
               cursor: pointer; z-index: 30;
-              box-shadow: 0 0 15px rgba(181,245,35,0.4);
+              box-shadow: 0 4px 16px rgba(241,89,40,0.4);
               transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
             }
             .wais-close-btn:hover {
               transform: scale(1.1) rotate(90deg);
-              background: #fff; box-shadow: 0 0 20px rgba(255,255,255,0.6);
+              background: #D9481B; box-shadow: 0 6px 20px rgba(241,89,40,0.55);
             }
             /* LEFT */
             .wais-popup-left {
@@ -221,41 +221,41 @@ export function GlobalPopup() {
               display: flex; flex-direction: column; justify-content: space-between;
               position: relative; z-index: 5;
             }
-            .wais-accent-bar { width: 50px; height: 4px; background: #b5f523; border-radius: 2px; }
+            .wais-accent-bar { width: 50px; height: 4px; background: #F15928; border-radius: 2px; }
             .wais-popup-title {
-              font-family: 'Space Grotesk', sans-serif;
+              font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
               font-size: 40px; line-height: 1.15; font-weight: 700;
               display: flex; flex-direction: column; margin-top: 15px;
               text-align: left;
               align-items: flex-start;
             }
             .wais-popup-title span { display: block; overflow: hidden; }
-            .wais-word-white { color: #fff; }
-            .wais-word-lime { color: #b5f523; text-shadow: 0 0 10px rgba(181,245,35,0.2); }
+            .wais-word-white { color: #FFFFFF; }
+            .wais-word-lime { color: #009EAD; }
             .wais-register-info { display:flex; align-items:center; gap:16px; margin: 20px 0; }
             .wais-icon-circle {
               width:48px; height:48px; border-radius:50%;
-              border:1.5px solid rgba(255,255,255,0.15);
-              background:rgba(255,255,255,0.03);
+              border:1.5px solid rgba(0,158,173,0.38);
+              background:rgba(0,105,184,0.16);
               display:flex; justify-content:center; align-items:center;
-              color:#fff; flex-shrink:0;
+              color:#FFFFFF; flex-shrink:0;
             }
-            .wais-info-text { font-size:15px; line-height:1.4; color:#8a99ad; font-weight:400; text-align: left; }
+            .wais-info-text { font-size:15px; line-height:1.4; color:rgba(247,249,252,0.78); font-weight:400; text-align: left; }
             .wais-cta-button {
               display:inline-flex; justify-content:space-between; align-items:center;
               width:320px; padding:16px 24px;
-              background:#b5f523; color:#02081c;
-              text-decoration:none; border-radius:8px;
-              font-family:'Outfit',sans-serif; font-weight:800; font-size:15px; letter-spacing:0.5px;
+              background:#F15928; color:#FFFFFF;
+              text-decoration:none; border-radius:9999px;
+              font-family: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:15px; letter-spacing:0.3px;
               position:relative; overflow:hidden;
-              box-shadow:0 5px 15px rgba(181,245,35,0.3);
-              transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+              box-shadow:0 6px 18px rgba(241,89,40,0.35);
+              transition:all 0.3s cubic-bezier(0.16,1,0.3,1);
             }
-            .wais-cta-button:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(181,245,35,0.5); background:#fff; }
+            .wais-cta-button:hover { transform:translateY(-2px); box-shadow:0 10px 26px rgba(241,89,40,0.5); background:#D9481B; color:#FFFFFF; }
             .wais-cta-button::after {
               content:''; position:absolute; top:-50%; left:-60%;
               width:30%; height:200%;
-              background:linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 100%);
+              background:linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.45) 50%,rgba(255,255,255,0) 100%);
               transform:rotate(25deg);
               animation:wais-shine 4s ease-in-out infinite;
             }
@@ -266,11 +266,11 @@ export function GlobalPopup() {
             .wais-trust-footer { display:flex; align-items:center; gap:8px; margin-top:15px; flex-wrap:nowrap; white-space:nowrap; }
             .wais-trust-item {
               display:flex; align-items:center; gap:5px;
-              font-size:10.5px; font-weight:500; color:#8a99ad;
+              font-size:10.5px; font-weight:500; color:rgba(247,249,252,0.72);
               letter-spacing:0.2px; white-space:nowrap;
             }
-            .wais-trust-icon { color:#b5f523; opacity:0.95; flex-shrink:0; }
-            .wais-trust-divider { width:1px; height:12px; background:rgba(255,255,255,0.15); }
+            .wais-trust-icon { color:#009EAD; opacity:0.95; flex-shrink:0; }
+            .wais-trust-divider { width:1px; height:12px; background:rgba(0,105,184,0.35); }
             /* RIGHT */
             .wais-popup-right {
               width:47%; height:100%;
@@ -287,8 +287,8 @@ export function GlobalPopup() {
               filter:blur(80px); opacity:0.35;
               pointer-events:none; z-index:2;
             }
-            .wais-cyan-glow { width:250px;height:250px;background:#00f3ff;top:10%;right:15%; }
-            .wais-lime-glow { width:200px;height:200px;background:#b5f523;bottom:5%;left:10%;opacity:0.25; }
+            .wais-cyan-glow { width:250px;height:250px;background:#0069B8;top:10%;right:15%; }
+            .wais-lime-glow { width:200px;height:200px;background:#009EAD;bottom:5%;left:10%;opacity:0.25; }
             .wais-tickets-perspective {
               position:relative; width:280px; height:320px;
               z-index:5; perspective:1000px;
@@ -318,21 +318,21 @@ export function GlobalPopup() {
             }
             .wais-ticket-top { text-align:center; display:flex; flex-direction:column; align-items:center; }
             .wais-ticket-badge {
-              background:#b5f523; color:#02081c;
-              font-family:'Outfit',sans-serif; font-weight:800; font-size:11px;
+              background:#F15928; color:#FFFFFF;
+              font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif; font-weight:700; font-size:11px;
               padding:3px 10px; border-radius:4px; margin-bottom:24px;
-              letter-spacing:0.5px; box-shadow:0 0 8px rgba(181,245,35,0.4);
+              letter-spacing:0.5px; box-shadow:0 4px 10px rgba(241,89,40,0.4);
             }
-            .wais-ticket-tag { color:#00f3ff; font-family:'Outfit',sans-serif; font-weight:800; font-size:13px; margin-bottom:24px; }
-            .wais-ticket-main { font-family:'Outfit',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.8px; color:#fff; line-height:1.2; }
-            .wais-ticket-sub { font-family:'Outfit',sans-serif; font-weight:700; font-size:12px; letter-spacing:1.5px; color:#00f3ff; margin-top:2px; }
+            .wais-ticket-tag { color:#009EAD; font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif; font-weight:700; font-size:13px; margin-bottom:24px; }
+            .wais-ticket-main { font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif; font-weight:700; font-size:13px; letter-spacing:0.8px; color:#FFFFFF; line-height:1.2; }
+            .wais-ticket-sub { font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif; font-weight:700; font-size:12px; letter-spacing:1.5px; color:#009EAD; margin-top:2px; }
             .wais-ticket-divider { width:100%; position:absolute; top:70%; left:0; display:flex; justify-content:center; }
-            .wais-divider-line { width:80%; border-bottom:1.5px dashed rgba(0,243,255,0.25); }
-            .wais-ticket-bottom { margin-bottom:4px; color:#00f3ff; }
+            .wais-divider-line { width:80%; border-bottom:1.5px dashed rgba(0,158,173,0.45); }
+            .wais-ticket-bottom { margin-bottom:4px; color:#009EAD; }
             .wais-scanner-beam {
               position:absolute; width:calc(100% - 4px); height:4px; left:2px;
-              background:linear-gradient(to right,transparent,#00f3ff,transparent);
-              box-shadow:0 0 10px #00f3ff;
+              background:linear-gradient(to right,transparent,#009EAD,transparent);
+              box-shadow:0 0 10px #009EAD;
               z-index:6; animation:wais-scanner 3.5s linear infinite; opacity:0.8; pointer-events:none;
             }
             @keyframes wais-scanner { 0%{top:10px;} 50%{top:calc(100% - 14px);} 100%{top:10px;} }
@@ -357,7 +357,7 @@ export function GlobalPopup() {
               {/* Close */}
               <button className="wais-close-btn" onClick={handleClose} aria-label="Close popup">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M1 1L13 13M13 1L1 13" stroke="#02081c" strokeWidth="2.5" strokeLinecap="round"/>
+                  <path d="M1 1L13 13M13 1L1 13" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round"/>
                 </svg>
               </button>
 
@@ -428,7 +428,7 @@ export function GlobalPopup() {
                       {/* Back Ticket */}
                       <div className="wais-ticket wais-ticket-back">
                         <svg className="wais-ticket-bg-svg" viewBox="0 0 140 240" fill="none">
-                          <path d="M 12 0 L 58 0 A 12 12 0 0 0 82 0 L 128 0 A 12 12 0 0 1 140 12 L 140 160 A 8 8 0 0 0 140 176 L 140 228 A 12 12 0 0 1 128 240 L 82 240 A 12 12 0 0 0 58 240 L 12 240 A 12 12 0 0 1 0 228 L 0 176 A 8 8 0 0 0 0 160 L 0 12 A 12 12 0 0 1 12 0 Z" fill="#030d29" fillOpacity="0.85" stroke="rgba(0,243,255,0.45)" strokeWidth="1.5"/>
+                          <path d="M 12 0 L 58 0 A 12 12 0 0 0 82 0 L 128 0 A 12 12 0 0 1 140 12 L 140 160 A 8 8 0 0 0 140 176 L 140 228 A 12 12 0 0 1 128 240 L 82 240 A 12 12 0 0 0 58 240 L 12 240 A 12 12 0 0 1 0 228 L 0 176 A 8 8 0 0 0 0 160 L 0 12 A 12 12 0 0 1 12 0 Z" fill="#08121E" fillOpacity="0.92" stroke="rgba(0,158,173,0.45)" strokeWidth="1.5"/>
                         </svg>
                         <div className="wais-ticket-content" style={{opacity:0.5}}>
                           <div className="wais-ticket-top">
@@ -455,7 +455,7 @@ export function GlobalPopup() {
                               <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                             </filter>
                           </defs>
-                          <path d="M 12 0 L 58 0 A 12 12 0 0 0 82 0 L 128 0 A 12 12 0 0 1 140 12 L 140 160 A 8 8 0 0 0 140 176 L 140 228 A 12 12 0 0 1 128 240 L 82 240 A 12 12 0 0 0 58 240 L 12 240 A 12 12 0 0 1 0 228 L 0 176 A 8 8 0 0 0 0 160 L 0 12 A 12 12 0 0 1 12 0 Z" fill="#030d29" fillOpacity="0.85" stroke="#00f3ff" strokeWidth="1.8" filter="url(#neon-glow-cyan)"/>
+                          <path d="M 12 0 L 58 0 A 12 12 0 0 0 82 0 L 128 0 A 12 12 0 0 1 140 12 L 140 160 A 8 8 0 0 0 140 176 L 140 228 A 12 12 0 0 1 128 240 L 82 240 A 12 12 0 0 0 58 240 L 12 240 A 12 12 0 0 1 0 228 L 0 176 A 8 8 0 0 0 0 160 L 0 12 A 12 12 0 0 1 12 0 Z" fill="#08121E" fillOpacity="0.92" stroke="#009EAD" strokeWidth="1.8" filter="url(#neon-glow-cyan)"/>
                         </svg>
                         <div className="wais-scanner-beam" />
                         <div className="wais-ticket-content">

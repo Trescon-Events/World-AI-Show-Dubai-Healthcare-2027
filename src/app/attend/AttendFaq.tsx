@@ -6,27 +6,24 @@ export function AttendFaq({ faqs }: { faqs: string[] }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="w-full mx-auto mt-12 p-6 border border-white/8 rounded-[24px] bg-[#040a19]/50">
+    <div className="w-full mx-auto mt-12 p-6 border border-[#0069B8]/52 rounded-[24px] bg-[#0D1B2E]">
       {faqs.map((faq, index) => {
         const isOpen = openIndex === index;
         return (
-          <div className="border-b border-white/36 last:border-b-0" key={faq}>
+          <div className="border-b border-[#0069B8]/25 last:border-b-0" key={faq}>
             <button
               aria-controls={`attend-faq-${index}`}
               aria-expanded={isOpen}
-              className="w-full min-h-[68px] py-4 px-6 grid grid-cols-[44px_1fr_24px] max-sm:grid-cols-[44px_1fr] items-center gap-5 border-0 cursor-pointer text-[#f7f9ff] bg-transparent text-left hover:text-cyan transition-colors duration-180"
+              className="w-full min-h-[68px] py-4 px-6 grid grid-cols-[1fr_24px] items-center gap-5 border-0 cursor-pointer text-[#F7F9FC] bg-transparent text-left hover:text-[#009EAD] transition-colors duration-180 max-sm:px-3"
               onClick={() => setOpenIndex(isOpen ? -1 : index)}
               type="button"
             >
-              <span className="text-white/68 font-mono text-[13px] font-normal">
-                / {String(index + 1).padStart(2, "0")}
-              </span>
               <strong className="text-[18px] font-extrabold max-sm:text-[16px]">
                 {faq}
               </strong>
               <span 
-                className={`text-white/70 font-bold text-center block max-sm:hidden transition-transform duration-200 ${
-                  isOpen ? "rotate-180 text-cyan" : ""
+                className={`text-white/70 font-bold text-center block transition-transform duration-200 ${
+                  isOpen ? "rotate-180 text-[#F15928]" : ""
                 }`}
                 aria-hidden="true"
               >
@@ -40,7 +37,7 @@ export function AttendFaq({ faqs }: { faqs: string[] }) {
               id={`attend-faq-${index}`}
             >
               <div className="overflow-hidden">
-                <p className="w-full ml-[68px] mr-6 pb-4 text-[#aeb5c5] text-[15px] leading-relaxed max-sm:ml-[44px]">
+                <p className="w-full px-6 pb-4 text-[#F7F9FC]/88 text-[15px] leading-relaxed max-sm:px-3">
                   World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE) is built for senior hospital, clinical informatics, genomics, payer, and regulatory decision-makers. Registration, sponsorship, and master schedule details are managed by the official Trescon team.
                 </p>
               </div>

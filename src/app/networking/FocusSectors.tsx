@@ -38,7 +38,7 @@ export function FocusSectors() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative py-[104px] bg-[#020C21] overflow-hidden max-sm:py-[72px]" id="focus-sectors">
+    <section className="relative py-[104px] bg-[#08121E] overflow-hidden max-sm:py-[72px]" id="focus-sectors">
       <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         
         {/* Industry Focus and Meet grid */}
@@ -46,22 +46,22 @@ export function FocusSectors() {
           
           {/* Headline Column */}
           <div>
-            <h2 className="text-left font-[850] text-white leading-[1.04] tracking-[-2px] text-[clamp(42px,5.2vw,60px)] max-[980px]:text-center">
+            <h2 className="text-left font-[850] text-white leading-[1.04] tracking-[-0.01em] text-[clamp(42px,5.2vw,60px)] max-[980px]:text-center">
               Ecosystem & <br />
               <GradientText>sectors.</GradientText>
             </h2>
-            <p className="mt-6 mb-8 text-[#a4adbd] text-[20px] leading-[1.45] max-[980px]:text-center max-sm:text-[17px]">
+            <p className="mt-6 mb-8 text-[#F7F9FC]/80 text-[20px] leading-[1.45] max-[980px]:text-center max-sm:text-[17px]">
               A single curated frame - no spectators, no fluff. Just the people writing the cheques, shipping the clinical systems and shaping the policy.
             </p>
             <div 
-              className="group relative mt-6 rounded-[20px] overflow-hidden max-sm:max-w-md max-sm:mx-auto cursor-pointer"
+              className="group relative mt-6 rounded-[20px] overflow-hidden border border-[#0069B8]/40 max-sm:max-w-md max-sm:mx-auto cursor-pointer"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               {/* Duotone Color Overlay */}
               <div 
                 className={`absolute inset-0 z-10 pointer-events-none mix-blend-color transition-colors duration-500 ease-out ${
-                  isHovered ? "bg-[#C0F43C]/35" : "bg-[#00ceff]/20"
+                  isHovered ? "bg-[#F15928]/25" : "bg-[#0069B8]/20"
                 }`} 
               />
               <img
@@ -82,19 +82,19 @@ export function FocusSectors() {
                 key={item}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                className="group flex flex-col min-h-[100px] p-[13px_14px] rounded-[8px] border border-white/5 bg-gradient-to-br from-[#00ceff]/6 to-[#c0f43c]/3 shadow-[inset_0_0_28px_rgba(65,220,255,0.06),0_20px_60px_rgba(0,0,0,0.22)] select-none hover:-translate-y-0.5 hover:border-[#C0F43C]/60 hover:shadow-[inset_0_0_28px_rgba(192,244,60,0.08),0_20px_60px_rgba(0,0,0,0.3)] transition-all duration-300 cursor-pointer"
+                className="group flex flex-col min-h-[100px] p-[13px_14px] rounded-[12px] border border-[#0069B8]/40 bg-[#0D1B2E] shadow-[0_14px_34px_rgba(0,0,0,0.28)] select-none hover:-translate-y-0.5 hover:border-[#F15928] transition-all duration-300 cursor-pointer"
               >
-                <span className="grid place-items-center w-10 h-10 mb-2 border border-white/10 rounded-[8px] text-cyan bg-black/26 group-hover:border-[#C0F43C]/30 transition-all duration-300">
+                <span className="grid place-items-center w-10 h-10 mb-2 border border-[#0069B8]/40 rounded-[8px] text-[#009EAD] bg-[#08121E] group-hover:border-[#F15928] transition-all duration-300">
                   <img
                     src={`/dubai/healthcare/icons/networking/${icon}`}
                     alt=""
                     width={25}
                     height={25}
-                    className="w-[25px] h-[25px] object-contain group-hover:hue-rotate-[255deg] group-hover:brightness-125 transition-all duration-300"
+                    className="w-[25px] h-[25px] object-contain transition-all duration-300"
                     aria-hidden="true"
                   />
                 </span>
-                <strong className="block text-white text-[14px] font-bold leading-[1.28] mt-1 group-hover:text-white transition-colors duration-300">
+                <strong className="block text-white text-[14px] font-bold leading-[1.28] mt-1 group-hover:text-[#009EAD] transition-colors duration-300">
                   {item}
                 </strong>
               </article>
@@ -113,7 +113,7 @@ export function FocusSectors() {
               {[...cLevelRoles, ...cLevelRoles, ...cLevelRoles].map((role, index) => (
                 <span
                   key={`${role}-${index}`}
-                  className="flex-none min-w-[250px] p-[15px_24px] rounded-[9px] text-[#06111f] bg-[#C0F43C] text-center font-extrabold text-[14px]"
+                  className="flex-none min-w-[250px] p-[15px_24px] rounded-[9px] text-white bg-[#F15928] text-center font-extrabold text-[14px]"
                 >
                   {role}
                 </span>
@@ -132,7 +132,7 @@ export function FocusSectors() {
               {[...seniorRoles, ...seniorRoles, ...seniorRoles].map((role, index) => (
                 <span
                   key={`${role}-${index}`}
-                  className="flex-none min-w-[250px] p-[15px_24px] rounded-[9px] text-[#06111f] bg-cyan text-center font-extrabold text-[14px]"
+                  className="flex-none min-w-[250px] p-[15px_24px] rounded-[9px] text-white bg-[#0069B8] text-center font-extrabold text-[14px]"
                 >
                   {role}
                 </span>

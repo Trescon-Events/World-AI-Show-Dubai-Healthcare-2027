@@ -171,12 +171,12 @@ export default function HubspotForm({ portalId, formId, region = "na1", classNam
 
   if (isSubmitted) {
     return (
-      <div className="flex flex-col items-center justify-center text-center p-8 border border-[#C0F43C]/20 rounded-[20px] bg-[#040c1e]/60 min-h-[350px] transition-all duration-300">
+      <div className="flex flex-col items-center justify-center text-center p-8 border border-[#009EAD]/35 rounded-[20px] bg-[#0D1B2E] min-h-[350px] transition-all duration-300">
         <span className="text-[52px] mb-4">✅</span>
         <h3 className="m-0 text-white font-extrabold text-[22px] mb-2 uppercase tracking-wide">
           Enquiry Received
         </h3>
-        <p className="m-0 text-white/70 text-[15px] max-w-[420px] leading-relaxed">
+        <p className="m-0 text-white/75 text-[15px] max-w-[420px] leading-relaxed">
           Thank you for reaching out! Your information has been securely captured. A representative from our team will contact you shortly.
         </p>
       </div>
@@ -186,7 +186,7 @@ export default function HubspotForm({ portalId, formId, region = "na1", classNam
   if (loadError) {
     return (
       <div className="w-full flex flex-col transition-all duration-300 animate-fadeIn">
-        <div className="p-4 border border-[#926DFF]/20 rounded-[12px] bg-[#926DFF]/5 text-white/80 text-[13px] leading-normal mb-6 flex gap-3 items-center">
+        <div className="p-4 border border-[#0069B8]/30 rounded-[12px] bg-[#0069B8]/10 text-white/85 text-[13px] leading-normal mb-6 flex gap-3 items-center">
           <span className="text-[16px]">💡</span>
           <p className="m-0">
             HubSpot Form scripts are blocked by your browser shield/ad-blocker. Displaying our direct secure fallback form to capture your enquiry.
@@ -266,7 +266,7 @@ export default function HubspotForm({ portalId, formId, region = "na1", classNam
 
           <button
             type="submit"
-            className="mt-4 w-full h-[50px] rounded-full font-extrabold text-[14.5px] text-black [color:#06111f!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.3)] transition-all duration-200 cursor-pointer"
+            className="bb-btn-primary mt-4 w-full h-[50px]"
           >
             Submit Enquiry ➔
           </button>
@@ -280,8 +280,8 @@ export default function HubspotForm({ portalId, formId, region = "na1", classNam
       <div id={containerId} className="hubspot-form-container w-full min-h-[600px] flex items-center justify-center bg-white/[0.01] rounded-[16px]" suppressHydrationWarning={true}>
         {/* Loading Spinner */}
         <div className="flex flex-col items-center gap-3" suppressHydrationWarning={true}>
-          <div className="w-8 h-8 rounded-full border-2 border-white/10 border-t-[#C0F43C] animate-spin" suppressHydrationWarning={true} />
-          <span className="text-[12px] font-mono text-white/30 uppercase tracking-[2px]" suppressHydrationWarning={true}>Loading Form...</span>
+          <div className="w-8 h-8 rounded-full border-2 border-[#0069B8]/25 border-t-[#F15928] animate-spin" suppressHydrationWarning={true} />
+          <span className="text-[12px] font-mono text-white/40 uppercase tracking-[2px]" suppressHydrationWarning={true}>Loading Form...</span>
         </div>
       </div>
     </div>

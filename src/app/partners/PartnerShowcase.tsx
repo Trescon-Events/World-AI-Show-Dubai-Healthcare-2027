@@ -43,10 +43,7 @@ const partnerTiers = [
 
 export function PartnerShowcase() {
   return (
-    <section className="relative py-[100px] bg-[#020814] overflow-hidden" id="showcase-benefits">
-      <div className="absolute top-1/4 left-0 w-[400px] h-[400px] rounded-full bg-cyan/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] rounded-full bg-purple-500/5 blur-[120px] pointer-events-none" />
-
+    <section className="relative py-[100px] bg-[#08121E] border-t border-[#0069B8]/25 overflow-hidden" id="showcase-benefits">
       <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         {/* ── PART 2: TIER-GROUPED ARCHITECTURE (Section 10) ─────────── */}
         <div className="mb-20">
@@ -59,15 +56,15 @@ export function PartnerShowcase() {
             {partnerTiers.map((item) => (
               <article
                 key={item.name}
-                className="group relative p-7 border border-white/[0.1] rounded-[22px] bg-[#040a17]/75 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-[#00ceff]/50"
+                className="group relative p-7 border border-[#0069B8]/52 rounded-[22px] bg-[#0D1B2E] transition-all duration-300 hover:-translate-y-1 hover:border-[#009EAD]"
               >
-                <span className="inline-block font-mono text-[11px] uppercase tracking-[1.6px] text-[#C0F43C] mb-3">
+                <span className="inline-block font-mono text-[11px] font-bold uppercase tracking-[1.6px] text-[#F15928] mb-3">
                   {item.tier}
                 </span>
                 <h4 className="m-0 mb-2.5 text-white font-[800] text-[18px] leading-snug">
                   {item.name}
                 </h4>
-                <p className="m-0 text-white/65 text-[14.5px] leading-relaxed">
+                <p className="m-0 text-[#F7F9FC]/80 text-[14.5px] leading-relaxed">
                   {item.deliverables}
                 </p>
               </article>
@@ -76,30 +73,25 @@ export function PartnerShowcase() {
         </div>
 
         {/* ── PART 3: CTA BANNER ── */}
-        <div
-          className="group/banner relative p-12 max-sm:p-8 border border-[#c0f43c]/20 rounded-[28px] text-center overflow-hidden transition-all duration-300 hover:border-[#c0f43c]/40"
-          style={{
-            background: "linear-gradient(135deg, rgba(192, 244, 60, 0.04) 0%, rgba(4, 10, 24, 0.96) 50%, rgba(0, 206, 255, 0.02) 100%)",
-          }}
-        >
-          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#c0f43c]/20 to-transparent pointer-events-none" />
+        <div className="group/banner relative p-12 max-sm:p-8 border border-[#0069B8]/52 rounded-[28px] bg-[#0D1B2E] text-center overflow-hidden transition-all duration-300 hover:border-[#009EAD]">
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#0069B8] via-[#009EAD] to-[#F15928] pointer-events-none" />
 
           <div className="relative z-10 flex flex-col items-center gap-6">
-            <h3 className="m-0 font-space-grotesk text-white font-[850] text-[clamp(28px,3.5vw,42px)] leading-tight tracking-tight">
+            <h3 className="m-0 font-display text-white font-[850] text-[clamp(28px,3.5vw,42px)] leading-tight tracking-tight">
               Put your clinical solution directly before <br />
               <GradientText>qualified hospital procurement committees.</GradientText>
             </h3>
 
-            <p className="m-0 text-white/70 text-[16px] leading-relaxed w-full font-sans">
+            <p className="m-0 text-[#F7F9FC]/80 text-[16px] leading-relaxed w-full font-sans">
               Secure your commercial partnership today.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mt-4 w-full max-sm:flex-col max-sm:items-center">
               <a
                 href="/dubai/healthcare/sponsorship-enquiry/"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[14px] font-extrabold text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                className="bb-btn-primary"
               >
-                Enquire About Sponsorship <span className="font-mono">→</span>
+                Enquire About Sponsorship <span className="bb-btn-arrow font-mono">→</span>
               </a>
             </div>
           </div>

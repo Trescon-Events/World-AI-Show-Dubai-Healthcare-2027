@@ -45,12 +45,12 @@ const partnerLogos = [
 
 export function PartnerMarquee() {
   return (
-    <section className="relative py-[92px] pb-0 bg-[#030b19] overflow-hidden max-sm:py-[62px]" id="exhibitors">
+    <section className="relative py-[92px] pb-0 bg-[#08121E] overflow-hidden max-sm:py-[62px]" id="exhibitors">
       <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)] text-center mb-14">
-        <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(36px,4.5vw,52px)]">
+        <h2 className="font-[850] text-white leading-tight tracking-[-0.01em] text-[clamp(36px,4.5vw,52px)]">
           The ecosystem, <GradientText>in motion.</GradientText>
         </h2>
-        <p className="w-full mx-auto mt-4 text-white/58 text-[16px] leading-relaxed">
+        <p className="w-full mx-auto mt-4 text-[#F7F9FC]/75 text-[16px] leading-relaxed">
           Hover over any row to pause the scrolling and inspect our confirmed summit sponsors and associate organizations.
         </p>
       </div>
@@ -63,7 +63,7 @@ export function PartnerMarquee() {
             {[...row1, ...row1, ...row1, ...row1].map((logo, index) => (
               <span
                 key={`${logo.alt}-r1-${index}`}
-                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white shadow-[0_0_28px_rgba(20,212,255,0.16)] select-none px-4"
+                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white border border-[#0069B8]/22 shadow-[0_8px_24px_rgba(8,18,30,0.2)] select-none px-4"
               >
                 <img
                   src={logo.path}
@@ -84,7 +84,7 @@ export function PartnerMarquee() {
             {[...row2, ...row2, ...row2, ...row2].map((logo, index) => (
               <span
                 key={`${logo.alt}-r2-${index}`}
-                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white shadow-[0_0_28px_rgba(20,212,255,0.16)] select-none px-4"
+                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white border border-[#0069B8]/22 shadow-[0_8px_24px_rgba(8,18,30,0.2)] select-none px-4"
               >
                 <img
                   src={logo.path}

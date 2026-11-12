@@ -180,10 +180,10 @@ export function HeroSectionDemo() {
   return (
     <section 
       ref={containerRef}
-      className="relative min-h-[720px] -mt-[102px] grid place-items-center overflow-hidden text-center max-[980px]:min-h-[680px] max-sm:-mt-[71px] max-sm:min-h-[720px]" 
+      className="relative min-h-[720px] grid place-items-center overflow-hidden text-center max-[980px]:min-h-[680px] max-sm:min-h-[720px]" 
       id="home"
       style={{
-        background: "#020205"
+        background: "#08121E"
       }}
     >
       {/* Background Canvas */}
@@ -197,14 +197,10 @@ export function HeroSectionDemo() {
         }}
       />
 
-      {/* Cyber Grid overlays */}
-      <div className="hero-overlay absolute inset-0 z-1 opacity-58" aria-hidden="true" />
-      <div className="hero-grid-pattern absolute bottom-0 left-[-6%] right-[-6%] h-[245px] z-1 opacity-70 blur-[1px]" aria-hidden="true" />
-
       {/* Hero Content */}
-      <div className="container relative z-10 mx-auto px-6 pt-[231px] max-sm:pt-[180px] max-sm:px-4 flex flex-col items-center">
+      <div className="container relative z-10 mx-auto px-6 page-hero-top max-sm:px-4 flex flex-col items-center">
         {/* Glow Status Pill */}
-        <p className="inline-flex items-center h-8 px-3.5 mb-[25px] border border-[#b9f82d]/72 rounded-full text-white/82 text-[14px] uppercase tracking-[1px] font-medium shadow-[0_0_12px_rgba(185,248,45,0.15)] bg-black/40">
+        <p className="inline-flex items-center h-8 px-3.5 mb-[25px] border border-[#009EAD]/60 rounded-full text-white/85 text-[14px] uppercase tracking-[1px] font-medium shadow-[0_0_12px_rgba(0,158,173,0.18)] bg-[#08121E]/60">
           48th Global Edition
         </p>
 

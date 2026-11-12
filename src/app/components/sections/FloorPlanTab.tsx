@@ -57,15 +57,15 @@ export function FloorPlanTab() {
     <div className="w-full flex flex-col items-center mt-4 animate-fadeIn">
       {/* Custom Sub-Tab Switcher */}
       <div className="flex justify-center mb-8 w-full">
-        <div className="inline-flex p-1.5 bg-[#050c1d]/90 border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)] w-full max-w-[600px]">
+        <div className="inline-flex p-1.5 bg-[#0D1B2E] border border-[#0069B8]/35 rounded-full shadow-[0_8px_32px_rgba(8,18,30,0.45)] w-full max-w-[600px]">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveSubTab(tab.key)}
               className={`flex-1 py-3.5 max-sm:py-3 rounded-full text-[14px] max-sm:text-[12px] font-extrabold transition-all duration-300 ${
                 activeSubTab === tab.key
-                  ? "bg-[#C0F43C] text-black shadow-[0_0_20px_rgba(192,244,60,0.25)]"
-                  : "text-white/60 hover:text-white"
+                  ? "bg-[#0069B8] text-white shadow-[0_4px_16px_rgba(0,105,184,0.3)]"
+                  : "text-white/70 hover:text-white"
               }`}
             >
               {tab.label}
@@ -76,7 +76,7 @@ export function FloorPlanTab() {
 
       {/* Top View - Interactive Static Image Viewer */}
       <div 
-        className={`w-full aspect-video min-h-[500px] max-h-[750px] relative bg-[#050c1d] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] ${activeSubTab !== "top-view" ? "hidden" : ""}`}
+        className={`w-full aspect-video min-h-[500px] max-h-[750px] relative bg-[#08121E] rounded-2xl overflow-hidden border border-[#0069B8]/35 shadow-[0_20px_60px_rgba(8,18,30,0.5)] ${activeSubTab !== "top-view" ? "hidden" : ""}`}
         style={{ cursor: imgScale > 1 ? (dragging ? "grabbing" : "grab") : "zoom-in" }}
         onWheel={handleWheel}
         onMouseDown={handleMouseDown}
@@ -112,21 +112,21 @@ export function FloorPlanTab() {
         <div className="absolute bottom-6 right-6 flex gap-2 z-10">
           <button
             onClick={(e) => { e.stopPropagation(); setImgScale((s) => Math.min(5, s + 0.5)); }}
-            className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#C0F43C] hover:!text-black transition-all text-xl font-bold shadow-lg"
+            className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#F15928] hover:!text-white transition-all text-xl font-bold shadow-lg"
             aria-label="Zoom in"
           >
             +
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); setImgScale(1); setImgPos({ x: 0, y: 0 }); }}
-            className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#C0F43C] hover:!text-black transition-all text-sm font-bold shadow-lg"
+            className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#F15928] hover:!text-white transition-all text-sm font-bold shadow-lg"
             aria-label="Reset zoom"
           >
             ⟲
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); setImgScale((s) => Math.max(1, s - 0.5)); }}
-            className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#C0F43C] hover:!text-black transition-all text-xl font-bold shadow-lg"
+            className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#F15928] hover:!text-white transition-all text-xl font-bold shadow-lg"
             aria-label="Zoom out"
           >
             −

@@ -58,41 +58,41 @@ const governmentLogos = [
 
 export function SponsorsSection() {
   return (
-    <section className="relative py-[100px] pb-0 bg-[#030b19] overflow-hidden max-sm:py-[72px] max-sm:pb-0" id="partners">
-      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
+    <section className="relative py-[100px] pb-0 bg-[#F7F9FC] overflow-hidden max-sm:py-[72px] max-sm:pb-0" id="partners">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         {/* S9 · Sponsor value & commercial architecture */}
-        <h2 className="text-center font-[850] text-white leading-[1.06] tracking-[-2px] text-[clamp(34px,4.4vw,54px)] w-full mx-auto">
+        <h2 className="text-center font-[850] text-[#08121E] leading-[1.06] tracking-[-0.01em] text-[clamp(34px,4.4vw,54px)] w-full mx-auto">
           Where Middle East hospital leaders specify, validate, and{" "}
           <GradientText>procure production AI</GradientText>
         </h2>
 
-        <p className="mt-6 w-full mx-auto text-center text-muted text-[18px] leading-[1.6] max-sm:text-[16px]">
+        <p className="mt-6 w-full mx-auto text-center text-[#334155] text-[18px] leading-[1.6] max-sm:text-[16px]">
           Middle East healthcare networks are finalising their 2027 technology procurement decisions now. Partnerships are structured around 20-minute plenary keynotes, exclusive 75-minute workshop clinics, standardised 6 sqm, 9 sqm, and 12 sqm concourse booths, and private 15-buyer CXO closed-door boardrooms.
         </p>
 
         <div className="mt-8 flex justify-center">
           <a
             href="/dubai/healthcare/attend/sponsor/"
-            className="inline-flex items-center justify-center gap-2 h-[52px] px-8 rounded-full font-extrabold text-[15px] text-[#06111F] [color:#06111F!important] bg-[#C0F43C] hover:shadow-[0_0_24px_rgba(192,244,60,0.35)] transition-all duration-200"
+            className="bb-btn-primary"
           >
-            Explore Sponsorship Tiers <span>→</span>
+            Explore Sponsorship Tiers <span className="bb-btn-arrow">→</span>
           </a>
         </div>
 
-        <p className="mt-14 mb-0 text-center font-mono text-xs uppercase tracking-[2px] text-white/55">
+        <p className="mt-14 mb-0 text-center font-mono text-xs font-bold uppercase tracking-[2px] text-[#0069B8]">
           Past Series Partners &amp; Sponsors
         </p>
       </div>
 
       {/* Two offset scrolling sponsor rows */}
       <div className="flex flex-col gap-5 mt-6 w-full overflow-hidden">
-        {/* Row 1: MDEC, MIDA, Datadog, Quantexa, Denodo (slides right-to-left) */}
+        {/* Row 1 */}
         <div className="relative w-full overflow-hidden">
           <div className="logo-marquee-rail flex gap-5 will-change-transform">
             {[...sponsorRow1, ...sponsorRow1, ...sponsorRow1].map((logo, index) => (
               <span
                 key={`${logo.alt}-${index}`}
-                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white shadow-[0_0_28px_rgba(20,212,255,0.16)] select-none px-4"
+                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white border border-[#0069B8]/22 shadow-[0_8px_24px_rgba(8,18,30,0.06)] select-none px-4"
               >
                 <img
                   src={logo.path}
@@ -107,13 +107,13 @@ export function SponsorsSection() {
           </div>
         </div>
 
-        {/* Row 2: Magure, Alibaba-cloud, ey, avatai, darwin (slides left-to-right) */}
+        {/* Row 2 */}
         <div className="relative w-full overflow-hidden">
           <div className="marquee-partners-reverse flex gap-5 will-change-transform">
             {[...sponsorRow2, ...sponsorRow2, ...sponsorRow2].map((logo, index) => (
               <span
                 key={`${logo.alt}-${index}`}
-                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white shadow-[0_0_28px_rgba(20,212,255,0.16)] select-none px-4"
+                className="flex-none grid place-items-center w-[190px] h-[82px] rounded-[12px] bg-white border border-[#0069B8]/22 shadow-[0_8px_24px_rgba(8,18,30,0.06)] select-none px-4"
               >
                 <img
                   src={logo.path}
@@ -129,18 +129,18 @@ export function SponsorsSection() {
         </div>
       </div>
 
-      {/* Governments and Associations Who Have Worked With Us In The Past (4x4 Grid from worldaishow.com) */}
-      <div className="mt-20 py-16 bg-white text-center">
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
-          <h3 className="m-0 mb-10 text-[#151923] font-[850] text-[clamp(22px,2.8vw,32px)] leading-[1.2] tracking-[-0.5px] uppercase w-full mx-auto">
+      {/* Governments and Associations Who Have Worked With Us In The Past */}
+      <div className="mt-20 py-16 bg-white border-t border-[#0069B8]/15 text-center">
+        <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
+          <h3 className="m-0 mb-10 text-[#08121E] font-[850] text-[clamp(22px,2.8vw,32px)] leading-[1.2] tracking-[-0.01em] uppercase w-full mx-auto">
             Governments and Associations Who Have Worked With Us In The Past
           </h3>
 
-          <div className="grid grid-cols-4 border border-slate-200 rounded-[16px] overflow-hidden max-md:grid-cols-2">
+          <div className="grid grid-cols-4 border border-[#0069B8]/22 rounded-[16px] overflow-hidden max-md:grid-cols-2">
             {governmentLogos.map((logo) => (
               <div
                 key={logo.alt}
-                className="flex items-center justify-center h-[126px] p-5 border-r border-b border-slate-200 bg-white hover:bg-slate-50 transition-colors duration-200"
+                className="flex items-center justify-center h-[126px] p-5 border-r border-b border-[#0069B8]/15 bg-white hover:bg-[#F7F9FC] transition-colors duration-200"
               >
                 <img
                   src={logo.path}
@@ -157,8 +157,8 @@ export function SponsorsSection() {
       </div>
 
       {/* Partners single row horizontal infinite marquee slider with hover pause */}
-      <div className="p-[28px_0_34px] bg-slate-50 border-t border-slate-200 text-center overflow-hidden">
-        <p className="m-0 mb-[26px] text-[18px] font-bold text-[#151923] uppercase tracking-[1.5px] select-none">
+      <div className="p-[28px_0_34px] bg-[#F7F9FC] border-t border-[#0069B8]/18 text-center overflow-hidden">
+        <p className="m-0 mb-[26px] text-[18px] font-bold text-[#08121E] uppercase tracking-[1.5px] select-none">
           Strategic &amp; Media Partners
         </p>
         <div className="relative w-full overflow-hidden">

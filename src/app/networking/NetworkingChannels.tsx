@@ -50,15 +50,15 @@ const channels: ChannelItem[] = [
 
 export function NetworkingChannels() {
   return (
-    <section className="relative py-[92px] bg-[#020b1c]" id="channels">
+    <section className="relative py-[92px] bg-[#08121E]" id="channels">
       <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         
         {/* Title */}
         <div className="text-center mb-16">
-          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#18d4ff]/30 rounded-full text-[#18d4ff] font-mono text-[12px] uppercase tracking-[2px] bg-[#18d4ff]/5">
+          <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#009EAD]/40 rounded-full text-[#009EAD] font-mono text-[12px] uppercase tracking-[2px] bg-[#0D1B2E]">
             Networking Platforms
           </span>
-          <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(36px,4.5vw,56px)]">
+          <h2 className="font-[850] text-white leading-tight tracking-[-0.01em] text-[clamp(36px,4.5vw,56px)]">
             A working summit. <br />
             <GradientText>Built to forge partnerships.</GradientText>
           </h2>
@@ -73,19 +73,19 @@ export function NetworkingChannels() {
             >
               {/* Info Column */}
               <div className={`${channel.reverse ? "order-2 max-[980px]:order-none" : "order-none"}`}>
-                <span className="text-[#18d4ff] font-mono text-[12px] uppercase tracking-[3px] font-bold block mb-3">
+                <span className="text-[#009EAD] font-mono text-[12px] uppercase tracking-[3px] font-bold block mb-3">
                   {channel.tag}
                 </span>
                 <h3 className="m-0 text-white font-[850] text-[34px] leading-tight mb-5 max-sm:text-[26px]">
                   {channel.title}
                 </h3>
-                <p className="m-0 text-white/66 text-[17px] leading-relaxed mb-6">
+                <p className="m-0 text-[#F7F9FC]/84 text-[17px] leading-relaxed mb-6">
                   {channel.desc}
                 </p>
                 <ul className="m-0 pl-0 list-none flex flex-col gap-3">
                   {channel.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center gap-3 text-white/80 text-[15px]">
-                      <span className="grid place-items-center w-[18px] h-[18px] rounded-full bg-cyan/15 text-cyan text-[10px] font-extrabold select-none">
+                    <li key={benefit} className="flex items-center gap-3 text-[#F7F9FC]/88 text-[15px]">
+                      <span className="grid place-items-center w-[18px] h-[18px] rounded-full bg-[#F15928]/20 text-[#F15928] text-[10px] font-extrabold select-none">
                         ✓
                       </span>
                       {benefit}
@@ -95,7 +95,7 @@ export function NetworkingChannels() {
               </div>
 
               {/* Graphic Column */}
-              <div className="relative min-h-[340px] overflow-hidden border border-[#20d5ff]/24 rounded-[24px] bg-[#071426]/72 shadow-[0_0_42px_rgba(0,206,255,0.1)]">
+              <div className="relative min-h-[340px] overflow-hidden border border-[#0069B8]/52 rounded-[24px] bg-[#0D1B2E] shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
                 <img
                   src={channel.image}
                   alt={channel.title}

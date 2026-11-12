@@ -59,11 +59,11 @@ export default function PanoramaViewer({ imageUrl }: { imageUrl: string }) {
     setFov((prev) => Math.max(30, Math.min(110, prev + delta)));
   };
 
-  if (!mounted) return <div className="w-full h-full bg-[#050c1d] flex items-center justify-center border border-white/5 rounded-2xl" />;
+  if (!mounted) return <div className="w-full h-full bg-[#08121E] flex items-center justify-center border border-[#0069B8]/25 rounded-2xl" />;
 
   return (
     <div 
-      className="w-full h-full relative cursor-grab active:cursor-grabbing bg-[#050c1d] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+      className="w-full h-full relative cursor-grab active:cursor-grabbing bg-[#08121E] rounded-2xl overflow-hidden border border-[#0069B8]/35 shadow-[0_20px_60px_rgba(8,18,30,0.5)]"
       onWheel={handleWheel}
     >
       <Canvas camera={{ position: [0, 0, 0.1], fov: 75 }}>
@@ -92,21 +92,21 @@ export default function PanoramaViewer({ imageUrl }: { imageUrl: string }) {
       <div className="absolute bottom-6 right-6 flex gap-2 z-10">
         <button
           onClick={(e) => { e.stopPropagation(); setFov((prev) => Math.max(30, prev - 15)); }}
-          className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#C0F43C] hover:!text-black transition-all text-xl font-bold shadow-lg"
+          className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#F15928] hover:!text-white transition-all text-xl font-bold shadow-lg"
           aria-label="Zoom in"
         >
           +
         </button>
         <button
           onClick={(e) => { e.stopPropagation(); setFov(75); }}
-          className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#C0F43C] hover:!text-black transition-all text-sm font-bold shadow-lg"
+          className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#F15928] hover:!text-white transition-all text-sm font-bold shadow-lg"
           aria-label="Reset zoom"
         >
           ⟲
         </button>
         <button
           onClick={(e) => { e.stopPropagation(); setFov((prev) => Math.min(110, prev + 15)); }}
-          className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#C0F43C] hover:!text-black transition-all text-xl font-bold shadow-lg"
+          className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 !text-white flex items-center justify-center hover:bg-[#F15928] hover:!text-white transition-all text-xl font-bold shadow-lg"
           aria-label="Zoom out"
         >
           −

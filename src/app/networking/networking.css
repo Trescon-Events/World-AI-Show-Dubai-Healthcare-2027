@@ -1,36 +1,24 @@
-/* ── Networking Pages — Hero Banner Spacing ─────────────────────────── */
+/* ── Networking Pages — Hero Banner Spacing (AI 2047 Brand Book V1.0) ── */
 /*
-  The header is: fixed top-5 (20px) + nav h-[61px] + subnav h-[41px] = ~122px total.
-  We add extra breathing room so the hero title sits comfortably below the nav.
-
-  Applied to:
-    - .net-networking-hero  → /networking/ main overview page inline hero
-    - .net-inner-hero       → all 4 sub-pages (attendee-app, ai-matchmaking,
-                               photo-gallery, whatsapp-networking)
+  The header is: fixed top-5 (20px) + nav h-[82px] + subnav h-[41px] = 143px total.
+  Provide clean breathing room below the fixed pill navbar and persistent sub-nav.
 */
 
-/* ── Main networking overview page hero ── */
-.net-networking-hero {
-  padding-top: 140px;
-}
-
-/* ── Sub-page hero sections (net-inner-hero) ── */
+.net-networking-hero,
 .net-inner-hero {
-  padding-top: 140px !important;
+  padding-top: 192px;
 }
 
-/* ── Tablet (≤ 980px) ── */
-@media (max-width: 980px) {
+@media (max-width: 1200px) {
   .net-networking-hero,
   .net-inner-hero {
-    padding-top: 120px !important;
+    padding-top: 144px;
   }
 }
 
-/* ── Mobile (≤ 640px) ── */
 @media (max-width: 640px) {
   .net-networking-hero,
   .net-inner-hero {
-    padding-top: 100px !important;
+    padding-top: 118px;
   }
 }

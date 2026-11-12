@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { AOSInit } from "./components/AOSInit";
 
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-jakarta",
+});
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   variable: "--font-space-grotesk",
 });
@@ -31,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} h-full antialiased`}>
-      <body suppressHydrationWarning className="min-h-full flex flex-col font-space-grotesk bg-bg text-text">
+    <html lang="en" className={`${plusJakartaSans.variable} ${spaceGrotesk.variable} h-full antialiased`}>
+      <body suppressHydrationWarning className="min-h-full flex flex-col font-sans bg-[#08121E] text-[#F7F9FC]">
         <AOSInit />
         {children}
         <ScrollToTop />

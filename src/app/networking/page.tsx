@@ -17,33 +17,33 @@ export default function NetworkingPage() {
       desc: "Personalised 1-day agenda builder, clinic selection, and digital business card exchange — all from a single AI-powered executive app.",
       href: "/dubai/healthcare/networking/attendee-app",
       action: "Explore",
-      badgeBg: "bg-[#00ceff]",
-      actionColor: "text-[#00ceff]",
-      borderColor: "border-[#00ceff]/15",
-      hoverBorder: "hover:border-[#00ceff]/45",
-      hoverTitle: "group-hover:text-[#00ceff]"
+      badgeBg: "bg-[#009EAD]",
+      actionColor: "text-[#009EAD]",
+      borderColor: "border-[#0069B8]/45",
+      hoverBorder: "hover:border-[#009EAD]",
+      hoverTitle: "group-hover:text-[#009EAD]"
     },
     {
       title: "AI Matchmaking",
       desc: "Algorithmic pre-scheduled 1-on-1 meetings connecting buy-side hospital and clinical leaders with vetted HealthTech infrastructure providers.",
       href: "/dubai/healthcare/networking/ai-matchmaking",
       action: "Explore",
-      badgeBg: "bg-[#C0F43C]",
-      actionColor: "text-[#C0F43C]",
-      borderColor: "border-[#C0F43C]/15",
-      hoverBorder: "hover:border-[#C0F43C]/45",
-      hoverTitle: "group-hover:text-[#C0F43C]"
+      badgeBg: "bg-[#F15928]",
+      actionColor: "text-[#F15928]",
+      borderColor: "border-[#0069B8]/45",
+      hoverBorder: "hover:border-[#F15928]",
+      hoverTitle: "group-hover:text-[#F15928]"
     },
     {
       title: "AI Photo Gallery",
       desc: "High-resolution executive photography from the global series, indexed instantly using AI face recognition.",
       href: "/dubai/healthcare/networking/photo-gallery",
       action: "Explore",
-      badgeBg: "bg-[#926DFF]",
-      actionColor: "text-[#926DFF]",
-      borderColor: "border-[#926DFF]/15",
-      hoverBorder: "hover:border-[#926DFF]/45",
-      hoverTitle: "group-hover:text-[#926DFF]"
+      badgeBg: "bg-[#0069B8]",
+      actionColor: "text-[#009EAD]",
+      borderColor: "border-[#0069B8]/45",
+      hoverBorder: "hover:border-[#0069B8]",
+      hoverTitle: "group-hover:text-[#009EAD]"
     }
   ];
 
@@ -74,42 +74,42 @@ export default function NetworkingPage() {
   ];
 
   const industryBorders = [
-    "border-[#C0F43C]/20",
-    "border-[#926DFF]/20",
-    "border-[#00CEFF]/20",
-    "border-[#3b82f6]/20",
-    "border-[#C0F43C]/20",
-    "border-[#00CEFF]/20",
-    "border-[#C0F43C]/20",
-    "border-[#C0F43C]/20",
-    "border-[#926DFF]/20",
-    "border-[#C0F43C]/20",
-    "border-[#00CEFF]/20",
-    "border-[#3b82f6]/20"
+    "border-[#F15928]/45",
+    "border-[#0069B8]/52",
+    "border-[#009EAD]/45",
+    "border-[#0069B8]/52",
+    "border-[#F15928]/45",
+    "border-[#009EAD]/45",
+    "border-[#0069B8]/52",
+    "border-[#F15928]/45",
+    "border-[#009EAD]/45",
+    "border-[#0069B8]/52",
+    "border-[#009EAD]/45",
+    "border-[#F15928]/45"
   ];
 
   return (
-    <main className="page-networking relative min-h-screen bg-gradient-to-b from-[#020814] via-[#031022] to-[#020a18] text-white font-space-grotesk overflow-x-hidden">
+    <main className="page-networking relative min-h-screen bg-[#08121E] text-white font-display overflow-x-clip">
       <Header activeItem="Networking" subNavItems={subNav} activeSubNavItem="Overview" />
 
       {/* ── Section 1: Hero ── */}
       <section
-        className="relative pt-[220px] pb-[120px] overflow-hidden bg-cover bg-[position:center_top] flex items-center min-h-[700px] max-md:pt-[170px]"
+        className="relative page-hero-subnav-top pb-[88px] overflow-hidden bg-cover bg-[position:center_top] flex items-center min-h-[580px] max-sm:pb-[64px] max-sm:min-h-[480px]"
         style={{
-          backgroundImage: `linear-gradient(90deg, rgba(2, 7, 19, 0.96) 0%, rgba(2, 7, 19, 0.8) 45%, rgba(2, 7, 19, 0.25) 100%), url('/dubai/healthcare/images/networking/networking-hero-bg.webp')`
+          backgroundImage: `linear-gradient(90deg, rgba(8, 18, 30, 0.96) 0%, rgba(8, 18, 30, 0.80) 45%, rgba(8, 18, 30, 0.25) 100%), url('/dubai/healthcare/images/networking/networking-hero-bg.webp')`
         }}
       >
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10">
-          <div className="w-full w-full">
-            <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-cyan/30 rounded-full text-cyan font-mono text-[12px] uppercase tracking-[2px] bg-cyan/5">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto relative z-10">
+          <div className="w-full">
+            <span className="inline-flex items-center mb-5 px-3.5 py-1.5 border border-[#009EAD]/40 rounded-full text-[#009EAD] font-mono text-[12px] uppercase tracking-[2px] bg-[#0D1B2E]">
               Networking Suite &amp; Concierge · Dubai 2027
             </span>
-            <h1 className="m-0 text-white font-[850] leading-[1.03] tracking-[-2.5px] text-[clamp(44px,5.8vw,74px)]">
+            <h1 className="m-0 text-white font-[850] leading-[1.03] tracking-[-0.01em] text-[clamp(42px,5.6vw,70px)]">
               Every <br />
               Conversation. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">By Design.</span>
+              <GradientText>By Design.</GradientText>
             </h1>
-            <p className="m-0 mt-6 text-white/75 text-[18px] leading-relaxed max-sm:text-[15px]">
+            <p className="m-0 mt-6 text-[#F7F9FC]/84 text-[18px] leading-relaxed max-sm:text-[15px]">
               Designed for senior healthcare and life sciences leaders, the forum enables high-impact peer exchange through pre-scheduled meetings, private boardroom discussions, and collaborative sessions focused on procurement and clinical priorities.
             </p>
 
@@ -117,15 +117,15 @@ export default function NetworkingPage() {
             <div className="flex flex-wrap items-center gap-4 mt-9 max-sm:flex-col max-sm:items-stretch">
               <a
                 href="/dubai/healthcare/attend/delegate"
-                className="px-8 py-[15px] rounded-full !text-black [color:#06111f!important] bg-[#C0F43C] shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] font-extrabold text-[14.5px] text-center transition-all duration-200 hover:-translate-y-0.5"
+                className="bb-btn-primary text-center"
               >
-                Apply for a Business Pass ➔
+                Apply for a Business Pass <span className="bb-btn-arrow">➔</span>
               </a>
               <a
                 href="/dubai/healthcare/sponsorship-enquiry"
-                className="px-8 py-[15px] rounded-full text-white border border-white/25 bg-white/5 hover:border-cyan font-extrabold text-[14.5px] text-center transition-all duration-200 hover:-translate-y-0.5"
+                className="bb-btn-outline-dark text-center"
               >
-                Enquire about sponsorship ➔
+                Enquire about sponsorship <span className="bb-btn-arrow">➔</span>
               </a>
             </div>
           </div>
@@ -133,42 +133,42 @@ export default function NetworkingPage() {
       </section>
 
       {/* Stats Row */}
-      <section className="relative py-12 border-y border-white/5 bg-[#020814]">
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
-          <div className="grid grid-cols-3 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1 text-center divide-x divide-white/10">
-            <div className="flex flex-col">
-              <span className="text-[40px] font-[900] text-[#C0F43C] tracking-tight">
+      <section className="relative py-12 border-y border-[#0069B8]/30 bg-[#0D1B2E]">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
+          <div className="grid grid-cols-3 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1 text-center divide-x divide-[#0069B8]/25 max-sm:divide-x-0 max-sm:divide-y">
+            <div className="flex flex-col max-sm:py-3">
+              <span className="text-[40px] font-[900] text-[#F15928] tracking-tight">
                 300+
               </span>
-              <span className="text-[12.5px] text-white/50 uppercase tracking-widest font-mono font-bold mt-1.5">Pre-Qualified Healthcare CXOs</span>
+              <span className="text-[12.5px] text-[#F7F9FC]/70 uppercase tracking-widest font-mono font-bold mt-1.5">Pre-Qualified Healthcare CXOs</span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-[40px] font-[900] text-[#C0F43C] tracking-tight">
+            <div className="flex flex-col max-sm:py-3">
+              <span className="text-[40px] font-[900] text-[#009EAD] tracking-tight">
                 80%+
               </span>
-              <span className="text-[12.5px] text-white/50 uppercase tracking-widest font-mono font-bold mt-1.5">Buy-Side Institutional Ratio</span>
+              <span className="text-[12.5px] text-[#F7F9FC]/70 uppercase tracking-widest font-mono font-bold mt-1.5">Buy-Side Institutional Ratio</span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-[40px] font-[900] text-[#C0F43C] tracking-tight">15 CXOs</span>
-              <span className="text-[12.5px] text-white/50 uppercase tracking-widest font-mono font-bold mt-1.5">Per Closed-Door Boardroom</span>
+            <div className="flex flex-col max-sm:py-3">
+              <span className="text-[40px] font-[900] text-[#F15928] tracking-tight">15 CXOs</span>
+              <span className="text-[12.5px] text-[#F7F9FC]/70 uppercase tracking-widest font-mono font-bold mt-1.5">Per Closed-Door Boardroom</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── Section 2: Ways to Connect ── */}
-      <section className="relative py-24 bg-[#030b19]">
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
+      <section className="relative py-24 bg-[#08121E]">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
 
           {/* Header */}
           <div className="text-center mb-16 w-full mx-auto">
-            <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#18d4ff]/10 text-[#18d4ff] border border-[#18d4ff]/20 mb-5 inline-block">
+            <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#0D1B2E] text-[#009EAD] border border-[#009EAD]/40 mb-5 inline-block">
               Section 12 · Networking Suite &amp; Attendee App
             </span>
-            <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(32px,4vw,44px)] m-0">
+            <h2 className="font-[850] text-white leading-tight tracking-[-0.01em] text-[clamp(32px,4vw,44px)] m-0">
               Engineered for the <GradientText>Regulated Healthcare Buying Unit</GradientText>
             </h2>
-            <p className="m-0 mt-5 text-white/60 text-[16px] leading-relaxed max-sm:text-[14px]">
+            <p className="m-0 mt-5 text-[#F7F9FC]/80 text-[16px] leading-relaxed max-sm:text-[14px]">
               Healthcare AI procurement requires alignment across Hospital CEOs, CMOs, CIOs, CNIOs, Heads of Clinical Informatics, and CISOs. Our networking suite connects all 5 governed institutional constituencies during the 1-Day Executive Decision Forum.
             </p>
           </div>
@@ -179,7 +179,7 @@ export default function NetworkingPage() {
               <a
                 key={way.title}
                 href={way.href}
-                className={`group relative overflow-hidden p-8 border ${way.borderColor} ${way.hoverBorder} rounded-[24px] bg-[#050c1c]/50 hover:bg-[#050c1c]/80 shadow-[0_12px_24px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between no-underline cursor-pointer`}
+                className={`group relative overflow-hidden p-8 border ${way.borderColor} ${way.hoverBorder} rounded-[24px] bg-[#0D1B2E] shadow-[0_14px_34px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between no-underline cursor-pointer`}
               >
                 <div>
                   <div className="flex justify-between items-center mb-6">
@@ -187,7 +187,7 @@ export default function NetworkingPage() {
                       <img
                         src="/dubai/healthcare/images/networking/Icon.webp"
                         alt="Icon"
-                        className="w-[18px] h-[18px] object-contain brightness-0 invert-0 select-none"
+                        className="w-[18px] h-[18px] object-contain brightness-0 invert select-none"
                       />
                     </span>
                   </div>
@@ -195,12 +195,12 @@ export default function NetworkingPage() {
                   <h3 className={`m-0 text-white font-extrabold text-[19px] tracking-tight ${way.hoverTitle} transition-colors`}>
                     {way.title}
                   </h3>
-                  <p className="m-0 mt-3 text-white/60 text-[14px] leading-relaxed">
+                  <p className="m-0 mt-3 text-[#F7F9FC]/75 text-[14px] leading-relaxed">
                     {way.desc}
                   </p>
                 </div>
 
-                <div className="mt-8 border-t border-white/10 pt-4">
+                <div className="mt-8 border-t border-[#0069B8]/25 pt-4">
                   <span className={`inline-flex items-center gap-1.5 text-[14px] font-bold transition-all ${way.actionColor}`}>
                     {way.action} <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">➔</span>
                   </span>
@@ -213,16 +213,16 @@ export default function NetworkingPage() {
       </section>
 
       {/* ── Section 3: 300 Qualified CXOs. One Room. ── */}
-      <section className="relative py-24 bg-[#020814]">
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
+      <section className="relative py-24 bg-[#08121E] border-t border-[#0069B8]/25">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
 
           <div className="grid grid-cols-[1.1fr_0.9fr] gap-12 max-[980px]:grid-cols-1 max-[980px]:gap-12">
 
             {/* Left Column: Heading and Roles List */}
             <div className="flex flex-col">
-              <h2 className="font-[850] text-white leading-[1.1] tracking-[-2px] text-[clamp(36px,4.5vw,52px)] m-0 mb-8">
+              <h2 className="font-[850] text-white leading-[1.1] tracking-[-0.01em] text-[clamp(36px,4.5vw,52px)] m-0 mb-8">
                 300+ Pre-Qualified Leaders.<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">The Healthcare Buying Unit.</span>
+                <GradientText>The Healthcare Buying Unit.</GradientText>
               </h2>
 
               {/* Roles List */}
@@ -230,7 +230,7 @@ export default function NetworkingPage() {
                 {roles.map((role) => (
                   <div
                     key={role}
-                    className="px-6 py-4 text-[14.5px] font-bold text-white/80 border border-[#2a2c4e] rounded-[14px] bg-[#050c1c]/10 hover:border-cyan/30 hover:bg-[#050c1c]/30 hover:text-white transition-all duration-200"
+                    className="px-6 py-4 text-[14.5px] font-bold text-[#F7F9FC]/88 border border-[#0069B8]/40 rounded-[14px] bg-[#0D1B2E] hover:border-[#009EAD] hover:text-white transition-all duration-200"
                   >
                     {role}
                   </div>
@@ -251,8 +251,7 @@ export default function NetworkingPage() {
                     return (
                       <span
                         key={ind}
-                        className={`px-5 py-2.5 rounded-full text-[13.5px] font-bold border ${borderColor} text-white/90 hover:text-white transition-all duration-200`}
-                        style={{ backgroundColor: "#4d6f998c" }}
+                        className={`px-5 py-2.5 rounded-full text-[13.5px] font-bold border ${borderColor} bg-[#0D1B2E] text-white hover:border-[#009EAD] transition-all duration-200`}
                       >
                         {ind}
                       </span>
@@ -262,17 +261,11 @@ export default function NetworkingPage() {
               </div>
 
               {/* Starts Before Day One Panel */}
-              <div
-                className="p-8 border border-[#926DFF]/30 rounded-[24px] shadow-[0_12px_32px_rgba(146,109,255,0.04)] relative overflow-hidden group hover:border-[#926DFF]/50 transition-all duration-300"
-                style={{
-                  background: "linear-gradient(135deg, rgba(146, 109, 255, 0.12) 0%, rgba(146, 109, 255, 0.02) 100%), #040b1e"
-                }}
-              >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-[radial-gradient(circle_at_80%_20%,rgba(146,109,255,0.08),transparent_70%)] pointer-events-none"></div>
+              <div className="p-8 border border-[#0069B8]/52 rounded-[24px] bg-[#0D1B2E] shadow-[0_18px_46px_rgba(0,0,0,0.35)] relative overflow-hidden group hover:border-[#009EAD] transition-all duration-300">
                 <h3 className="m-0 text-white font-[850] text-[19px] tracking-tight mb-3">
-                  Your Network Starts <span className="text-[#a78bfa]">Before Forum Day</span>
+                  Your Network Starts <span className="text-[#009EAD]">Before Forum Day</span>
                 </h3>
-                <p className="m-0 text-white/70 text-[14px] leading-relaxed">
+                <p className="m-0 text-[#F7F9FC]/80 text-[14px] leading-relaxed">
                   Qualified delegates and commercial partners receive early access to the attendee app ahead of 25 March 2027 — build your personalised 1-day agenda, select your parallel breakout clinic, and pre-schedule 1-on-1 meetings.
                 </p>
               </div>
@@ -285,29 +278,29 @@ export default function NetworkingPage() {
       </section>
 
       {/* ── Section 4: Closing CTA ── */}
-      <section className="relative py-24 bg-[#030b19] border-t border-white/5">
-        <div className="w-[min(820px,calc(100%-48px))] mx-auto relative overflow-hidden p-12 border border-[#C0F43C]/20 rounded-[28px] bg-gradient-to-br from-[#040d1f] to-[#020713] text-center shadow-[0_24px_62px_rgba(0,0,0,0.5)] max-sm:p-8">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C0F43C]/60 to-transparent"></div>
+      <section className="relative py-24 bg-[#08121E] border-t border-[#0069B8]/25">
+        <div className="w-[min(820px,calc(100%-48px))] max-sm:w-[min(100%-32px,820px)] mx-auto relative overflow-hidden p-12 border border-[#0069B8]/52 rounded-[28px] bg-[#0D1B2E] text-center shadow-[0_24px_62px_rgba(0,0,0,0.45)] max-sm:p-8">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0069B8] via-[#009EAD] to-[#F15928]"></div>
 
-          <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(28px,3.5vw,38px)] m-0">
+          <h2 className="font-[850] text-white leading-tight tracking-[-0.01em] text-[clamp(28px,3.5vw,38px)] m-0">
             Be in the room where <GradientText>regulated clinical AI gets decided.</GradientText>
           </h2>
-          <p className="m-0 mt-4 text-white/58 text-[15px] leading-relaxed w-full mx-auto">
+          <p className="m-0 mt-4 text-[#F7F9FC]/80 text-[15px] leading-relaxed w-full mx-auto">
             Apply for a Business Pass or enquire about commercial sponsorship for World AI Show | Healthcare and Life Sciences | Dubai 2027 (25 March 2027 · Dubai, UAE · 1-Day Executive Decision Forum).
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <a
               href="/dubai/healthcare/attend/delegate"
-              className="px-8 py-3.5 rounded-full text-black [color:#06111f!important] bg-[#C0F43C] font-extrabold text-sm shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] transition-all duration-200 hover:-translate-y-0.5"
+              className="bb-btn-primary"
             >
-              Apply for a Business Pass ➔
+              Apply for a Business Pass <span className="bb-btn-arrow">➔</span>
             </a>
             <a
               href="/dubai/healthcare/sponsorship-enquiry"
-              className="px-8 py-3.5 rounded-full text-white border border-white/25 bg-white/5 hover:border-cyan font-extrabold text-sm transition-all duration-200 hover:-translate-y-0.5"
+              className="bb-btn-outline-dark"
             >
-              Enquire about sponsorship ➔
+              Enquire about sponsorship <span className="bb-btn-arrow">➔</span>
             </a>
           </div>
         </div>

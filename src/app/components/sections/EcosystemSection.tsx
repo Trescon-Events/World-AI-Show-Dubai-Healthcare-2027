@@ -68,7 +68,7 @@ export function EcosystemSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-[104px] bg-gradient-to-b from-[#051224]/70 to-[#020a18]/96 max-sm:py-[72px]"
+      className="relative py-[104px] bg-[#08121E] max-sm:py-[72px]"
       id="ecosystem"
     >
       <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
@@ -83,7 +83,7 @@ export function EcosystemSection() {
         <div className="grid grid-cols-[1fr_0.95fr] gap-[88px] items-center mt-[74px] max-[980px]:grid-cols-1 max-[980px]:gap-12">
           
           {/* Donut Chart and List Wrapper */}
-          <div className="flex flex-col min-h-[526px] p-[38px_26px] border border-purple/50 rounded-[18px] bg-[radial-gradient(circle_at_51%_28%,rgba(95,69,188,0.44),transparent_40%),#0c1026] max-sm:min-h-auto max-sm:p-6 max-sm:px-[18px]">
+          <div className="flex flex-col min-h-[526px] p-[38px_26px] border border-[#0069B8]/45 rounded-[18px] bg-[#0D1B2E] max-sm:min-h-auto max-sm:p-6 max-sm:px-[18px]">
             
             {/* The Donut Circle - triggers scale bounce only when visible */}
             <div className={`relative w-[min(330px,70vw)] aspect-square mx-auto mb-[34px] rounded-full ${
@@ -111,24 +111,24 @@ export function EcosystemSection() {
               </svg>
 
               {/* Data Labels - pops in only on scroll reveal */}
-              <span className={`absolute z-4 text-[#020712] font-black text-[28px] top-[28%] left-[8%] select-none transition-all duration-300 ${
+              <span className={`absolute z-4 text-[#08121E] font-black text-[28px] top-[28%] left-[8%] select-none transition-all duration-300 ${
                 isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}>
                 45%
               </span>
-              <span className={`absolute z-4 text-[#020712] font-black text-[28px] top-[15%] right-[19%] select-none transition-all duration-300 ${
+              <span className={`absolute z-4 text-[#08121E] font-black text-[28px] top-[15%] right-[19%] select-none transition-all duration-300 ${
                 isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}>
                 20%
               </span>
-              <span className={`absolute z-4 text-[#020712] font-black text-[28px] bottom-[12%] right-[24%] select-none transition-all duration-300 ${
+              <span className={`absolute z-4 text-[#08121E] font-black text-[28px] bottom-[12%] right-[24%] select-none transition-all duration-300 ${
                 isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}>
                 35%
               </span>
 
               {/* Central Text Panel */}
-              <div className="absolute inset-[31%] z-3 grid place-content-center rounded-full text-white bg-[#10142a] text-center shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+              <div className="absolute inset-[31%] z-3 grid place-content-center rounded-full text-white bg-[#08121E] text-center shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
                 <strong className="block text-[34px] leading-none font-extrabold">100%</strong>
                 <small className="block mt-2 text-muted text-[16px]">Coverage</small>
               </div>

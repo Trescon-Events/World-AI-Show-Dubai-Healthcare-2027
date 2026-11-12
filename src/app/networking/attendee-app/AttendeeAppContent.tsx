@@ -15,39 +15,35 @@ export function AttendeeAppContent() {
   ];
 
   return (
-    <div className="relative w-full text-white font-space-grotesk">
+    <div className="relative w-full text-white font-display">
       {/* Hero / Header Section */}
       <section 
-        className="relative net-inner-hero pt-[250px] pb-24 overflow-hidden"
+        className="relative net-inner-hero page-hero-subnav-top pb-24 overflow-hidden"
         style={{
-          backgroundImage: `url('/dubai/healthcare/images/networking/attendee-app-hero-bg.webp')`,
+          backgroundImage: `linear-gradient(90deg, rgba(8, 18, 30, 0.94) 0%, rgba(8, 18, 30, 0.72) 55%, rgba(8, 18, 30, 0.25) 100%), url('/dubai/healthcare/images/networking/attendee-app-hero-bg.webp')`,
           backgroundPosition: 'right center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Soft Ambient Spotlights */}
-        <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] rounded-full bg-[#00ceff]/8 blur-[110px] pointer-events-none z-0"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[#C0F43C]/4 blur-[130px] pointer-events-none z-0"></div>
-
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10 text-left flex flex-col items-start">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto relative z-10 text-left flex flex-col items-start">
           <div className="max-w-[620px] w-full">
-            <span className="text-[#18d4ff] font-mono text-[12px] uppercase tracking-[3px] font-bold block mb-3">
+            <span className="text-[#009EAD] font-mono text-[12px] uppercase tracking-[3px] font-bold block mb-3">
               Powered by KonfHub
             </span>
-            <h1 className="font-[850] text-white leading-[1.03] tracking-[-2.5px] text-[clamp(44px,5.4vw,72px)] m-0">
+            <h1 className="font-[850] text-white leading-[1.03] tracking-[-0.01em] text-[clamp(44px,5.4vw,68px)] m-0">
               Your Day, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ceff] to-[#C0F43C]">Fully in Hand</span>
+              <GradientText>Fully in Hand</GradientText>
             </h1>
-            <p className="m-0 mt-6 text-white/70 text-[18px] leading-relaxed max-sm:text-[15px]">
+            <p className="m-0 mt-6 text-[#F7F9FC]/84 text-[18px] leading-relaxed max-sm:text-[15px]">
               The World AI Show | Healthcare and Life Sciences | Dubai 2027 Event App is your command centre on the ground in Dubai. Personalised 1-day agenda builder, parallel breakout clinic selection (Ambient Voice or Diagnostic AI), speakers, sponsors, and live networking — all unified in one AI-powered platform.
             </p>
             <div className="flex flex-wrap items-center gap-4 mt-8">
               <a
                 href="/dubai/healthcare/sponsorship-enquiry"
-                className="px-6 h-[49px] inline-flex items-center justify-center gap-2.5 rounded-full font-extrabold text-sm transition-all duration-200 bg-[#C0F43C] text-black [color:#06111f!important] shadow-[0_0_24px_rgba(192,244,60,0.24)] hover:shadow-[0_0_32px_rgba(192,244,60,0.4)] hover:-translate-y-0.5"
+                className="bb-btn-primary"
               >
-                Enquire Now ➔
+                Enquire Now <span className="bb-btn-arrow">➔</span>
               </a>
             </div>
           </div>
@@ -55,20 +51,20 @@ export function AttendeeAppContent() {
       </section>
 
       {/* Horizontal Features Badges Bar */}
-      <section className="relative py-8 bg-[#030b19]/60 border-y border-white/5">
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
+      <section className="relative py-8 bg-[#0D1B2E] border-y border-[#0069B8]/30">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
           <div className="flex flex-wrap justify-center items-center gap-[10px]">
             {badgeFeatures.map((feat) => (
               <div
                 key={feat.label}
-                className="flex items-center h-[36px] pt-[10px] pb-[8px] px-[12px] gap-[9px] border border-[#926DFF] rounded-[4px] bg-[rgba(77,111,153,0.55)] text-[#8199b5] text-[11.5px] font-extrabold uppercase tracking-[1px] select-none hover:bg-[rgba(77,111,153,0.7)] hover:border-[#b196ff] transition-all duration-200"
+                className="flex items-center h-[36px] px-[14px] gap-[9px] border border-[#0069B8]/52 rounded-[6px] bg-[#08121E] text-[#F7F9FC]/90 text-[11.5px] font-extrabold uppercase tracking-[1px] select-none hover:border-[#009EAD] hover:text-white transition-all duration-200"
               >
                 <img
                   src={feat.icon}
                   alt={`${feat.label} Icon`}
                   className="w-[14px] h-[14px] object-contain flex-none"
                 />
-                <span className="leading-none mt-[1.5px] whitespace-nowrap">
+                <span className="leading-none mt-[1px] whitespace-nowrap">
                   {feat.label}
                 </span>
               </div>
@@ -78,18 +74,18 @@ export function AttendeeAppContent() {
       </section>
 
       {/* App Features. Built for Every Role in the Room */}
-      <section className="relative py-24 bg-[#020814]">
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
+      <section className="relative py-24 bg-[#08121E]">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
           
           {/* Section Header */}
           <div className="text-center mb-16 w-full mx-auto">
-            <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#C0F43C]/10 text-[#C0F43C] border border-[#C0F43C]/20 mb-5 inline-block">
+            <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#0D1B2E] text-[#F15928] border border-[#F15928]/40 mb-5 inline-block">
               App Features
             </span>
-            <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(32px,4vw,44px)] m-0">
+            <h2 className="font-[850] text-white leading-tight tracking-[-0.01em] text-[clamp(32px,4vw,44px)] m-0">
               Built for Every <GradientText>Role in the Room</GradientText>
             </h2>
-            <p className="m-0 mt-5 text-white/60 text-[16px] leading-relaxed max-sm:text-[14px]">
+            <p className="m-0 mt-5 text-[#F7F9FC]/80 text-[16px] leading-relaxed max-sm:text-[14px]">
               Whether you&apos;re a hospital delegate, sponsor, or exhibitor — the app is designed to give you a different and better experience.
             </p>
           </div>
@@ -98,16 +94,13 @@ export function AttendeeAppContent() {
             
             {/* Card 1: For Attendees */}
             <div 
-              className="p-10 rounded-[28px] border-[4px] border-[#22446D] shadow-[0_22px_62px_rgba(0,0,0,0.45)] transition-all duration-300 relative group overflow-hidden max-sm:p-6"
-              style={{
-                background: "linear-gradient(0deg, rgba(46, 60, 77, 0.55), rgba(46, 60, 77, 0.55)), linear-gradient(94.42deg, rgba(255, 255, 255, 0.09) 0.77%, rgba(255, 255, 255, 0) 33.68%), linear-gradient(95.06deg, rgba(146, 109, 255, 0) 69.31%, rgba(146, 109, 255, 0.2) 99.59%)"
-              }}
+              className="p-10 rounded-[28px] border border-[#0069B8]/52 bg-[#0D1B2E] shadow-[0_22px_62px_rgba(0,0,0,0.45)] transition-all duration-300 relative group overflow-hidden max-sm:p-6 hover:border-[#F15928]"
             >
-              <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#C0F43C] text-black mb-6">
+              <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#F15928] text-white mb-6">
                 <img 
                   src="/dubai/healthcare/images/networking/Icon.webp" 
                   alt="Attendees" 
-                  className="w-[14px] h-[14px] object-contain" 
+                  className="w-[14px] h-[14px] object-contain brightness-0 invert" 
                 />
                 For Attendees
               </span>
@@ -176,16 +169,13 @@ export function AttendeeAppContent() {
 
             {/* Card 2: For Sponsors & Exhibitors */}
             <div 
-              className="p-10 rounded-[28px] border-[4px] border-[#22446D] shadow-[0_22px_62px_rgba(0,0,0,0.45)] transition-all duration-300 relative group overflow-hidden max-sm:p-6"
-              style={{
-                background: "linear-gradient(0deg, rgba(46, 60, 77, 0.55), rgba(46, 60, 77, 0.55)), linear-gradient(94.42deg, rgba(255, 255, 255, 0.09) 0.77%, rgba(255, 255, 255, 0) 33.68%), linear-gradient(95.06deg, rgba(146, 109, 255, 0) 69.31%, rgba(146, 109, 255, 0.2) 99.59%)"
-              }}
+              className="p-10 rounded-[28px] border border-[#0069B8]/52 bg-[#0D1B2E] shadow-[0_22px_62px_rgba(0,0,0,0.45)] transition-all duration-300 relative group overflow-hidden max-sm:p-6 hover:border-[#009EAD]"
             >
-              <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#926DFF] text-white mb-6">
+              <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#0069B8] text-white mb-6">
                 <img 
                   src="/dubai/healthcare/icons/attendee-app/exhibitor.webp" 
                   alt="Sponsors & Exhibitors" 
-                  className="w-[14px] h-[14px] object-contain filter brightness-0" 
+                  className="w-[14px] h-[14px] object-contain filter brightness-0 invert" 
                 />
                 For Sponsors &amp; Exhibitors
               </span>

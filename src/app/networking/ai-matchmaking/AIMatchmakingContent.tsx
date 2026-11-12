@@ -19,36 +19,32 @@ export function AIMatchmakingContent() {
   ];
 
   return (
-    <div className="relative w-full text-white font-space-grotesk">
+    <div className="relative w-full text-white font-display">
       <section 
-        className="relative net-inner-hero pt-[250px] pb-24 overflow-hidden"
+        className="relative net-inner-hero page-hero-subnav-top pb-24 overflow-hidden"
         style={{
-          backgroundImage: `url('/dubai/healthcare/images/networking/ai-matchmaking-bg.webp')`,
+          backgroundImage: `linear-gradient(90deg, rgba(8, 18, 30, 0.94) 0%, rgba(8, 18, 30, 0.78) 55%, rgba(8, 18, 30, 0.35) 100%), url('/dubai/healthcare/images/networking/ai-matchmaking-bg.webp')`,
           backgroundPosition: 'right center',
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
-          backgroundColor: 'transparent'
+          backgroundColor: '#08121E'
         }}
       >
-        {/* Soft Ambient Spotlights */}
-        <div className="absolute top-1/4 left-1/4 w-[450px] h-[450px] rounded-full bg-[#00ceff]/8 blur-[110px] pointer-events-none z-0"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[#C0F43C]/4 blur-[130px] pointer-events-none z-0"></div>
-
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto relative z-10 text-left flex flex-col items-start">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto relative z-10 text-left flex flex-col items-start">
           <div className="max-w-[620px] w-full">
-            <span className="text-[#18d4ff] font-mono text-[12px] uppercase tracking-[3px] font-bold block mb-3">
+            <span className="text-[#009EAD] font-mono text-[12px] uppercase tracking-[3px] font-bold block mb-3">
               AI-Powered Matchmaking
             </span>
-            <h1 className="font-[850] text-white leading-[1.03] tracking-[-2.5px] text-[clamp(44px,5.4vw,72px)] m-0">
+            <h1 className="font-[850] text-white leading-[1.03] tracking-[-0.01em] text-[clamp(44px,5.4vw,68px)] m-0">
               Meet the Right People. <br />
               <GradientText>Every Time.</GradientText>
             </h1>
-            <p className="m-0 mt-6 text-white/70 text-[18px] leading-relaxed max-sm:text-[15px]">
+            <p className="m-0 mt-6 text-[#F7F9FC]/84 text-[18px] leading-relaxed max-sm:text-[15px]">
               Set your goals once. Our AI reads your clinical or technical role, interests, and intent — then surfaces the connections most likely to matter. No cold introductions. No wasted handshakes.
             </p>
 
             <div className="mt-8 w-full text-left">
-              <span className="block text-[11px] uppercase tracking-[2px] font-bold text-white/40 mb-4 font-mono">
+              <span className="block text-[11px] uppercase tracking-[2px] font-bold text-[#F7F9FC]/55 mb-4 font-mono">
                 Pick your focus areas — AI does the rest
               </span>
               <div className="flex flex-wrap gap-[10px] max-w-[620px]">
@@ -56,13 +52,13 @@ export function AIMatchmakingContent() {
                   <button
                     key={area}
                     onClick={() => setSelectedFocus(area)}
-                    className={`flex items-center justify-center h-[36px] px-[16px] text-[11.5px] font-extrabold uppercase tracking-[1px] rounded-[4px] cursor-pointer transition-all duration-200 outline-none select-none ${
+                    className={`flex items-center justify-center h-[36px] px-[16px] text-[11.5px] font-extrabold uppercase tracking-[1px] rounded-[6px] cursor-pointer transition-all duration-200 outline-none select-none border ${
                       selectedFocus === area
-                        ? "bg-[#C0F43C] text-black border border-[#C0F43C] shadow-[0_0_15px_rgba(192,244,60,0.3)]"
-                        : "text-[#8199b5] border border-[#926DFF] bg-[rgba(77,111,153,0.55)] hover:bg-[rgba(77,111,153,0.7)] hover:border-[#b196ff] hover:text-white"
+                        ? "bg-[#F15928] text-white border-[#F15928]"
+                        : "text-[#F7F9FC]/85 border-[#0069B8]/52 bg-[#0D1B2E] hover:border-[#009EAD] hover:text-white"
                     }`}
                   >
-                    <span className="leading-none mt-[1.5px] whitespace-nowrap">
+                    <span className="leading-none mt-[1px] whitespace-nowrap">
                       {area}
                     </span>
                   </button>
@@ -74,15 +70,15 @@ export function AIMatchmakingContent() {
       </section>
 
       {/* Right People. Real Connections. Section */}
-      <section className="relative py-24 bg-[#020814]">
-        <div className="w-[min(1172px,calc(100%-48px))] mx-auto">
+      <section className="relative py-24 bg-[#08121E] border-t border-[#0069B8]/25">
+        <div className="w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
           
           {/* Section Header */}
           <div className="text-center mb-16 w-full mx-auto">
-            <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#18d4ff]/10 text-[#18d4ff] border border-[#18d4ff]/20 mb-5 inline-block">
+            <span className="px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-[2px] bg-[#0D1B2E] text-[#009EAD] border border-[#009EAD]/40 mb-5 inline-block">
               AI Powered Platform · KonfHub
             </span>
-            <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(32px,4vw,44px)] m-0">
+            <h2 className="font-[850] text-white leading-tight tracking-[-0.01em] text-[clamp(32px,4vw,44px)] m-0">
               Right People. <GradientText>Real Connections.</GradientText>
             </h2>
           </div>
@@ -91,16 +87,13 @@ export function AIMatchmakingContent() {
             
             {/* Card 1: For Attendees */}
             <div 
-              className="p-10 rounded-[28px] border-[4px] border-[#22446D] shadow-[0_22px_62px_rgba(0,0,0,0.45)] transition-all duration-300 relative group overflow-hidden max-sm:p-6"
-              style={{
-                background: "linear-gradient(0deg, rgba(46, 60, 77, 0.55), rgba(46, 60, 77, 0.55)), linear-gradient(94.42deg, rgba(255, 255, 255, 0.09) 0.77%, rgba(255, 255, 255, 0) 33.68%), linear-gradient(95.06deg, rgba(146, 109, 255, 0) 69.31%, rgba(146, 109, 255, 0.2) 99.59%)"
-              }}
+              className="p-10 rounded-[28px] border border-[#0069B8]/52 bg-[#0D1B2E] shadow-[0_22px_62px_rgba(0,0,0,0.45)] transition-all duration-300 relative group overflow-hidden max-sm:p-6 hover:border-[#F15928]"
             >
-              <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#C0F43C] text-black mb-6">
+              <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#F15928] text-white mb-6">
                 <img 
                   src="/dubai/healthcare/images/networking/Icon.webp" 
                   alt="Attendees" 
-                  className="w-[14px] h-[14px] object-contain" 
+                  className="w-[14px] h-[14px] object-contain brightness-0 invert" 
                 />
                 For Attendees
               </span>
@@ -138,16 +131,13 @@ export function AIMatchmakingContent() {
 
             {/* Card 2: For Sponsors & Exhibitors */}
             <div 
-              className="p-10 rounded-[28px] border-[4px] border-[#22446D] shadow-[0_22px_62px_rgba(0,0,0,0.45)] transition-all duration-300 relative group overflow-hidden max-sm:p-6"
-              style={{
-                background: "linear-gradient(0deg, rgba(46, 60, 77, 0.55), rgba(46, 60, 77, 0.55)), linear-gradient(94.42deg, rgba(255, 255, 255, 0.09) 0.77%, rgba(255, 255, 255, 0) 33.68%), linear-gradient(95.06deg, rgba(146, 109, 255, 0) 69.31%, rgba(146, 109, 255, 0.2) 99.59%)"
-              }}
+              className="p-10 rounded-[28px] border border-[#0069B8]/52 bg-[#0D1B2E] shadow-[0_22px_62px_rgba(0,0,0,0.45)] transition-all duration-300 relative group overflow-hidden max-sm:p-6 hover:border-[#009EAD]"
             >
-              <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#926DFF] text-white mb-6">
+              <span className="inline-flex items-center gap-2 px-[14px] py-[6px] rounded-full text-[12.5px] font-extrabold bg-[#0069B8] text-white mb-6">
                 <img 
                   src="/dubai/healthcare/icons/attendee-app/exhibitor.webp" 
                   alt="Sponsors & Exhibitors" 
-                  className="w-[14px] h-[14px] object-contain filter brightness-0" 
+                  className="w-[14px] h-[14px] object-contain filter brightness-0 invert" 
                 />
                 For Sponsors &amp; Exhibitors
               </span>

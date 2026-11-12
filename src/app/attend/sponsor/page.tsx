@@ -12,7 +12,7 @@ const subNav = ["Overview", "Delegate", "Sponsor", "Media Partner", "Association
 
 export default function SponsorPage() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-[#020814] via-[#031022] to-[#020a18] text-white font-space-grotesk overflow-x-hidden">
+    <main className="relative min-h-screen bg-[#08121E] text-white font-display overflow-x-clip">
       <Header activeItem="Attend" subNavItems={subNav} activeSubNavItem="Sponsor" />
       <AttendSponsorSection />
       <FooterSection />

@@ -2,14 +2,11 @@
 
 export function FooterSection() {
   return (
-    <footer className="relative py-[74px] pb-[38px] bg-gradient-to-b from-[#040c1c]/72 to-[#030b19] bg-[#030b19] border-t border-white/5 overflow-hidden" id="footer">
-      {/* Visual top glow accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[1px] bg-[radial-gradient(circle,rgba(18,205,255,0.24),transparent_70%)] pointer-events-none" />
-
-      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
+    <footer className="relative py-[74px] pb-[38px] bg-[#08121E] border-t-2 border-[#0069B8] overflow-visible" id="footer">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         
         {/* Footer Top Column Grid */}
-        <div className="grid grid-cols-[1.65fr_0.7fr_0.78fr_0.7fr] gap-[72px] pb-[48px] border-b border-white/20 max-[980px]:grid-cols-1 max-[980px]:gap-[42px]">
+        <div className="grid grid-cols-[1.65fr_0.7fr_0.78fr_0.7fr] gap-[72px] pb-[48px] border-b border-[#0069B8]/35 max-[980px]:grid-cols-1 max-[980px]:gap-[42px]">
           
           {/* Brand block */}
           <div className="flex flex-col">
@@ -20,59 +17,59 @@ export function FooterSection() {
               height={50}
               className="w-[min(250px,100%)] h-auto object-contain mb-4 select-none"
             />
-            <p className="max-w-[430px] m-0 mt-2 text-muted text-[17px] leading-[1.55]">
+            <p className="max-w-[430px] m-0 mt-2 text-[#F7F9FC]/84 text-[17px] leading-[1.55]">
               The premier buyer-led executive decision forum connecting clinical leadership, hospital operations, and life-sciences innovation through deployable, governed, and evidence-backed artificial intelligence. Day 2 of the March Dubai Cluster · 25 March 2027 · Dubai, United Arab Emirates.
             </p>
           </div>
 
           {/* Column 1: Links */}
           <div className="flex flex-col gap-[18px]">
-            <h3 className="m-0 mb-2 text-white/74 font-mono text-[12px] uppercase tracking-[5px] select-none">
+            <h3 className="m-0 mb-2 text-[#009EAD] font-mono text-[12px] font-bold uppercase tracking-[4px] select-none">
               Event
             </h3>
-            <a href="/dubai/healthcare/attend" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/dubai/healthcare/attend" className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5">
               Attend
             </a>
-            <a href="/dubai/healthcare/agenda" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/dubai/healthcare/agenda" className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5">
               Agenda
             </a>
-            <a href="/dubai/healthcare/speakers" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/dubai/healthcare/speakers" className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5">
               Speakers
             </a>
-            <a href="/dubai/healthcare/partners" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/dubai/healthcare/partners" className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5">
               Partners
             </a>
           </div>
 
           {/* Column 2: Enquiries */}
           <div className="flex flex-col gap-[18px]">
-            <h3 className="m-0 mb-2 text-white/74 font-mono text-[12px] uppercase tracking-[5px] select-none">
+            <h3 className="m-0 mb-2 text-[#009EAD] font-mono text-[12px] font-bold uppercase tracking-[4px] select-none">
               Enquiries
             </h3>
-            <a href="/dubai/healthcare/sponsorship-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/dubai/healthcare/sponsorship-enquiry" className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5">
               Sponsorships
             </a>
-            <a href="/dubai/healthcare/attend/delegate" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/dubai/healthcare/attend/delegate" className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5">
               Business Pass
             </a>
-            <a href="/dubai/healthcare/media-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/dubai/healthcare/media-enquiry" className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5">
               Media Partner
             </a>
-            <a href="/dubai/healthcare/speaker-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/dubai/healthcare/speaker-enquiry" className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5">
               Speaker Slot
             </a>
           </div>
 
           {/* Column 3: Organiser */}
           <div className="flex flex-col gap-[18px]">
-            <h3 className="m-0 mb-2 text-white/74 font-mono text-[12px] uppercase tracking-[5px] select-none">
+            <h3 className="m-0 mb-2 text-[#009EAD] font-mono text-[12px] font-bold uppercase tracking-[4px] select-none">
               Organiser
             </h3>
             <a
               href="https://www.tresconglobal.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5"
+              className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5"
             >
               Trescon
             </a>
@@ -80,11 +77,11 @@ export function FooterSection() {
               href="https://tresconglobal.com/about-us/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5"
+              className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5"
             >
               About Us
             </a>
-            <a href="/dubai/healthcare/general-enquiry" className="text-muted text-[15px] hover:text-cyan transition-colors duration-150 py-0.5">
+            <a href="/dubai/healthcare/general-enquiry" className="text-white text-[15px] hover:text-[#009EAD] transition-colors duration-150 py-0.5">
               Contact Us
             </a>
           </div>
@@ -93,7 +90,7 @@ export function FooterSection() {
 
         {/* Footer Bottom Row */}
         <div className="flex items-center justify-between gap-6 pt-[34px] max-sm:flex-col max-sm:items-start">
-          <p className="m-0 text-white/52 font-mono text-[13px] leading-relaxed">
+          <p className="m-0 text-[#F7F9FC]/65 font-mono text-[13px] leading-relaxed">
             © 2026–2027 World AI Show | Healthcare and Life Sciences | Dubai 2027. All rights reserved. Organised by Trescon.
           </p>
           <div className="flex gap-3">
@@ -101,7 +98,7 @@ export function FooterSection() {
               href="https://www.linkedin.com/showcase/world-ai-show/"
               target="_blank"
               rel="noopener noreferrer"
-              className="grid place-items-center w-[38px] h-[38px] border border-[#C0F43C]/60 rounded-full text-[#C0F43C] hover:text-[#C0F43C] hover:border-[#C0F43C] hover:scale-105 transition-all duration-200 shadow-[0_0_12px_rgba(192,244,60,0.15)]"
+              className="grid place-items-center w-[38px] h-[38px] bg-[#0D1B2E] border border-[#0069B8] rounded-full text-white hover:text-white hover:border-[#F15928] hover:bg-[#F15928] hover:scale-105 transition-all duration-200"
               aria-label="LinkedIn"
             >
               <svg className="w-[15px] h-[15px] fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -112,7 +109,7 @@ export function FooterSection() {
               href="https://x.com/WorldAIShow"
               target="_blank"
               rel="noopener noreferrer"
-              className="grid place-items-center w-[38px] h-[38px] border border-[#C0F43C]/60 rounded-full text-[#C0F43C] hover:text-[#C0F43C] hover:border-[#C0F43C] hover:scale-105 transition-all duration-200 shadow-[0_0_12px_rgba(192,244,60,0.15)]"
+              className="grid place-items-center w-[38px] h-[38px] bg-[#0D1B2E] border border-[#0069B8] rounded-full text-white hover:text-white hover:border-[#F15928] hover:bg-[#F15928] hover:scale-105 transition-all duration-200"
               aria-label="Twitter"
             >
               <svg className="w-[14px] h-[14px] fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +120,7 @@ export function FooterSection() {
               href="https://www.instagram.com/world_ai_show?igsh=anRibHE4OHFlOHM%3D"
               target="_blank"
               rel="noopener noreferrer"
-              className="grid place-items-center w-[38px] h-[38px] border border-[#C0F43C]/60 rounded-full text-[#C0F43C] hover:text-[#C0F43C] hover:border-[#C0F43C] hover:scale-105 transition-all duration-200 shadow-[0_0_12px_rgba(192,244,60,0.15)]"
+              className="grid place-items-center w-[38px] h-[38px] bg-[#0D1B2E] border border-[#0069B8] rounded-full text-white hover:text-white hover:border-[#F15928] hover:bg-[#F15928] hover:scale-105 transition-all duration-200"
               aria-label="Instagram"
             >
               <svg className="w-[16px] h-[16px] fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +131,7 @@ export function FooterSection() {
               href="https://www.youtube.com/channel/UCrJB-EsWzCNPk34FO_N8Qew/videos"
               target="_blank"
               rel="noopener noreferrer"
-              className="grid place-items-center w-[38px] h-[38px] border border-[#C0F43C]/60 rounded-full text-[#C0F43C] hover:text-[#C0F43C] hover:border-[#C0F43C] hover:scale-105 transition-all duration-200 shadow-[0_0_12px_rgba(192,244,60,0.15)]"
+              className="grid place-items-center w-[38px] h-[38px] bg-[#0D1B2E] border border-[#0069B8] rounded-full text-white hover:text-white hover:border-[#F15928] hover:bg-[#F15928] hover:scale-105 transition-all duration-200"
               aria-label="YouTube"
             >
               <svg className="w-[16px] h-[16px] fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

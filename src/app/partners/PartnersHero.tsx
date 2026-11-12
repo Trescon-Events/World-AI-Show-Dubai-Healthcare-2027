@@ -6,17 +6,17 @@ export function PartnersHero() {
   return (
     <section
       id="overview"
-      className="relative min-h-[680px] flex items-center page-hero-top pb-[90px] overflow-hidden bg-cover bg-[position:center_top] bg-no-repeat after:absolute after:inset-x-0 after:bottom-0 after:h-24 after:bg-gradient-to-t after:from-[#020814] after:to-transparent after:z-0 max-sm:min-h-[540px] max-sm:pb-[60px]"
+      className="relative min-h-[540px] flex items-center page-hero-top pb-[76px] overflow-hidden bg-cover bg-[position:center_top] bg-no-repeat after:absolute after:inset-x-0 after:bottom-0 after:h-20 after:bg-gradient-to-t after:from-[#08121E] after:to-transparent after:z-0 max-sm:min-h-[440px] max-sm:pb-[56px]"
       style={{
         backgroundImage:
-          'linear-gradient(90deg, rgba(2, 7, 19, 0.92) 0%, rgba(2, 7, 19, 0.62) 42%, rgba(2, 7, 19, 0.1) 100%), url("/dubai/healthcare/images/sponsors/Partners-logo-banner.webp")',
+          'linear-gradient(90deg, rgba(8, 18, 30, 0.94) 0%, rgba(8, 18, 30, 0.68) 46%, rgba(8, 18, 30, 0.16) 100%), url("/dubai/healthcare/images/sponsors/Partners-logo-banner.webp")',
       }}
     >
-      <div className="relative z-10 w-[min(1172px,calc(100%-48px))] mx-auto">
-        <h1 className="m-0 text-white font-[850] leading-[1.06] tracking-[-2px] text-[clamp(42px,5.4vw,72px)] w-full">
+      <div className="relative z-10 w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto">
+        <h1 className="m-0 text-white font-[850] leading-[1.06] tracking-[-0.01em] text-[clamp(42px,5.4vw,68px)] w-full">
           <GradientText>Partner With us</GradientText> at World AI Show
         </h1>
-        <p className="w-full mt-6 mb-0 text-white/84 text-[19px] leading-relaxed max-sm:text-base">
+        <p className="w-full mt-6 mb-0 text-[#F7F9FC]/84 text-[19px] leading-relaxed max-sm:text-base">
           Commercial partnerships are structured around plenary keynotes, exclusive workshop clinics, standardised concourse booths, and private CXO closed-door boardrooms.
         </p>
       </div>

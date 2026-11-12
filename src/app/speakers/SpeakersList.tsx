@@ -66,31 +66,31 @@ export function SpeakersList() {
   }, [baseList, searchQuery, activeFilter]);
 
   return (
-    <section className="relative py-[92px] bg-[#020b1c] max-sm:py-[62px]" id="lineup">
+    <section className="relative py-[92px] bg-[#F7F9FC] max-sm:py-[62px]" id="lineup">
       <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
 
         {/* Clinical & Technical Faculty Pre-Announcement Banner (Section 09) */}
-        <div className="mb-12 p-7 rounded-2xl border border-[#C0F43C]/35 bg-gradient-to-r from-[#C0F43C]/10 via-[#061428] to-[#18d4ff]/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="mb-12 p-7 rounded-2xl border border-[#0069B8]/22 bg-white shadow-[0_12px_32px_rgba(8,18,30,0.06)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="max-w-[740px]">
-            <span className="inline-block font-mono text-[11px] font-bold uppercase tracking-[2px] text-[#C0F43C] mb-2">
+            <span className="inline-block font-mono text-[11px] font-bold uppercase tracking-[2px] text-[#0069B8] mb-2">
               Clinical &amp; Technical Faculty · 2027 Cohort Status
             </span>
-            <p className="m-0 text-white/90 text-[16px] leading-relaxed">
+            <p className="m-0 text-[#334155] text-[16px] leading-relaxed">
               The 2027 Dubai Healthcare Faculty is currently under peer review. 35–45 senior Hospital Group CXOs, Chief Medical Officers, Clinical Informatics Leads, and Health Authorities will be announced in rolling cohorts.
             </p>
           </div>
           <a
             href="/dubai/healthcare/agenda/call-for-speakers/"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-[#C0F43C] text-[#06111F] [color:#06111F!important] font-extrabold text-[14px] whitespace-nowrap hover:brightness-110 transition-all shrink-0"
+            className="bb-btn-primary shrink-0 whitespace-nowrap"
           >
-            Have a deployment case study? Apply to speak →
+            Have a deployment case study? Apply to speak <span className="bb-btn-arrow">→</span>
           </a>
         </div>
 
         {/* Search & Filter Controls (Section 09) */}
         <div className="mb-10 flex flex-col gap-5">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-6">
-            <h2 className="font-[850] text-white leading-tight tracking-[-1.5px] text-[clamp(28px,3.6vw,42px)] m-0">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#0069B8]/18 pb-6">
+            <h2 className="font-[850] text-[#08121E] leading-tight tracking-[-0.01em] text-[clamp(28px,3.6vw,42px)] m-0">
               Global Series <GradientText>Past Speakers</GradientText>
             </h2>
 
@@ -101,7 +101,7 @@ export function SpeakersList() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by name, designation, or company"
-                className="w-full h-[44px] px-4 rounded-full bg-[#051024] border border-white/15 text-white text-[14px] placeholder:text-white/45 focus:outline-none focus:border-cyan transition-colors"
+                className="w-full h-[44px] px-4 rounded-full bg-white border border-[#0069B8]/25 text-[#08121E] text-[14px] placeholder:text-[#52657A] focus:outline-none focus:border-[#0069B8] transition-colors"
               />
             </div>
           </div>
@@ -115,10 +115,10 @@ export function SpeakersList() {
                   key={pill}
                   type="button"
                   onClick={() => setActiveFilter(pill)}
-                  className={`px-4 py-2 rounded-full font-mono text-[12px] uppercase tracking-[1.2px] font-bold transition-all duration-200 cursor-pointer ${
+                  className={`px-4 py-2 rounded-full font-mono text-[12px] uppercase tracking-[1.2px] font-bold transition-all duration-200 cursor-pointer border ${
                     isActive
-                      ? "bg-[#C0F43C] text-[#06111F] [color:#06111F!important] border border-[#C0F43C]"
-                      : "bg-white/5 text-white/70 border border-white/10 hover:border-cyan/40 hover:text-white"
+                      ? "bg-[#0069B8] text-white border-[#0069B8]"
+                      : "bg-white text-[#334155] border-[#0069B8]/22 hover:border-[#0069B8] hover:text-[#0069B8]"
                   }`}
                 >
                   {pill}
@@ -129,9 +129,9 @@ export function SpeakersList() {
         </div>
 
         {filteredSpeakers.length === 0 ? (
-          <p className="text-white/60 text-lg">No speakers match your current search or filter criteria.</p>
+          <p className="text-[#52657A] text-lg">No speakers match your current search or filter criteria.</p>
         ) : (
-          <div className="speaker-grid grid grid-cols-3 gap-[22px] max-[980px]:grid-cols-2 max-sm:grid-cols-1">
+          <div className="speaker-grid grid grid-cols-4 gap-[20px] max-[980px]:grid-cols-2 max-sm:grid-cols-1">
             {filteredSpeakers.map((speaker, index) => (
               <SpeakerCard
                 key={speaker.id}

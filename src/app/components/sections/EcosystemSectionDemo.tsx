@@ -34,20 +34,20 @@ const sourceCitedCards: TelemetryCardData[] = [
       {
         name: "Regional Health System AI Capital Priority",
         value: 82,
-        color: "from-[#9be12b] via-[#C0F43C] to-[#d8ff66]",
-        textColor: "text-[#C0F43C]",
-        glowColor: "rgba(192, 244, 60, 0.55)",
+        color: "from-[#D94B1E] via-[#F15928] to-[#ff7b4f]",
+        textColor: "text-[#F15928]",
+        glowColor: "rgba(241, 89, 40, 0.45)",
       },
       {
         name: "Annual Healthcare AI Growth Rate (CAGR)",
         value: 35,
-        color: "from-[#1289b8] via-[#2fd5f6] to-[#6be5ff]",
-        textColor: "text-[#2fd5f6]",
-        glowColor: "rgba(47, 213, 246, 0.5)",
+        color: "from-[#0069B8] via-[#009EAD] to-[#26c6d9]",
+        textColor: "text-[#009EAD]",
+        glowColor: "rgba(0, 158, 173, 0.45)",
       },
     ],
     icon: (
-      <svg className="w-9 h-9 text-[#2fd5f6]" viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-9 h-9 text-[#009EAD]" viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round">
         <line x1="4" y1="31" x2="32" y2="31" />
         <rect x="6.5" y="23" width="3.8" height="8" rx="0.6" />
         <rect x="12.8" y="19" width="3.8" height="12" rx="0.6" />
@@ -69,20 +69,20 @@ const sourceCitedCards: TelemetryCardData[] = [
       {
         name: "Regional providers prioritising ambient voice",
         value: 68,
-        color: "from-[#9be12b] via-[#C0F43C] to-[#d8ff66]",
-        textColor: "text-[#C0F43C]",
-        glowColor: "rgba(192, 244, 60, 0.55)",
+        color: "from-[#D94B1E] via-[#F15928] to-[#ff7b4f]",
+        textColor: "text-[#F15928]",
+        glowColor: "rgba(241, 89, 40, 0.45)",
       },
       {
         name: "Clinician hours consumed by EHR data entry",
         value: 45,
-        color: "from-[#1289b8] via-[#2fd5f6] to-[#6be5ff]",
-        textColor: "text-[#2fd5f6]",
-        glowColor: "rgba(47, 213, 246, 0.5)",
+        color: "from-[#0069B8] via-[#009EAD] to-[#26c6d9]",
+        textColor: "text-[#009EAD]",
+        glowColor: "rgba(0, 158, 173, 0.45)",
       },
     ],
     icon: (
-      <svg className="w-9 h-9 text-[#2fd5f6]" viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-9 h-9 text-[#009EAD]" viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round">
         <path d="M7.5 9.5 A13.5 13.5 0 0 0 7.5 26.5" />
         <path d="M28.5 9.5 A13.5 13.5 0 0 1 28.5 26.5" />
         <path d="M10.5 12 A10 10 0 0 0 10.5 24" />
@@ -104,23 +104,23 @@ const sourceCitedCards: TelemetryCardData[] = [
       {
         name: "Acute stroke & ICH time-to-treatment reduction",
         value: 60,
-        color: "from-[#1289b8] via-[#2fd5f6] to-[#6be5ff]",
-        textColor: "text-[#2fd5f6]",
-        glowColor: "rgba(47, 213, 246, 0.55)",
+        color: "from-[#0069B8] via-[#009EAD] to-[#26c6d9]",
+        textColor: "text-[#009EAD]",
+        glowColor: "rgba(0, 158, 173, 0.45)",
       },
       {
         name: "Diagnostic imaging triage sensitivity benchmark",
         value: 94,
-        color: "from-[#9be12b] via-[#C0F43C] to-[#d8ff66]",
-        textColor: "text-[#C0F43C]",
-        glowColor: "rgba(192, 244, 60, 0.55)",
+        color: "from-[#D94B1E] via-[#F15928] to-[#ff7b4f]",
+        textColor: "text-[#F15928]",
+        glowColor: "rgba(241, 89, 40, 0.45)",
       },
     ],
     icon: (
-      <svg className="w-9 h-9 text-[#2fd5f6]" viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round">
+      <svg className="w-9 h-9 text-[#009EAD]" viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round">
         <path d="M16.5 5.5 L27 9.5 V17.5 C27 24.2 16.5 29.5 16.5 29.5 C16.5 29.5 6 24.2 6 17.5 V9.5 L16.5 5.5 Z" />
         <polyline points="12.5 17 15.5 20 21 14" />
-        <circle cx="24.5" cy="24.5" r="5.2" className="fill-[#071320]" stroke="currentColor" strokeWidth={1.7} />
+        <circle cx="24.5" cy="24.5" r="5.2" className="fill-[#0D1B2E]" stroke="currentColor" strokeWidth={1.7} />
         <polyline points="22.3 24.5 24 26.2 27 23" />
       </svg>
     ),
@@ -223,19 +223,19 @@ function TelemetryCard({ card, cardIndex }: { card: TelemetryCardData; cardIndex
       data-aos={cardIndex === 0 ? "fade-right" : cardIndex === 1 ? "fade-up" : "fade-left"}
       data-aos-delay={String(cardIndex * 150)}
       onMouseEnter={replayAnimation}
-      className="group relative p-7 rounded-[20px] border border-[#2a4359]/80 bg-[#071320] shadow-[0_24px_60px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] text-left flex flex-col justify-between overflow-hidden hover:-translate-y-1.5 hover:border-[#2fd5f6]/55 hover:shadow-[0_28px_70px_rgba(0,0,0,0.65),0_0_32px_rgba(47,213,246,0.14)] transition-all duration-300"
+      className="group relative p-7 rounded-[20px] border border-[#0069B8]/52 bg-[#0D1B2E] shadow-[0_24px_60px_rgba(0,0,0,0.45)] text-left flex flex-col justify-between overflow-hidden hover:-translate-y-1.5 hover:border-[#009EAD] transition-all duration-300"
     >
       <div>
         <div className="relative z-10 flex items-center justify-between mb-2.5">
           <div className="flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
             {card.icon}
           </div>
-          <span className="text-[#79acc7] font-mono text-[12px] font-semibold tracking-[0.8px] uppercase">
-            BENCHMARK // {card.index}
+          <span className="text-[#009EAD] font-mono text-[12px] font-semibold tracking-[0.8px] uppercase">
+            CLINICAL BENCHMARK
           </span>
         </div>
 
-        <strong className="relative z-10 block text-[clamp(21px,1.9vw,26px)] font-[850] leading-[1.15] tracking-[-0.5px] text-[#C0F43C] tabular-nums drop-shadow-[0_0_16px_rgba(192,244,60,0.2)] mb-1">
+        <strong className="relative z-10 block text-[clamp(21px,1.9vw,26px)] font-[850] leading-[1.15] tracking-[-0.01em] text-[#F15928] tabular-nums mb-1">
           {animTrigger > 0 ? formattedHeadline : card.displayValue}
         </strong>
 
@@ -249,7 +249,7 @@ function TelemetryCard({ card, cardIndex }: { card: TelemetryCardData; cardIndex
           {card.bars.map((bar, bIdx) => (
             <div key={bar.name} className="space-y-1.5">
               <div className="flex items-center justify-between text-[11.5px]">
-                <span className="text-white/80 group-hover:text-white transition-colors">
+                <span className="text-[#F7F9FC]/84 group-hover:text-white transition-colors">
                   {bar.name}
                 </span>
                 <span className={`${bar.textColor} font-bold tabular-nums`}>
@@ -257,7 +257,7 @@ function TelemetryCard({ card, cardIndex }: { card: TelemetryCardData; cardIndex
                 </span>
               </div>
 
-              <div className="relative w-full h-[7px] rounded-full bg-[#132638] overflow-hidden">
+              <div className="relative w-full h-[7px] rounded-full bg-[#08121E] overflow-hidden">
                 <div
                   className={`relative h-full rounded-full bg-gradient-to-r ${bar.color} transition-all ease-out overflow-hidden`}
                   style={{
@@ -295,7 +295,7 @@ function TelemetryCard({ card, cardIndex }: { card: TelemetryCardData; cardIndex
 export function EcosystemSectionDemo() {
   return (
     <section
-      className="relative w-full pt-10 pb-20 bg-[#020b1c] overflow-hidden flex flex-col items-center max-sm:py-12"
+      className="relative w-full py-20 bg-[#08121E] overflow-hidden flex flex-col items-center max-sm:py-12"
       id="ecosystem"
     >
       <style>{`
@@ -308,8 +308,8 @@ export function EcosystemSectionDemo() {
           50% { transform: translateY(-6px); }
         }
         @keyframes NeonBreath {
-          0%, 100% { filter: brightness(1) drop-shadow(0 0 0px rgba(47, 213, 246, 0)); }
-          50% { filter: brightness(1.12) drop-shadow(0 0 12px rgba(192, 244, 60, 0.22)); }
+          0%, 100% { filter: brightness(1) drop-shadow(0 0 0px rgba(0, 158, 173, 0)); }
+          50% { filter: brightness(1.08) drop-shadow(0 0 10px rgba(0, 105, 184, 0.25)); }
         }
         @keyframes CircuitPulse {
           0% { stroke-dashoffset: 212; opacity: 0.25; }
@@ -337,28 +337,11 @@ export function EcosystemSectionDemo() {
         }
       `}</style>
 
-      {/* Subtle architectural background grid & ambient glow */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.18]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(24, 212, 255, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(24, 212, 255, 0.08) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-          maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 100%)",
-          WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 100%)",
-        }}
-        aria-hidden="true"
-      />
-      <div
-        className="absolute top-12 left-1/2 -translate-x-1/2 w-[900px] h-[420px] rounded-full bg-[#18d4ff]/[0.05] blur-[130px] pointer-events-none"
-        aria-hidden="true"
-      />
-
       {/* ───── S3 · The argument — page centre of gravity ───── */}
-      <div className="relative z-10 w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-24px,1172px)] mx-auto flex flex-col items-center text-center">
+      <div className="relative z-10 w-[min(1172px,calc(100%-48px))] max-sm:w-[min(100%-32px,1172px)] mx-auto flex flex-col items-center text-center">
         <h2
           data-aos="fade-up"
-          className="w-full text-center font-[850] text-white leading-[1.06] tracking-[-1.8px] text-[clamp(32px,4.4vw,52px)] mb-5"
+          className="w-full text-center font-[850] text-white leading-[1.06] tracking-[-0.02em] text-[clamp(32px,4vw,48px)] mb-5"
         >
           Moving clinical AI{" "}
           <GradientText>from experimental trials to reimbursable practice.</GradientText>
@@ -367,13 +350,13 @@ export function EcosystemSectionDemo() {
         <p
           data-aos="fade-up"
           data-aos-delay="80"
-          className="w-full text-white/85 text-[18px] leading-[1.6] mb-14 max-sm:text-[16px]"
+          className="w-full text-[#F7F9FC]/88 text-[18px] leading-[1.6] mb-14 max-sm:text-[16px]"
         >
           Healthcare providers cannot afford unvalidated AI when patient safety, liability, and data sovereignty are at stake. World AI Show bridges the gap between algorithmic accuracy and hospital adoption, convening Middle East healthcare leaders around live EMR interoperability, clinical governance, and regulatory compliance.
         </p>
 
         {/* Component C2 — Animated Source-Cited Telemetry Cards */}
-        <div className="w-full grid grid-cols-3 gap-6 max-lg:grid-cols-1 mb-10">
+        <div className="w-full grid grid-cols-3 gap-6 overflow-visible max-lg:grid-cols-1 mb-10">
           {sourceCitedCards.map((card, idx) => (
             <TelemetryCard key={card.index} card={card} cardIndex={idx} />
           ))}
@@ -383,19 +366,18 @@ export function EcosystemSectionDemo() {
         <div
           data-aos="zoom-in-up"
           data-aos-delay="150"
-          className="relative w-full p-9 max-sm:p-6 rounded-[24px] border border-[#C0F43C]/35 bg-gradient-to-r from-[#06152d]/95 via-[#091e3a]/95 to-[#06152d]/95 shadow-[0_20px_50px_rgba(0,0,0,0.45),0_0_40px_rgba(192,244,60,0.08)] overflow-hidden text-left"
+          className="relative w-full p-9 max-sm:p-6 rounded-[24px] border border-[#0069B8]/42 bg-[#0D1B2E] shadow-[0_20px_50px_rgba(0,0,0,0.45)] overflow-hidden text-left"
         >
-          <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#C0F43C] via-[#18d4ff] to-[#C0F43C]" />
-          <div className="absolute -right-20 -bottom-20 w-72 h-72 rounded-full bg-[#C0F43C]/10 blur-3xl pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0069B8]" />
 
           <div className="relative z-10 flex items-center gap-7 max-md:flex-col max-md:items-start max-md:gap-4 pl-3 max-sm:pl-1">
-            <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-[#C0F43C]/35 bg-[#C0F43C]/12 flex items-center justify-center text-[#C0F43C] shadow-[0_0_24px_rgba(192,244,60,0.2)]">
+            <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-[#009EAD]/40 bg-[#08121E] flex items-center justify-center text-[#009EAD]">
               <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
               </svg>
             </div>
             <div>
-              <span className="block text-[#C0F43C] font-mono text-[11px] font-bold uppercase tracking-[2.2px] mb-1.5">
+              <span className="block text-[#F15928] font-mono text-[11px] font-bold uppercase tracking-[2.2px] mb-1.5">
                 The Executive Mandate
               </span>
               <p className="m-0 text-white font-semibold text-[19px] leading-[1.55] max-sm:text-[16px]">

@@ -1,103 +1,225 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #020b1c;
-  --color-panel: #061226;
-  --color-panel-soft: #081a31;
-  --color-line: rgba(89, 213, 255, 0.22);
-  --color-line-green: rgba(183, 247, 43, 0.42);
-  --color-text: #f6f8ff;
-  --color-muted: #a4adbd;
-  --color-dim: #6f7a8e;
-  --color-cyan: #18d4ff;
-  --color-blue: #79ceff;
-  --color-green: #C0F43C;
-  --color-purple: #9a6cff;
+  --color-bg: #08121E;
+  --color-panel: #0D1B2E;
+  --color-panel-soft: #0D1B2E;
+  --color-cloud: #F7F9FC;
+  --color-line: rgba(0, 105, 184, 0.22);
+  --color-line-dark: rgba(0, 105, 184, 0.42);
+  --color-text: #FFFFFF;
+  --color-muted: rgba(247, 249, 252, 0.88);
+  --color-dim: #64748B;
+  --color-blue: #0069B8;
+  --color-blue-dark: #004A88;
+  --color-teal: #009EAD;
+  --color-cyan: #009EAD;
+  --color-orange: #F15928;
+  --color-orange-hover: #D9481B;
+  --color-green: #F15928;
+  --color-purple: #0069B8;
 
-  --font-space-grotesk: var(--font-space-grotesk), sans-serif;
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
+  --font-jakarta: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
+  --font-display: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-space-grotesk: var(--font-space-grotesk), "Space Grotesk", sans-serif;
 }
 
 :root {
-  --bg: #020b1c;
-  --panel: #061226;
-  --panel-soft: #081a31;
-  --line: rgba(89, 213, 255, 0.22);
-  --line-green: rgba(183, 247, 43, 0.42);
-  --text: #f6f8ff;
-  --muted: #a4adbd;
-  --dim: #6f7a8e;
-  --cyan: #18d4ff;
-  --blue: #79ceff;
-  --green: #C0F43C;
-  --purple: #9a6cff;
+  --bb-blue: #0069B8;
+  --bb-blue-dark: #004A88;
+  --bb-teal: #009EAD;
+  --bb-orange: #F15928;
+  --bb-orange-hover: #D9481B;
+  --bb-cloud: #F7F9FC;
+  --bb-white: #FFFFFF;
+  --bb-midnight: #08121E;
+  --bb-raised: #0D1B2E;
+  --bb-slate: #334155;
+  --bb-muted-light: #52657A;
+  --bb-muted-slate: #64748B;
+  --bb-border-light: rgba(0, 105, 184, 0.22);
+  --bb-border-dark: rgba(0, 105, 184, 0.42);
+
+  --bg: #08121E;
+  --panel: #0D1B2E;
+  --panel-soft: #0D1B2E;
+  --line: rgba(0, 105, 184, 0.42);
+  --line-green: rgba(241, 89, 40, 0.45);
+  --text: #FFFFFF;
+  --muted: rgba(247, 249, 252, 0.88);
+  --dim: #64748B;
+  --cyan: #009EAD;
+  --blue: #0069B8;
+  --green: #F15928;
+  --purple: #0069B8;
 }
 
-* {
-  box-sizing: border-box;
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--bb-midnight);
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    color: var(--bb-cloud);
+    background: var(--bb-midnight);
+    font-family: var(--font-jakarta), "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  ::selection {
+    color: #FFFFFF;
+    background: var(--bb-orange);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  background: var(--bg);
+@layer components {
+  .bb-btn-primary,
+  .bb-btn-outline-dark,
+  .bb-btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.25;
+    white-space: nowrap;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .bb-btn-primary {
+    background-color: #F15928;
+    border: 1.5px solid #F15928;
+    color: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(241, 89, 40, 0.24);
+  }
+
+  .bb-btn-primary:hover {
+    background-color: #D9481B;
+    border-color: #D9481B;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(241, 89, 40, 0.36);
+  }
+
+  .bb-btn-outline-dark {
+    background-color: rgba(8, 18, 30, 0.78);
+    border: 1.5px solid #0069B8;
+    color: #FFFFFF;
+  }
+
+  .bb-btn-outline-dark:hover {
+    background-color: #0069B8;
+    border-color: #009EAD;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(0, 105, 184, 0.3);
+  }
+
+  .bb-btn-outline-light {
+    background-color: #FFFFFF;
+    border: 1.5px solid #0069B8;
+    color: #0069B8;
+  }
+
+  .bb-btn-outline-light:hover {
+    background-color: #0069B8;
+    border-color: #0069B8;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+
+  .bb-btn-arrow {
+    transition: transform 200ms ease;
+  }
+
+  .bb-btn-primary:hover .bb-btn-arrow,
+  .bb-btn-outline-dark:hover .bb-btn-arrow,
+  .bb-btn-outline-light:hover .bb-btn-arrow,
+  .group:hover .bb-btn-arrow {
+    transform: translateX(3px);
+  }
+
+  /* Hero clearance for fixed header without sub-nav (Speakers, Partners, Enquiry/Onboarding) */
+  .page-hero-top {
+    padding-top: 150px;
+  }
+  @media (max-width: 1200px) {
+    .page-hero-top {
+      padding-top: 136px;
+    }
+  }
+  @media (max-width: 640px) {
+    .page-hero-top {
+      padding-top: 112px;
+    }
+  }
+
+  /* Hero clearance for fixed header WITH persistent 41px sub-nav (Attend, Agenda, Networking) */
+  .page-hero-subnav-top {
+    padding-top: 192px;
+  }
+  @media (max-width: 1200px) {
+    .page-hero-subnav-top {
+      padding-top: 144px;
+    }
+  }
+  @media (max-width: 640px) {
+    .page-hero-subnav-top {
+      padding-top: 118px;
+    }
+  }
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  color: var(--text);
-  background:
-    radial-gradient(circle at 9% 12%, rgba(0, 204, 255, 0.16), transparent 26rem),
-    radial-gradient(circle at 78% 6%, rgba(186, 248, 45, 0.08), transparent 24rem),
-    linear-gradient(180deg, #020713 0%, #041022 48%, #020a18 100%);
-  font-family: var(--font-space-grotesk), Arial, Helvetica, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-::selection {
-  color: #031122;
-  background: var(--green);
-}
-
-/* Custom High Fidelity Hero Backgrounds and Overlays */
+/* Clean Hero Base and Scrims */
 .hero-bg {
-  background:
-    linear-gradient(180deg, rgba(1, 6, 18, 0.12), #030a19 98%),
-    radial-gradient(ellipse at 50% 93%, rgba(16, 215, 255, 0.36), transparent 22%),
-    radial-gradient(ellipse at 18% 19%, rgba(13, 208, 255, 0.24), transparent 30%),
-    #030919;
+  background: #08121E;
 }
 
 .hero-overlay {
-  background:
-    linear-gradient(180deg, rgba(2, 7, 18, 0.18), rgba(2, 9, 22, 0.82) 100%),
-    repeating-linear-gradient(90deg, transparent 0 76px, rgba(66, 217, 255, 0.08) 77px 78px, transparent 79px 119px),
-    radial-gradient(circle at 15% 72%, rgba(174, 249, 45, 0.7) 0 4px, transparent 5px),
-    radial-gradient(circle at 33% 69%, rgba(30, 230, 255, 0.88) 0 5px, transparent 6px),
-    radial-gradient(circle at 57% 70%, rgba(99, 222, 255, 0.8) 0 4px, transparent 5px),
-    radial-gradient(circle at 78% 64%, rgba(181, 247, 45, 0.75) 0 3px, transparent 4px),
-    radial-gradient(circle at 92% 69%, rgba(172, 247, 45, 0.7) 0 4px, transparent 5px);
+  background: linear-gradient(180deg, rgba(8, 18, 30, 0.35), rgba(8, 18, 30, 0.85) 100%);
 }
 
 .hero-grid-pattern {
-  background:
-    radial-gradient(ellipse at center, rgba(35, 224, 255, 0.42), transparent 43%),
-    repeating-radial-gradient(ellipse at center, transparent 0 12px, rgba(56, 216, 255, 0.26) 13px 14px);
+  background: transparent;
 }
 
 /* Donut Chart Keyframes and Classes */
@@ -131,27 +253,27 @@ img {
   100% { transform: scale(1); }
 }
 
-
-
 /* Speakers Grid Micro-Interactions */
-
 .speaker-card-inner:hover {
-  z-index: 2 !important;
-  border-color: rgba(192, 244, 60, 0.56) !important;
-  box-shadow: 0 0 24px rgba(0, 206, 255, 0.14), inset 0 0 28px rgba(192, 244, 60, 0.08);
+  z-index: 2;
+  border-color: #F15928 !important;
+  box-shadow: 0 16px 36px rgba(8, 18, 30, 0.45), 0 0 24px rgba(241, 89, 40, 0.16);
   transform: translateY(-2px);
 }
 .speaker-card-inner:hover img {
-  opacity: 1 !important;
-  filter: saturate(1.06) !important;
+  opacity: 1;
+  filter: saturate(1.05);
   transform: scale(1.035);
 }
-.speaker-card-inner:hover::after {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 10%, rgba(0, 0, 0, 0.84) 100%) !important;
+.speaker-card-inner:hover .speaker-line {
+  width: 100%;
+  background-color: #F15928;
 }
 
-.speaker-card-inner:hover .speaker-line {
-  width: 100% !important;
+/* Override speaker card height to use responsive aspect ratio */
+.speaker-grid .h-\[380px\] {
+  height: auto;
+  aspect-ratio: 3 / 4;
 }
 
 /* Carousel Marquee Animations */
@@ -260,19 +382,6 @@ img {
   animation-play-state: paused;
 }
 
-/* ===== BUTTON COLOR OVERRIDES =====
-   Force correct text colors on primary buttons
-   regardless of parent color inheritance */
-a[class*="bg-[#C0F43C]"],
-button[class*="bg-[#C0F43C]"] {
-  color: #06111f !important;
-}
-
-a[class*="bg-[#06111f]"],
-button[class*="bg-[#06111f]"] {
-  color: #ffffff !important;
-}
-
 /* ================= HUBSPOT FORM DESIGN SYSTEM ================= */
 .hubspot-form-container {
   width: 100%;
@@ -284,7 +393,6 @@ button[class*="bg-[#06111f]"] {
   background: transparent !important;
 }
 
-/* Hide any embedded banner images inside HubSpot forms */
 .hubspot-form-container .hs-richtext img,
 .hubspot-form-container .hs-form img,
 .hubspot-form-container .hs-form-private img,
@@ -305,7 +413,6 @@ button[class*="bg-[#06111f]"] {
   margin-bottom: 24px !important;
 }
 
-/* Form field containers that have multiple columns (like first name + last name) */
 .hubspot-form-container .hs-form-field > .input {
   width: 100% !important;
 }
@@ -317,7 +424,6 @@ button[class*="bg-[#06111f]"] {
   width: 100% !important;
 }
 
-/* For multi-column fieldsets, display as responsive grid */
 .hubspot-form-container .hs-form-private .form-columns-2,
 .hubspot-form-container .hs-form .form-columns-2 {
   display: grid !important;
@@ -342,25 +448,23 @@ button[class*="bg-[#06111f]"] {
   }
 }
 
-/* Labels */
 .hubspot-form-container label,
 .hubspot-form-container .hs-form label,
 .hubspot-form-container .hs-form-private label {
   font-size: 14px !important;
   font-weight: 600 !important;
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(247, 249, 252, 0.88) !important;
   margin-bottom: 8px !important;
   display: block !important;
-  font-family: var(--font-space-grotesk), sans-serif !important;
+  font-family: var(--font-jakarta), sans-serif !important;
   background: transparent !important;
 }
 
 .hubspot-form-container .hs-form label .hs-form-required {
-  color: #C0F43C !important;
+  color: #F15928 !important;
   margin-left: 4px !important;
 }
 
-/* Inputs, Selects, Textareas */
 .hubspot-form-container .hs-input,
 .hubspot-form-container input.hs-input,
 .hubspot-form-container select.hs-input,
@@ -377,14 +481,14 @@ button[class*="bg-[#06111f]"] {
 .hubspot-form-container .hs-form-private input[type="tel"],
 .hubspot-form-container .hs-form-private select,
 .hubspot-form-container .hs-form-private textarea {
-  background: rgba(4, 14, 33, 0.6) !important;
-  border: 1px solid rgba(89, 213, 255, 0.22) !important;
+  background: rgba(8, 18, 30, 0.72) !important;
+  border: 1px solid rgba(0, 105, 184, 0.52) !important;
   border-radius: 12px !important;
-  color: #ffffff !important;
+  color: #FFFFFF !important;
   padding: 14px 18px !important;
   width: 100% !important;
   font-size: 15px !important;
-  font-family: var(--font-space-grotesk), sans-serif !important;
+  font-family: var(--font-jakarta), sans-serif !important;
   box-sizing: border-box !important;
   outline: none !important;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -395,36 +499,33 @@ button[class*="bg-[#06111f]"] {
 
 .hubspot-form-container input::placeholder,
 .hubspot-form-container textarea::placeholder {
-  color: rgba(255, 255, 255, 0.35) !important;
+  color: rgba(247, 249, 252, 0.42) !important;
 }
 
-/* Focus styles */
 .hubspot-form-container .hs-input:focus,
 .hubspot-form-container .hs-form input:focus,
 .hubspot-form-container .hs-form select:focus,
 .hubspot-form-container .hs-form textarea:focus,
 .hubspot-form-container .hs-form-private input:focus,
 .hubspot-form-container .hs-form-private select:focus {
-  border-color: #C0F43C !important;
-  background: rgba(192, 244, 60, 0.04) !important;
-  box-shadow: 
-    0 0 0 1px #C0F43C,
-    0 0 16px rgba(192, 244, 60, 0.15),
+  border-color: #009EAD !important;
+  background: rgba(0, 158, 173, 0.06) !important;
+  box-shadow:
+    0 0 0 1px #009EAD,
+    0 0 16px rgba(0, 158, 173, 0.2),
     inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Select option styling */
 .hubspot-form-container select option,
 .hubspot-form-container .hs-form select option {
-  background: #061226 !important;
-  color: #ffffff !important;
+  background: #0D1B2E !important;
+  color: #FFFFFF !important;
 }
 
-/* File upload */
 .hubspot-form-container input[type="file"] {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px dashed rgba(89, 213, 255, 0.25) !important;
-  color: rgba(255, 255, 255, 0.6) !important;
+  background: rgba(247, 249, 252, 0.04) !important;
+  border: 1px dashed rgba(0, 105, 184, 0.52) !important;
+  color: rgba(247, 249, 252, 0.72) !important;
   padding: 16px !important;
   font-size: 14px !important;
   border-radius: 12px !important;
@@ -436,39 +537,39 @@ button[class*="bg-[#06111f]"] {
 }
 
 .hubspot-form-container input[type="file"]:hover {
-  border-color: #C0F43C !important;
-  background: rgba(192, 244, 60, 0.02) !important;
+  border-color: #009EAD !important;
+  background: rgba(0, 158, 173, 0.05) !important;
 }
 
-/* Submit button */
 .hubspot-form-container .hs-button,
 .hubspot-form-container .hs-button.primary,
 .hubspot-form-container input[type="submit"],
 .hubspot-form-container .hs-form .hs-button,
 .hubspot-form-container .hs-form-private .hs-button {
-  background: #C0F43C !important;
-  color: #06111f !important;
+  background: #F15928 !important;
+  color: #FFFFFF !important;
   font-size: 15px !important;
   font-weight: 700 !important;
-  letter-spacing: 0.03em !important;
+  letter-spacing: 0.02em !important;
   text-transform: none !important;
-  padding: 16px 36px !important;
-  border: none !important;
+  padding: 15px 34px !important;
+  border: 1.5px solid #F15928 !important;
   border-radius: 9999px !important;
   cursor: pointer !important;
-  font-family: var(--font-space-grotesk), sans-serif !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  font-family: var(--font-jakarta), sans-serif !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
   margin-top: 16px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 4px 14px rgba(192, 244, 60, 0.25) !important;
+  box-shadow: 0 8px 20px rgba(241, 89, 40, 0.25) !important;
 }
 
 .hubspot-form-container .hs-button:hover,
 .hubspot-form-container input[type="submit"]:hover {
-  background: #d2f768 !important;
-  box-shadow: 0 6px 20px rgba(192, 244, 60, 0.4) !important;
+  background: #D9481B !important;
+  border-color: #D9481B !important;
+  box-shadow: 0 10px 26px rgba(241, 89, 40, 0.36) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -477,7 +578,6 @@ button[class*="bg-[#06111f]"] {
   transform: translateY(0) !important;
 }
 
-/* Error messages */
 .hubspot-form-container .hs-error-msgs {
   list-style: none !important;
   padding: 0 !important;
@@ -489,17 +589,17 @@ button[class*="bg-[#06111f]"] {
 .hubspot-form-container .hs-main-font-element,
 .hubspot-form-container .no-list.hs-error-msgs li {
   font-size: 13px !important;
-  color: #ff5e5e !important;
+  color: #F15928 !important;
   font-weight: 500 !important;
-  font-family: var(--font-space-grotesk), sans-serif !important;
+  font-family: var(--font-jakarta), sans-serif !important;
 }
 
 .hubspot-form-container .hs-field-desc {
   font-size: 12px !important;
-  color: rgba(255, 255, 255, 0.45) !important;
+  color: rgba(247, 249, 252, 0.6) !important;
   margin-top: 6px !important;
   margin-left: 2px !important;
-  font-family: var(--font-space-grotesk), sans-serif !important;
+  font-family: var(--font-jakarta), sans-serif !important;
 }
 
 .hubspot-form-container .actions {
@@ -509,13 +609,13 @@ button[class*="bg-[#06111f]"] {
 .hubspot-form-container .submitted-message,
 .hubspot-form-container .hs-form .submitted-message {
   font-size: 18px !important;
-  color: #C0F43C !important;
+  color: #FFFFFF !important;
   font-weight: 700 !important;
   text-align: center !important;
   padding: 32px 24px !important;
-  font-family: var(--font-space-grotesk), sans-serif !important;
-  background: rgba(192, 244, 60, 0.05) !important;
-  border: 1px solid rgba(192, 244, 60, 0.2) !important;
+  font-family: var(--font-jakarta), sans-serif !important;
+  background: rgba(0, 158, 173, 0.1) !important;
+  border: 1px solid rgba(0, 158, 173, 0.45) !important;
   border-radius: 20px !important;
 }
 
@@ -526,18 +626,17 @@ button[class*="bg-[#06111f]"] {
 .hubspot-form-container .submitted-message p *,
 .hubspot-form-container .submitted-message span *,
 .hubspot-form-container .submitted-message div * {
-  color: #ffffff !important;
-  font-family: var(--font-space-grotesk), sans-serif !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-jakarta), sans-serif !important;
 }
 
 .hubspot-form-container .submitted-message strong,
 .hubspot-form-container .submitted-message h1,
 .hubspot-form-container .submitted-message h2,
 .hubspot-form-container .submitted-message h3 {
-  color: #C0F43C !important;
+  color: #009EAD !important;
 }
 
-/* Radio & Checkbox overrides */
 .hubspot-form-container .hs-form .inputs-list,
 .hubspot-form-container .hs-form-private .inputs-list,
 .hubspot-form-container .hs-form ul.inputs-list,
@@ -563,7 +662,7 @@ button[class*="bg-[#06111f]"] {
   font-weight: 500 !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(247, 249, 252, 0.88) !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 10px !important;
@@ -584,9 +683,9 @@ button[class*="bg-[#06111f]"] {
   height: 20px !important;
   min-width: 20px !important;
   max-width: 20px !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  border: 1.5px solid rgba(0, 158, 173, 0.6) !important;
   border-radius: 50% !important;
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(8, 18, 30, 0.6) !important;
   cursor: pointer !important;
   position: relative !important;
   padding: 0 !important;
@@ -605,7 +704,7 @@ button[class*="bg-[#06111f]"] {
 .hubspot-form-container .hs-form .inputs-list input[type="radio"]:checked,
 .hubspot-form-container .hs-form-private .inputs-list input[type="radio"]:checked,
 .hubspot-form-container .hbspt-form .inputs-list input[type="radio"]:checked {
-  border-color: #C0F43C !important;
+  border-color: #F15928 !important;
   background: transparent !important;
 }
 
@@ -620,13 +719,13 @@ button[class*="bg-[#06111f]"] {
   width: 10px !important;
   height: 10px !important;
   border-radius: 50% !important;
-  background: #C0F43C !important;
+  background: #F15928 !important;
 }
 
 .hubspot-form-container .hs-form .inputs-list input[type="checkbox"]:checked,
 .hubspot-form-container .hs-form-private .inputs-list input[type="checkbox"]:checked {
-  border-color: #C0F43C !important;
-  background: #C0F43C !important;
+  border-color: #F15928 !important;
+  background: #F15928 !important;
 }
 
 .hubspot-form-container .hs-form .inputs-list input[type="checkbox"]:checked::after {
@@ -635,7 +734,7 @@ button[class*="bg-[#06111f]"] {
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
-  color: #06111f !important;
+  color: #FFFFFF !important;
   font-size: 12px !important;
   font-weight: 900 !important;
 }
@@ -644,8 +743,8 @@ button[class*="bg-[#06111f]"] {
 .hubspot-form-container .hs-form .inputs-list input[type="checkbox"]:hover,
 .hubspot-form-container .hbspt-form .inputs-list input[type="radio"]:hover,
 .hubspot-form-container .hbspt-form .inputs-list input[type="checkbox"]:hover {
-  border-color: #C0F43C !important;
-  background: rgba(192, 244, 60, 0.05) !important;
+  border-color: #F15928 !important;
+  background: rgba(241, 89, 40, 0.08) !important;
 }
 
 .hubspot-form-container .hs-form .hs-fieldtype-radio .input,
@@ -656,32 +755,6 @@ button[class*="bg-[#06111f]"] {
   padding: 0 !important;
 }
 
-/* HubSpot custom label overrides */
-.hs-form-1557b39a-64b3-47b7-b420-ce4a0857d1cc_7b7859b4-8edc-471a-9a53-78ed99346625 .hs-form-field label:not(.hs-error-msg) {
-  color: #fff !important;
-}
-
-/* Specific overrides for all 4 enquiry form IDs */
-[class*="hs-form-1557b39a-64b3-47b7-b420-ce4a0857d1cc"] .hs-form-field label:not(.hs-error-msg),
-[class*="hs-form-cc694ad6-290f-4dee-8dee-0863b628709f"] .hs-form-field label:not(.hs-error-msg),
-[class*="hs-form-29a8340d-28ce-4692-8f0d-d51674b63037"] .hs-form-field label:not(.hs-error-msg),
-[class*="hs-form-08add4f9-c5b2-4629-a437-3b738b9b3cee"] .hs-form-field label:not(.hs-error-msg),
-[class*="hs-form-1557b39a-64b3-47b7-b420-ce4a0857d1cc"] label:not(.hs-error-msg),
-[class*="hs-form-cc694ad6-290f-4dee-8dee-0863b628709f"] label:not(.hs-error-msg),
-[class*="hs-form-29a8340d-28ce-4692-8f0d-d51674b63037"] label:not(.hs-error-msg),
-[class*="hs-form-08add4f9-c5b2-4629-a437-3b738b9b3cee"] label:not(.hs-error-msg),
-[class*="hs-form-1557b39a-64b3-47b7-b420-ce4a0857d1cc"] label span,
-[class*="hs-form-cc694ad6-290f-4dee-8dee-0863b628709f"] label span,
-[class*="hs-form-29a8340d-28ce-4692-8f0d-d51674b63037"] label span,
-[class*="hs-form-08add4f9-c5b2-4629-a437-3b738b9b3cee"] label span,
-[class*="hs-form-1557b39a-64b3-47b7-b420-ce4a0857d1cc"] legend,
-[class*="hs-form-cc694ad6-290f-4dee-8dee-0863b628709f"] legend,
-[class*="hs-form-29a8340d-28ce-4692-8f0d-d51674b63037"] legend,
-[class*="hs-form-08add4f9-c5b2-4629-a437-3b738b9b3cee"] legend {
-  color: #ffffff !important;
-}
-
-/* Comprehensive HubSpot global overrides to paint all labels, spans, and legends white (#fff) */
 .hubspot-form-container .hs-form-field label:not(.hs-error-msg),
 .hubspot-form-container label:not(.hs-error-msg),
 .hubspot-form-container label span,
@@ -698,11 +771,7 @@ button[class*="bg-[#06111f]"] {
 [class*=" hs-form-"] label:not(.hs-error-msg),
 [class*=" hs-form-"] label span,
 [class*=" hs-form-"] legend {
-  color: #ffffff !important;
-}
-
-.min-h-\[720px\] {
-  min-height: 800px;
+  color: #FFFFFF !important;
 }
 
 /* Modal Animations */
@@ -735,22 +804,21 @@ button[class*="bg-[#06111f]"] {
   animation: popupZoomIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-
 /* ── Photo Gallery Phone Mockup ── */
 .net-phone {
   position: relative;
   width: 210px;
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 32px;
   box-shadow:
     0 0 0 2px #d1d5db,
     0 0 0 4px #e5e7eb,
-    0 28px 60px rgba(0,0,0,0.38),
-    0 0 40px rgba(54,188,176,0.14);
+    0 28px 60px rgba(0, 0, 0, 0.38),
+    0 0 40px rgba(0, 158, 173, 0.16);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-jakarta), sans-serif;
 }
 .net-phone.large { width: 250px; }
 
@@ -761,7 +829,7 @@ button[class*="bg-[#06111f]"] {
   transform: translateX(-50%);
   width: 90px;
   height: 22px;
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 0 0 16px 16px;
   z-index: 10;
   display: flex;
@@ -771,7 +839,7 @@ button[class*="bg-[#06111f]"] {
 .net-phone-notch-pill {
   width: 52px;
   height: 6px;
-  background: #1a1a1a;
+  background: #08121E;
   border-radius: 4px;
 }
 
@@ -782,12 +850,12 @@ button[class*="bg-[#06111f]"] {
   padding: 28px 16px 6px;
   font-size: 9px;
   font-weight: 700;
-  color: #111827;
+  color: #08121E;
 }
 
 .net-phone-screen {
   flex: 1;
-  background: #f9fafb;
+  background: #F7F9FC;
   padding: 10px 12px 12px;
   overflow: hidden;
 }
@@ -798,7 +866,7 @@ button[class*="bg-[#06111f]"] {
   width: 100%;
   aspect-ratio: 1;
   max-height: 110px;
-  background: linear-gradient(135deg, rgba(54,188,176,0.08), rgba(54,188,176,0.03));
+  background: linear-gradient(135deg, rgba(0, 158, 173, 0.08), rgba(0, 105, 184, 0.04));
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -809,7 +877,7 @@ button[class*="bg-[#06111f]"] {
   position: absolute;
   width: 14px;
   height: 14px;
-  border-color: #36BCB0;
+  border-color: #009EAD;
   border-style: solid;
   border-width: 0;
 }
@@ -823,7 +891,7 @@ button[class*="bg-[#06111f]"] {
   left: 10px;
   right: 10px;
   height: 1.5px;
-  background: linear-gradient(90deg, transparent, #36BCB0, transparent);
+  background: linear-gradient(90deg, transparent, #009EAD, transparent);
   animation: netScanMove 1.8s ease-in-out infinite;
   top: 20%;
 }
@@ -835,11 +903,10 @@ button[class*="bg-[#06111f]"] {
 }
 
 .net-scan-face {
-  color: #36BCB0;
+  color: #009EAD;
   opacity: 0.45;
 }
 
-/* Photo grid */
 .net-photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -849,101 +916,43 @@ button[class*="bg-[#06111f]"] {
   aspect-ratio: 1;
   border-radius: 5px;
   overflow: hidden;
-  background: rgba(54,188,176,0.12);
+  background: rgba(0, 158, 173, 0.12);
 }
 
-/* Home indicator */
 .net-phone-home {
   height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: #FFFFFF;
 }
 .net-phone-home::after {
   content: '';
   width: 80px;
   height: 4px;
-  background: #1a1a1a;
+  background: #08121E;
   border-radius: 3px;
   opacity: 0.18;
-}
-
-.pt-\[200px\], .pt-\[220px\] {
-  padding-top: 300px !important;
-}
-
-.page-speakers .pt-\[200px\],
-.page-speakers .pt-\[220px\],
-.page-partners .pt-\[200px\],
-.page-partners .pt-\[220px\],
-.page-agenda .pt-\[200px\],
-.page-agenda .pt-\[220px\] {
-  padding-top: 0px !important;
-}
-
-/* Hero top padding for Speakers & Partners pages */
-.page-hero-top {
-  padding-top: 130px !important;
-}
-@media (max-width: 768px) {
-  .page-hero-top {
-    padding-top: 110px !important;
-  }
-}
-@media (max-width: 480px) {
-  .page-hero-top {
-    padding-top: 95px !important;
-  }
-}
-
-.pt-\[90px\] {
-  padding-top: 40px !important;
-}
-
-/* Custom styling for Footer social media icons and borders */
-.border-\[\#C0F43C\]\/60 {
-    border-color: #1b9ad6 !important;
-    box-shadow: 0 0 12px rgba(27, 154, 214, 0.25) !important;
-}
-
-.border-\[\#C0F43C\]\/60:hover {
-    border-color: #1b9ad6 !important;
-    box-shadow: 0 0 16px rgba(27, 154, 214, 0.5) !important;
-}
-
-.fill-current {
-    fill: #1b9ad6 !important;
-}
-
-.border-\[\#C0F43C\]\/60:hover .fill-current {
-    fill: #1b9ad6 !important;
-}
-
-/* Override speaker card height to use responsive aspect ratio */
-.speaker-grid .h-\[380px\] {
-  height: auto !important;
-  aspect-ratio: 3 / 4 !important;
 }
 
 /* 3D Experience Tab Animations */
 @keyframes tab-active-pulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(192, 244, 60, 0.2);
+    box-shadow: 0 0 20px rgba(241, 89, 40, 0.2);
   }
   50% {
-    box-shadow: 0 0 35px rgba(192, 244, 60, 0.6);
+    box-shadow: 0 0 35px rgba(241, 89, 40, 0.48);
   }
 }
 
 @keyframes tab-inactive-pulse {
   0%, 100% {
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 105, 184, 0.28);
     box-shadow: none;
   }
   50% {
-    border-color: rgba(192, 244, 60, 0.35);
-    box-shadow: 0 0 15px rgba(192, 244, 60, 0.1);
+    border-color: rgba(0, 158, 173, 0.48);
+    box-shadow: 0 0 15px rgba(0, 158, 173, 0.12);
   }
 }
 
@@ -979,16 +988,12 @@ button[class*="bg-[#06111f]"] {
   background: linear-gradient(
     to right,
     transparent,
-    rgba(192, 244, 60, 0.18),
+    rgba(0, 158, 173, 0.18),
     transparent
   );
   transform: rotate(30deg);
   animation: tab-auto-shine 4s infinite ease-in-out;
   pointer-events: none;
-}
-
-.text-\[clamp\(54px\,6\.5vw\,82px\)\] {
-    font-size: clamp(54px, 6.5vw, 82px) !important;
 }
 
 /* ================= DATA-AOS SCROLL ANIMATION SYSTEM ================= */
@@ -1012,7 +1017,6 @@ html.aos-enabled [data-aos="fade-down"]:not([data-aos-animate="true"]) {
   transform: translate3d(0, -64px, 0) !important;
 }
 
-/* AOS convention: fade-right = slide in from left toward right; fade-left = slide in from right toward left */
 html.aos-enabled [data-aos="fade-right"]:not([data-aos-animate="true"]) {
   transform: translate3d(-72px, 0, 0) !important;
 }

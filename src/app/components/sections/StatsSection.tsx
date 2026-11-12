@@ -120,7 +120,7 @@ function HoverParticles({ isHovered }: { isHovered: boolean }) {
     };
     resizeCanvas();
 
-    const colors = ["#00ceff", "#c0f43c", "#9a6cff"];
+    const colors = ["#0069B8", "#009EAD", "#F15928"];
     const initParticles = () => {
       particles = [];
       const particleCount = 22;
@@ -191,7 +191,7 @@ function HoverParticles({ isHovered }: { isHovered: boolean }) {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none w-full h-full mix-blend-screen opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[15px]"
+      className="absolute inset-0 pointer-events-none w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[16px]"
     />
   );
 }
@@ -206,11 +206,11 @@ function StatCard({ stat, index }: { stat: (typeof statsData)[0]; index: number 
       data-aos-delay={String(index * 100)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative min-h-[194px] p-6 border-0 border-t border-[#293442]/55 rounded-[15px] bg-gradient-to-br from-[#00ceff]/20 to-[#c0f43c]/9 shadow-[0_20px_60px_rgba(0,0,0,0.22),inset_0_0_28px_rgba(65,220,255,0.06)] backdrop-blur-md group hover:-translate-y-1 transition-all duration-300 border-t-[#293442] overflow-hidden flex flex-col items-center justify-center text-center"
+      className="relative min-h-[194px] p-6 border border-[#0069B8]/22 rounded-[16px] bg-white shadow-[0_14px_34px_rgba(8,18,30,0.06)] group hover:-translate-y-1 hover:border-[#0069B8] transition-all duration-300 overflow-hidden flex flex-col items-center justify-center text-center"
     >
       <HoverParticles isHovered={isHovered} />
 
-      <div className="relative z-10 grid place-items-center w-10 h-10 mx-auto rounded-full bg-black/26 text-cyan shadow-[inset_0_0_12px_rgba(24,212,255,0.1)] group-hover:scale-105 transition-transform duration-200">
+      <div className="relative z-10 grid place-items-center w-11 h-11 mx-auto rounded-full bg-[#08121E] border border-[#0069B8]/40 text-white group-hover:scale-105 group-hover:border-[#009EAD] transition-all duration-200">
         <img
           src={stat.icon}
           alt=""
@@ -221,16 +221,12 @@ function StatCard({ stat, index }: { stat: (typeof statsData)[0]; index: number 
         />
       </div>
 
-      <span className="absolute top-[18px] right-[20px] text-white/45 font-mono text-[11px] tracking-wider select-none z-10">
-        {stat.index}
-      </span>
-
-      <strong className="block mt-[22px] text-[#C0F43C] font-[850] text-[34px] leading-none tracking-tight relative z-10 text-center">
+      <strong className="block mt-[22px] text-[#F15928] font-[850] text-[34px] leading-none tracking-tight relative z-10 text-center">
         {stat.prefix}
         <Counter end={stat.number} suffix={stat.suffix} />
       </strong>
 
-      <p className="mt-3 text-white/80 font-mono text-[13px] uppercase tracking-[1px] leading-relaxed font-semibold relative z-10 text-center">
+      <p className="mt-3 text-[#334155] font-mono text-[13px] uppercase tracking-[1px] leading-relaxed font-semibold relative z-10 text-center">
         {stat.label}
       </p>
     </article>
@@ -239,18 +235,18 @@ function StatCard({ stat, index }: { stat: (typeof statsData)[0]; index: number 
 
 export function StatsSection() {
   return (
-    <section className="relative pt-[68px] pb-[32px] -mt-[30px] z-10 bg-[#020b1c] overflow-hidden max-sm:py-[48px] max-sm:mt-0" id="attend">
-      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-24px,1172px)]">
+    <section className="relative py-[76px] z-10 bg-[#F7F9FC] overflow-visible max-sm:py-[48px]" id="attend">
+      <div className="w-[min(1172px,calc(100%-48px))] mx-auto max-sm:w-[min(100%-32px,1172px)]">
         {/* Title Heading */}
         <h2
           data-aos="fade-up"
-          className="text-center font-[850] text-white leading-[1.04] tracking-[-2px] text-[clamp(38px,4.8vw,56px)]"
+          className="text-center font-[850] text-[#08121E] leading-[1.04] tracking-[-0.02em] text-[clamp(32px,4vw,48px)]"
         >
           <GradientText>The Power</GradientText> Behind the <GradientText>Room</GradientText>
         </h2>
 
         {/* Stats Grid Layout (Four across desktop, two across mobile per C1) */}
-        <div className="grid grid-cols-4 gap-4 mt-12 pb-1.5 max-[980px]:grid-cols-2 max-sm:grid-cols-2 max-sm:mt-8">
+        <div className="grid grid-cols-4 gap-4 mt-12 pb-1.5 overflow-visible max-[980px]:grid-cols-2 max-sm:grid-cols-2 max-sm:mt-8">
           {statsData.map((stat, idx) => (
             <StatCard key={stat.index} stat={stat} index={idx} />
           ))}
